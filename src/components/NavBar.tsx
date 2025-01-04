@@ -32,6 +32,8 @@ const NavBar = () => {
               <p id="p-reg">Contact</p>
             </div>
           </div>
+
+          <div className="underline"></div>
         </div>
 
         <div className="tablet-navbar"></div>
