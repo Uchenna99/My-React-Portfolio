@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { TiThMenu } from "react-icons/ti";
 
 interface StateProps {
   state: boolean;
@@ -30,7 +31,7 @@ const NavBar = () => {
       <div className="navbar-container">
 
         <div className="laptop-navbar">
-          <div className="name-logo"> <h2>UCHE'S PORTFOLIO</h2> </div>
+          <div className="name-logo"> <h2 id="h-reg">UCHE'S PORTFOLIO</h2> </div>
 
           <div className="nav-right">
 
@@ -66,7 +67,15 @@ const NavBar = () => {
           }
         </div>
 
-        <div className="tablet-navbar"></div>
+        <div className="tablet-navbar">
+
+          <div className="name-logo"> <h2 id="h-reg">UCHE'S PORTFOLIO</h2> </div>
+
+          <div className="tab-nav-right">
+            <TiThMenu />
+          </div>
+
+        </div>
       </div>
     </>
   )
