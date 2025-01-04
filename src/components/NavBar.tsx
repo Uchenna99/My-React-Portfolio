@@ -1,5 +1,10 @@
 import { useState } from "react"
 
+interface StateProps {
+  state: boolean;
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 
 const NavBar = () => {
   const [home, setHome] = useState<boolean>(true);
@@ -10,6 +15,16 @@ const NavBar = () => {
 
   const navState = [ home, about, skills, work, contact ]
 
+  const handleClick = ( {state, setState}: StateProps )=>{
+    if(state === true){
+      null;
+    }else{
+      setHome(false); setAbout(false); setSkills(false);
+      setWork(false); setContact(false); setState(true);
+    }
+    
+  };
+
   return (
     <>
       <div className="navbar-container">
@@ -18,28 +33,37 @@ const NavBar = () => {
           <div className="name-logo"> <h2>UCHE'S PORTFOLIO</h2> </div>
 
           <div className="nav-right">
-            <div className="nav-options" onClick={()=> setHome(true)}
-              style={{color: home? 'darkviolet' : ''}}
-              >
-              <p id="p-reg">Home</p>
+
+            <div className="nav-options" onClick={()=> handleClick({state: home, setState: setHome})}>
+              <p id="p-reg" style={{fontFamily: home? 'mbold':'', color: home? 'darkviolet' : ''}}>Home</p>
+              <div className="faded-underline" style={{display: home? 'none':''}}></div>
             </div>
-            <div className="nav-options" onClick={()=> setAbout(true)}>
-              <p id="p-reg">About</p>
+            
+            <div className="nav-options" onClick={()=> handleClick({state: about, setState: setAbout})}>
+              <p id="p-reg" style={{fontFamily: about? 'mbold':'', color: about? 'darkviolet' : ''}}>About</p>
+              <div className="faded-underline" style={{display: about? 'none':''}}></div>
             </div>
-            <div className="nav-options" onClick={()=> setSkills(true)}>
-              <p id="p-reg">Skills</p>
+
+            <div className="nav-options" onClick={()=> handleClick({state: skills, setState: setSkills})}>
+              <p id="p-reg" style={{fontFamily: skills? 'mbold':'', color: skills? 'darkviolet' : ''}}>Skills</p>
+              <div className="faded-underline" style={{display: skills? 'none':''}}></div>
             </div>
-            <div className="nav-options" onClick={()=> setWork(true)}>
-              <p id="p-reg">Work</p>
+            <div className="nav-options" onClick={()=> handleClick({state: work, setState: setWork})}>
+              <p id="p-reg" style={{fontFamily: work? 'mbold':'', color: work? 'darkviolet' : ''}}>Work</p>
+              <div className="faded-underline" style={{display: work? 'none':''}}></div>
             </div>
-            <div className="nav-options" onClick={()=> setContact(true)}>
-              <p id="p-reg">Contact</p>
+            <div className="nav-options" onClick={()=> handleClick({state: contact, setState: setContact})}>
+              <p id="p-reg" style={{fontFamily: contact? 'mbold':'', color: contact? 'darkviolet' : ''}}>Contact</p>
+              <div className="faded-underline" style={{display: contact? 'none':''}}></div>
             </div>
           </div>
 
-          <div className="underline"
-            style={{right: home? '508px' : about? '434px' : skills? '361px' : work? '291px' : contact? '212px' : ''}}
-          ></div>
+          {navState.includes(true) && 
+            <div className="underline"
+              style={{right: home? '507px' : about? '432px' : skills? '360px' : work? '291px' : contact? '212px' : ''}}
+            ></div>
+
+          }
         </div>
 
         <div className="tablet-navbar"></div>
