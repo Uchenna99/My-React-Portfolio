@@ -15,7 +15,9 @@ const Hero = () => {
             <button className="hero-butn">Contact Me</button>
           </div>
 
-          <div className="hero-image-section"></div>
+          <div className="hero-image-section">
+            <div className="circle"></div>
+          </div>
 
         </div>
       </div>
