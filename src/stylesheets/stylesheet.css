@@ -265,15 +265,15 @@ h2#h1{
 }
 
 h2#h2{
-    animation: h2-slide 400ms 2s 1 forwards linear;
+    animation: h2-slide 400ms 1.5s 1 forwards linear;
 }
 
 h2#h3{
-    animation: h2-slide 400ms 3s 1 forwards linear;
+    animation: h2-slide 400ms 2s 1 forwards linear;
 }
 
 h2#h4{
-    animation: h2-slide 400ms 4s 1 forwards linear;
+    animation: h2-slide 400ms 2.5s 1 forwards linear;
 }
 
 
@@ -290,7 +290,7 @@ button.hero-butn{
     cursor: pointer;
     transition: 300ms;
     opacity: 0;
-    animation: appear 600ms 5s 1 forwards linear;
+    animation: appear 600ms 3s 1 forwards linear;
 }
 
 button.hero-butn:hover{
