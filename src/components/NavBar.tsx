@@ -63,11 +63,12 @@ const NavBar = () => {
 
           {navState.includes(true) && 
             <div className="underline"
-              style={{right: home? '507px' : about? '432px' : skills? '360px' : work? '291px' : contact? '212px' : ''}}
+              style={{right: home? '488px' : about? '412px' : skills? '340px' : work? '270px' : contact? '190px' : ''}}
             ></div>
 
           }
         </div>
+
 
         
         <div className="tablet-navbar-wrap">

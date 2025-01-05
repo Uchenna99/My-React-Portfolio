@@ -1,4 +1,14 @@
 
+@media screen and (max-width: 1299px) {
+    .laptop-navbar{
+        width: 100%;
+    }
+    .hero{
+        width: 100%;
+    }
+}
+
+
 @media screen and (max-width: 949px) {
     .laptop-navbar{
         display: none;
