@@ -356,9 +356,21 @@ button.hero-butn:hover{
 .header-text{
     width: fit-content;
     height: fit-content;
-    background-color: plum;
+    /* background-color: plum; */
     padding: 6px 0;
     font-size: 22px;
+    color: darkviolet;
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 40px;
+}
+
+.header-underline{
+    width: 70px;
+    height: 4px;
+    background-color: darkviolet;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
 }
