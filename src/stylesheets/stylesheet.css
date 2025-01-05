@@ -5,6 +5,7 @@
     height: fit-content;
     background-color: white;
     font-family: mregular;
+    /* overflow: hidden; */
 }
 
 #h-reg{
@@ -24,6 +25,16 @@
     to{opacity: 1;}
 }
 
+@keyframes drop-out {
+    from{ rotate: 0; transform-origin: right 0; }
+    to{ rotate: 160deg; transform-origin: right 0; }
+}
+
+@keyframes drop-in {
+    from{ rotate: 160deg; transform-origin: right 0; }
+    to{ rotate: 0; transform-origin: right 0; }
+}
+
 
 
 
@@ -37,6 +48,8 @@
     background-color: white;
     display: flex;
     color: #636363;
+    position: relative;
+    z-index: 10;
 }
 
 
@@ -112,15 +125,95 @@
     display: none;
 }
 
+.faded-underline2{
+    width: 40px;
+    height: 2px;
+    background-color: darkviolet;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    transition: 300ms;
+}
 
+
+
+.tablet-navbar-wrap{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+}
 
 .tablet-navbar{
     width: 100%;
     height: 100%;
     background-color: white;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 25px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 15;
 }
 
+
+.tab-nav-right{
+    width: fit-content;
+    height: fit-content;
+    /* background-color: plum; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 30px;
+    position: relative;
+    z-index: 15;
+}
+
+
+.drop-down{
+    width: 300px;
+    height: fit-content;
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    top: 60px;
+    z-index: 9;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.drop-in{
+    display: flex;
+    animation: drop-in 400ms 1 forwards linear;
+}
+
+.drop-out{
+    display: flex;
+    animation: drop-out 400ms 1 forwards linear;
+}
+
+
+.highlighter{
+    width: 100%;
+    height: fit-content;
+    padding: 6px 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(211, 211, 211, 0.5);
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* HERO */

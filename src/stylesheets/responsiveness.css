@@ -3,7 +3,7 @@
     .laptop-navbar{
         display: none;
     }
-    .tablet-navbar{
+    .tablet-navbar-wrap{
         display: flex;
     }
     #h-reg{

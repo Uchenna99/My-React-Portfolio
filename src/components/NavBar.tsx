@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { TiThMenu } from "react-icons/ti";
+import { ImMenu3 } from "react-icons/im";
+import { ImMenu4 } from "react-icons/im";
 
 interface StateProps {
   state: boolean;
@@ -13,6 +14,7 @@ const NavBar = () => {
   const [skills, setSkills] = useState<boolean>(false);
   const [work, setWork] = useState<boolean>(false);
   const [contact, setContact] = useState<boolean>(false);
+  const [burger, setBurger] = useState('');
 
   const navState = [ home, about, skills, work, contact ]
 
@@ -31,7 +33,7 @@ const NavBar = () => {
       <div className="navbar-container">
 
         <div className="laptop-navbar">
-          <div className="name-logo"> <h2 id="h-reg">UCHE'S PORTFOLIO</h2> </div>
+          <div className="name-logo"> <h2 id="h-reg">WELCOME</h2> </div>
 
           <div className="nav-right">
 
@@ -67,15 +69,58 @@ const NavBar = () => {
           }
         </div>
 
-        <div className="tablet-navbar">
+        
+        <div className="tablet-navbar-wrap">
+          <div className="tablet-navbar">
 
-          <div className="name-logo"> <h2 id="h-reg">UCHE'S PORTFOLIO</h2> </div>
+            <div className="name-logo"> <h2 id="h-reg">WELCOME</h2> </div>
 
-          <div className="tab-nav-right">
-            <TiThMenu />
+            <div className="tab-nav-right" onClick={()=>{burger === 'show'? setBurger('hide') : setBurger('show') }}>
+              { burger === 'show'? <ImMenu4 style={{color: "darkviolet"}} /> : <ImMenu3 /> }
+            </div>
+
           </div>
 
+          <div className={`drop-down ${burger === 'show'? 'drop-in': burger === 'hide'? 'drop-out' : ''}`} >
+
+            <div className="highlighter">
+              <div className="nav-options" onClick={()=> handleClick({state: home, setState: setHome})}>
+                <p id="p-reg" style={{fontFamily: home? 'mbold':'', color: home? 'darkviolet' : ''}}>Home</p>
+                <div className="faded-underline2" style={{display: home? 'flex':'none'}}></div>
+              </div>
+            </div>
+
+            <div className="highlighter">
+              <div className="nav-options" onClick={()=> handleClick({state: about, setState: setAbout})}>
+                <p id="p-reg" style={{fontFamily: about? 'mbold':'', color: about? 'darkviolet' : ''}}>About</p>
+                <div className="faded-underline2" style={{display: about? 'flex':'none'}}></div>
+              </div>
+            </div>
+
+            <div className="highlighter">
+              <div className="nav-options" onClick={()=> handleClick({state: skills, setState: setSkills})}>
+                <p id="p-reg" style={{fontFamily: skills? 'mbold':'', color: skills? 'darkviolet' : ''}}>Skills</p>
+                <div className="faded-underline2" style={{display: skills? 'flex':'none'}}></div>
+              </div>
+            </div>
+
+            <div className="highlighter">
+              <div className="nav-options" onClick={()=> handleClick({state: work, setState: setWork})}>
+                <p id="p-reg" style={{fontFamily: work? 'mbold':'', color: work? 'darkviolet' : ''}}>Work</p>
+                <div className="faded-underline2" style={{display: work? 'flex':'none'}}></div>
+              </div>
+            </div>
+
+            <div className="highlighter">
+              <div className="nav-options" onClick={()=> handleClick({state: contact, setState: setContact})}>
+                <p id="p-reg" style={{fontFamily: contact? 'mbold':'', color: contact? 'darkviolet' : ''}}>Contact</p>
+                <div className="faded-underline2" style={{display: contact? 'flex':'none'}}></div>
+              </div>
+            </div>
+
+          </div>
         </div>
+        
       </div>
     </>
   )
