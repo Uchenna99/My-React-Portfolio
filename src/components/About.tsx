@@ -4,12 +4,15 @@ import HeaderText from "./HeaderText"
 const About = () => {
   return (
     <>
-      <div className="about-wrap">
+      <div className="outer-wrap">
 
         <HeaderText title="About" />
 
-        <div className="about"></div>
-        
+        <div className="inner-wrap">
+
+          <div className="about"></div>
+
+        </div>
       </div>
     </>
   )

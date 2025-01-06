@@ -1,10 +1,19 @@
+import HeaderText from "./HeaderText"
 
 
 const Skills = () => {
   return (
     <>
-      <div className="skills-wrap">
-        <div className="skills"></div>
+      <div className="outer-wrap">
+
+        <HeaderText title="Skills" />
+
+        <div className="inner-wrap">
+
+          <div className="skills"></div>
+
+        </div>
+
       </div>
     </>
   )

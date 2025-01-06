@@ -1,8 +1,20 @@
+import HeaderText from "./HeaderText"
 
 
 const Work = () => {
   return (
-    <div>Work</div>
+    <>
+      <div className="outer-wrap">
+
+        <HeaderText title="Work" />
+
+        <div className="inner-wrap">
+
+          <div className="work"></div>
+
+        </div>
+      </div>
+    </>
   )
 }
 
