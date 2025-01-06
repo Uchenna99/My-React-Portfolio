@@ -2,7 +2,11 @@
 
 const Skills = () => {
   return (
-    <div>Skills</div>
+    <>
+      <div className="skills-wrap">
+        <div className="skills"></div>
+      </div>
+    </>
   )
 }
 

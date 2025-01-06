@@ -1,3 +1,4 @@
+import HeaderText from "./HeaderText"
 
 
 const About = () => {
@@ -5,10 +6,7 @@ const About = () => {
     <>
       <div className="about-wrap">
 
-        <div className="header-text">
-          <h2>About</h2>
-          <div className="header-underline"></div>
-        </div>
+        <HeaderText title="About" />
 
         <div className="about"></div>
         
