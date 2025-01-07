@@ -17,7 +17,9 @@ const Hero = () => {
             </div>
 
             <div className="hero-image-section">
-              <div className="circle"></div>
+              <div className="circle">
+                {/* <div className="circle2"></div> */}
+              </div>
             </div>
             
           </div>
