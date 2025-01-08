@@ -9,12 +9,8 @@ interface StateProps {
   setState: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-interface ParentProps {
-  parContact: boolean;
-}
 
-
-const NavBar = ({parContact}:ParentProps) => {
+const NavBar = () => {
   // const [home, setHome] = useState<boolean>(true);
   // const [about, setAbout] = useState<boolean>(false);
   // const [skills, setSkills] = useState<boolean>(false);
@@ -39,8 +35,6 @@ const NavBar = ({parContact}:ParentProps) => {
     }
     
   };
-
-  if(parContact){ ()=>handleClick({state: contact, setState: setContact}) };
 
 
   return (

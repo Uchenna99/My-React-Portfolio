@@ -11,14 +11,13 @@ import { NavbarContext } from "./context/ContextProvider"
 
 
 const HomePage = () => {
-  const [contact, setContact] = useState(false);
 
   return (
     <>
     <NavbarContext>
         <div className="portfolio-wrap">
 
-          <NavBar parContact={contact} />
+          <NavBar />
 
           <Hero />
 
@@ -28,7 +27,7 @@ const HomePage = () => {
           
           <Work />
 
-          <Contact contactDiv={()=> setContact(true)} />
+          <Contact />
 
           <Footer />
 
