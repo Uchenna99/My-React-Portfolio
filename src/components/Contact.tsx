@@ -1,10 +1,20 @@
+import { useInView } from "react-intersection-observer"
 import HeaderText from "./HeaderText"
+import { useNavbarContext } from "../context/ContextProvider";
 
 
 
 const Contact = () => {
-  
-
+  const {contact, setContact, setHome, setAbout, setSkills, setWork} = useNavbarContext();
+  const {inView, ref} = useInView();
+  if(inView){
+    if(contact){
+      null;
+    }else{
+      setHome(false); setAbout(false); setSkills(false);
+      setWork(false); setContact(true);
+    }
+  }
 
   return (
     <>
@@ -14,7 +24,7 @@ const Contact = () => {
         
         <div className="inner-wrap">
 
-          <div className="contact" >
+          <div className="contact" ref={ref}>
             <div className="contact-box">
 
               <div className="input-wrap">
