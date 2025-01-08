@@ -1,3 +1,4 @@
+import { useState } from "react"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
@@ -7,26 +8,29 @@ import Skills from "./components/Skills"
 import Work from "./components/Work"
 
 
+
 const HomePage = () => {
+  const [contact, setContact] = useState(false);
+
   return (
     <>
-      <div className="portfolio-wrap">
+        <div className="portfolio-wrap">
 
-        <NavBar />
+          <NavBar parContact={contact} />
 
-        <Hero />
+          <Hero />
 
-        <About />
+          <About />
 
-        <Skills />
-        
-        <Work />
+          <Skills />
+          
+          <Work />
 
-        <Contact />
+          <Contact contactDiv={()=> setContact(!contact)} />
 
-        <Footer />
+          <Footer />
 
-      </div>
+        </div>
     </>
   )
 }

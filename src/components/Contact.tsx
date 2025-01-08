@@ -1,7 +1,22 @@
+import { useInView } from "react-intersection-observer"
 import HeaderText from "./HeaderText"
+import { useState } from "react";
+
+interface Props {
+  contactDiv: ()=>void;
+}
 
 
-const Contact = () => {
+const Contact = ({contactDiv}:Props) => {
+  // const [view, setView] = useState()
+  const { ref, inView } = useInView({threshold: 0.6});
+  
+  if(inView){
+    contactDiv();
+  }else{
+    contactDiv();
+  }
+
   return (
     <>
       <div className="outer-wrap">
@@ -10,7 +25,7 @@ const Contact = () => {
         
         <div className="inner-wrap">
 
-          <div className="contact">
+          <div className="contact" ref={ref}>
             <div className="contact-box">
 
               <div className="input-wrap">

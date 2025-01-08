@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react"
 import { ImMenu3 } from "react-icons/im";
 import { ImMenu4 } from "react-icons/im";
@@ -7,8 +8,12 @@ interface StateProps {
   setState: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+interface ParentProps {
+  parContact: boolean;
+}
 
-const NavBar = () => {
+
+const NavBar = ({parContact}:ParentProps) => {
   const [home, setHome] = useState<boolean>(true);
   const [about, setAbout] = useState<boolean>(false);
   const [skills, setSkills] = useState<boolean>(false);
@@ -16,7 +21,9 @@ const NavBar = () => {
   const [contact, setContact] = useState<boolean>(false);
   const [burger, setBurger] = useState('');
 
-  const navState = [ home, about, skills, work, contact ]
+  const navState = [ home, about, skills, work, contact ];
+
+  if(parContact){setContact(true)}
 
   const handleClick = ( {state, setState}: StateProps )=>{
     if(state === true){
