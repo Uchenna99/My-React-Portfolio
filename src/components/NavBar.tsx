@@ -18,7 +18,8 @@ const NavBar = () => {
   // const [contact, setContact] = useState<boolean>(false);
 
   const {
-    about, setAbout, home, setHome, skills, setSkills, contact, setContact, work, setWork
+    about, setAbout, home, setHome, skills, setSkills, contact, setContact, work, setWork,
+    aboutRef, heroRef, skillsRef, workRef, contactRef, setNavPress
   } = useNavbarContext();
 
   const [burger, setBurger] = useState('');
@@ -32,6 +33,7 @@ const NavBar = () => {
     }else{
       setHome(false); setAbout(false); setSkills(false);
       setWork(false); setContact(false); setState(true);
+      setNavPress(true);
     }
     
   };
@@ -46,25 +48,30 @@ const NavBar = () => {
 
           <div className="nav-right">
 
-            <div className="nav-options" onClick={()=> { handleClick({state: home, setState: setHome}); }}>
+            <div className="nav-options" onClick={()=> { handleClick({state: home, setState: setHome});
+              heroRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: home? 'mbold':'', color: home? 'darkviolet' : ''}}>Home</p>
               <div className="faded-underline" style={{display: home? 'none':''}}></div>
             </div>
             
-            <div className="nav-options" onClick={()=> handleClick({state: about, setState: setAbout})}>
+            <div className="nav-options" onClick={()=> {handleClick({state: about, setState: setAbout}); 
+              aboutRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: about? 'mbold':'', color: about? 'darkviolet' : ''}}>About</p>
               <div className="faded-underline" style={{display: about? 'none':''}}></div>
             </div>
 
-            <div className="nav-options" onClick={()=> handleClick({state: skills, setState: setSkills})}>
+            <div className="nav-options" onClick={()=> {handleClick({state: skills, setState: setSkills}); 
+              skillsRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: skills? 'mbold':'', color: skills? 'darkviolet' : ''}}>Skills</p>
               <div className="faded-underline" style={{display: skills? 'none':''}}></div>
             </div>
-            <div className="nav-options" onClick={()=> handleClick({state: work, setState: setWork})}>
+            <div className="nav-options" onClick={()=> {handleClick({state: work, setState: setWork}); 
+              workRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: work? 'mbold':'', color: work? 'darkviolet' : ''}}>Work</p>
               <div className="faded-underline" style={{display: work? 'none':''}}></div>
             </div>
-            <div className="nav-options" onClick={()=> handleClick({state: contact, setState: setContact})}>
+            <div className="nav-options" onClick={()=> {handleClick({state: contact, setState: setContact}); 
+              contactRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: contact? 'mbold':'', color: contact? 'darkviolet' : ''}}>Contact</p>
               <div className="faded-underline" style={{display: contact? 'none':''}}></div>
             </div>

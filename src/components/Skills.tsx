@@ -5,12 +5,12 @@ import { useEffect } from "react";
 
 
 const Skills = () => {
-  const {setHome, setAbout, skills, setSkills, setContact, setWork} = useNavbarContext();
+  const {setHome, setAbout, skills, setSkills, setContact, setWork, skillsRef, navPress} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
 
   useEffect(()=>{
     if(inView){
-      if(skills){
+      if(skills || navPress){
         null;
       }else{
         setHome(false); setAbout(false); setSkills(true);
@@ -26,9 +26,9 @@ const Skills = () => {
 
         <HeaderText title="Skills" />
 
-        <div className="inner-wrap">
+        <div className="inner-wrap" ref={ref}>
 
-          <div className="skills" ref={ref}></div>
+          <div className="skills" ref={skillsRef}></div>
 
         </div>
 

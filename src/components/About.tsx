@@ -5,12 +5,12 @@ import { useEffect } from "react";
 
 
 const About = () => {
-  const {setHome, about, setAbout, aboutRef, setSkills, setContact, setWork} = useNavbarContext();
+  const {setHome, about, setAbout, aboutRef, setSkills, setContact, setWork, navPress} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
 
   useEffect(()=>{
     if(inView){
-      if(about){
+      if(about || navPress){
         null;
       }else{
         setHome(false);  setSkills(false);
