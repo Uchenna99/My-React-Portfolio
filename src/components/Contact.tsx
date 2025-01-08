@@ -1,6 +1,5 @@
 import { useInView } from "react-intersection-observer"
 import HeaderText from "./HeaderText"
-import { useState } from "react";
 
 interface Props {
   contactDiv: ()=>void;
@@ -13,8 +12,12 @@ const Contact = ({contactDiv}:Props) => {
   
   if(inView){
     contactDiv();
+    // console.log(inView);
+    
   }else{
-    contactDiv();
+    // contactDiv();
+    // console.log(inView);
+    
   }
 
   return (

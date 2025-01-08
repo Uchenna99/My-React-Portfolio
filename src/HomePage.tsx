@@ -6,6 +6,7 @@ import Hero from "./components/Hero"
 import NavBar from "./components/NavBar"
 import Skills from "./components/Skills"
 import Work from "./components/Work"
+import { NavbarContext } from "./context/ContextProvider"
 
 
 
@@ -14,6 +15,7 @@ const HomePage = () => {
 
   return (
     <>
+    <NavbarContext>
         <div className="portfolio-wrap">
 
           <NavBar parContact={contact} />
@@ -26,11 +28,12 @@ const HomePage = () => {
           
           <Work />
 
-          <Contact contactDiv={()=> setContact(!contact)} />
+          <Contact contactDiv={()=> setContact(true)} />
 
           <Footer />
 
         </div>
+      </NavbarContext>
     </>
   )
 }

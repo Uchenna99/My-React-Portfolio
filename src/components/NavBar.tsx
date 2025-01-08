@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react"
 import { ImMenu3 } from "react-icons/im";
 import { ImMenu4 } from "react-icons/im";
+import { useNavbarContext } from "../context/ContextProvider";
 
 interface StateProps {
   state: boolean;
@@ -14,16 +15,20 @@ interface ParentProps {
 
 
 const NavBar = ({parContact}:ParentProps) => {
-  const [home, setHome] = useState<boolean>(true);
-  const [about, setAbout] = useState<boolean>(false);
-  const [skills, setSkills] = useState<boolean>(false);
-  const [work, setWork] = useState<boolean>(false);
-  const [contact, setContact] = useState<boolean>(false);
+  // const [home, setHome] = useState<boolean>(true);
+  // const [about, setAbout] = useState<boolean>(false);
+  // const [skills, setSkills] = useState<boolean>(false);
+  // const [work, setWork] = useState<boolean>(false);
+  // const [contact, setContact] = useState<boolean>(false);
+
+  const {
+    about, setAbout, home, setHome, skills, setSkills, contact, setContact, work, setWork
+  } = useNavbarContext();
+
   const [burger, setBurger] = useState('');
 
   const navState = [ home, about, skills, work, contact ];
-
-  if(parContact){setContact(true)}
+  
 
   const handleClick = ( {state, setState}: StateProps )=>{
     if(state === true){
@@ -34,6 +39,9 @@ const NavBar = ({parContact}:ParentProps) => {
     }
     
   };
+
+  if(parContact){ ()=>handleClick({state: contact, setState: setContact}) };
+
 
   return (
     <>
