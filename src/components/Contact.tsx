@@ -1,20 +1,25 @@
 import { useInView } from "react-intersection-observer"
 import HeaderText from "./HeaderText"
 import { useNavbarContext } from "../context/ContextProvider";
+import { useEffect } from "react";
 
 
 
 const Contact = () => {
   const {contact, setContact, setHome, setAbout, setSkills, setWork} = useNavbarContext();
-  const {inView, ref} = useInView();
-  if(inView){
-    if(contact){
-      null;
-    }else{
-      setHome(false); setAbout(false); setSkills(false);
-      setWork(false); setContact(true);
+  const {inView, ref} = useInView({threshold: 0.5});
+
+  useEffect(()=>{
+    if(inView){
+      if(contact){
+        null;
+      }else{
+        setHome(false); setAbout(false); setSkills(false);
+        setWork(false); setContact(true);
+      }
     }
-  }
+  }, [inView]);
+  
 
   return (
     <>

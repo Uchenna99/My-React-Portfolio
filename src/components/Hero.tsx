@@ -1,11 +1,29 @@
+import { useInView } from "react-intersection-observer"
+import { useNavbarContext } from "../context/ContextProvider";
+import { useEffect } from "react";
 
 
 const Hero = () => {
+  const {home, setHome, setAbout, setSkills, setContact, setWork} = useNavbarContext();
+  const {ref, inView} = useInView({threshold: 0.5});
+
+  useEffect(()=>{
+    if(inView){
+      if(home){
+        null;
+      }else{
+         setAbout(false); setSkills(false);
+        setWork(false); setContact(false); setHome(true);
+      }
+    }
+  }, [inView]);
+  
+
   return (
     <>
       <div className="outer-wrap">
         <div className="inner-wrap">
-          <div className="hero">
+          <div className="hero" ref={ref}>
 
             <div className="hero-text-section">
               <h2 id="h1">Hello,</h2>

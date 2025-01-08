@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useRef, useState } from "react";
 
 interface NavbarProps {
     home: boolean;
@@ -11,22 +11,26 @@ interface NavbarProps {
     setWork: React.Dispatch<React.SetStateAction<boolean>>;
     contact: boolean;
     setContact: React.Dispatch<React.SetStateAction<boolean>>;
+    aboutRef: React.MutableRefObject<HTMLDivElement | null> | undefined;
 }
 
 export const Context = createContext<NavbarProps | null>(null);
 
 export const NavbarContext = ({children}:any)=>{
+    
     const [home, setHome] = useState<boolean>(true);
     const [about, setAbout] = useState<boolean>(false);
     const [skills, setSkills] = useState<boolean>(false);
     const [work, setWork] = useState<boolean>(false);
     const [contact, setContact] = useState<boolean>(false);
+
+    const aboutRef = useRef<HTMLDivElement | null>(null);
     
     return(
         <>
             <Context.Provider value={{
                 about, setAbout, contact, setContact, home, setHome,
-                skills, setSkills, work, setWork
+                skills, setSkills, work, setWork, aboutRef
             }}>
                 {children}
             </Context.Provider>

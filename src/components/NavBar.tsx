@@ -46,7 +46,7 @@ const NavBar = () => {
 
           <div className="nav-right">
 
-            <div className="nav-options" onClick={()=> handleClick({state: home, setState: setHome})}>
+            <div className="nav-options" onClick={()=> { handleClick({state: home, setState: setHome}); }}>
               <p id="p-reg" style={{fontFamily: home? 'mbold':'', color: home? 'darkviolet' : ''}}>Home</p>
               <div className="faded-underline" style={{display: home? 'none':''}}></div>
             </div>
