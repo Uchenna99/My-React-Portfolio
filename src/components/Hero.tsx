@@ -1,6 +1,7 @@
 import { useInView } from "react-intersection-observer"
 import { useNavbarContext } from "../context/ContextProvider";
 import { useEffect } from "react";
+import me from "../assets/IMAGES/photos/Me.jpg"
 
 
 const Hero = () => {
@@ -39,7 +40,7 @@ const Hero = () => {
 
             <div className="hero-image-section">
               <div className="circle">
-                {/* <div className="circle2"></div> */}
+                <img src={me} alt="photo" />
               </div>
             </div>
             

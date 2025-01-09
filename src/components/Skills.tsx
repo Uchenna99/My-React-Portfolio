@@ -41,6 +41,11 @@ const Skills = () => {
             <div className="skills-display">
 
               <h2>Professional Skills</h2>
+              <p>
+              As a committed web developer, I possess a strong combination of technical proficiency and creative problem-solving 
+              abilities. My skills span across modern web development practices and frameworks, including front-end and back-end 
+              technologies, responsive designs, and user experience optimization.
+              </p>
 
               <div className="language-skills">
 

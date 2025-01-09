@@ -2,6 +2,7 @@ import { useInView } from "react-intersection-observer";
 import HeaderText from "./HeaderText"
 import { useNavbarContext } from "../context/ContextProvider";
 import { useEffect } from "react";
+import me from "../assets/IMAGES/photos/Me_smile.jpg"
 
 
 const About = () => {
@@ -33,7 +34,9 @@ const About = () => {
 
           <div className="about" ref={aboutRef}>
 
-            <div className="photo"></div>
+            <div className="photo">
+              <img src={me} alt="photo" />
+            </div>
 
             <div className="about-text">
               <p>
