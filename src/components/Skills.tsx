@@ -2,6 +2,10 @@ import { useInView } from "react-intersection-observer";
 import HeaderText from "./HeaderText"
 import { useNavbarContext } from "../context/ContextProvider";
 import { useEffect } from "react";
+import html from "../assets/IMAGES/skills/html_256x256.png"
+import css from "../assets/IMAGES/skills/css_256x256.png"
+import js from "../assets/IMAGES/skills/javascript_256x256.png"
+import ts from "../assets/IMAGES/skills/typescript_256x256.png"
 
 
 const Skills = () => {
@@ -30,7 +34,17 @@ const Skills = () => {
 
           <div className="skills" ref={skillsRef}>
 
-            <div className="logo-grid"></div>
+            <div className="language-skills">
+
+              <div className="skill-logo" style={{backgroundImage: `url(${html})`}}></div>
+
+              <div className="skill-logo" style={{backgroundImage: `url(${css})`}}></div>
+
+              <div className="skill-logo" style={{backgroundImage: `url(${js})`}}></div>
+
+              <div className="skill-logo" style={{backgroundImage: `url(${ts})`}}></div>
+
+            </div>
 
             <div className="skills-photo"></div>
 
