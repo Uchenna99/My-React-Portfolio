@@ -6,6 +6,10 @@ import html from "../assets/IMAGES/skills/html_256x256.png"
 import css from "../assets/IMAGES/skills/css_256x256.png"
 import js from "../assets/IMAGES/skills/javascript_256x256.png"
 import ts from "../assets/IMAGES/skills/typescript_256x256.png"
+import reactjs from "../assets/IMAGES/skills/react_logo.png"
+import pg from "../assets/IMAGES/skills/postgresql.248x256.png"
+import prisma from "../assets/IMAGES/skills/prisma.png"
+import mongodb from "../assets/IMAGES/skills/mongo_db.png"
 
 
 const Skills = () => {
@@ -34,16 +38,53 @@ const Skills = () => {
 
           <div className="skills" ref={skillsRef}>
 
-            <div className="language-skills">
+            <div className="skills-display">
 
-              <div className="skill-logo" style={{backgroundImage: `url(${html})`}}></div>
+              <h2>Professional Skills</h2>
 
-              <div className="skill-logo" style={{backgroundImage: `url(${css})`}}></div>
+              <div className="language-skills">
 
-              <div className="skill-logo" style={{backgroundImage: `url(${js})`}}></div>
+                <div className="skill-card">
+                  <div className="skill-logo" style={{backgroundImage: `url(${html})`}}></div>
+                  <p>HTML</p>
+                </div>
 
-              <div className="skill-logo" style={{backgroundImage: `url(${ts})`}}></div>
+                <div className="skill-card">
+                  <div className="skill-logo" style={{backgroundImage: `url(${css})`}}></div>
+                  <p>CSS</p>
+                </div>
 
+                <div className="skill-card">
+                  <div className="skill-logo" style={{backgroundImage: `url(${js})`}}></div>
+                  <p>Javascript</p>
+                </div>
+
+                <div className="skill-card">
+                  <div className="skill-logo" style={{backgroundImage: `url(${ts})`}}></div>
+                  <p>Typescript</p>
+                </div>
+
+                <div className="skill-card">
+                  <div className="skill-logo" style={{backgroundImage: `url(${reactjs})`}}></div>
+                  <p>React</p>
+                </div>
+
+                <div className="skill-card">
+                  <div className="skill-logo" style={{backgroundImage: `url(${pg})`}}></div>
+                  <p>PostgreSQL</p>
+                </div>
+
+                <div className="skill-card">
+                  <div className="skill-logo" style={{backgroundImage: `url(${mongodb})`}}></div>
+                  <p>Mongo DB</p>
+                </div>
+
+                <div className="skill-card">
+                  <div className="skill-logo" style={{backgroundImage: `url(${prisma})`}}></div>
+                  <p>Prisma</p>
+                </div>
+
+              </div>
             </div>
 
             <div className="skills-photo"></div>
