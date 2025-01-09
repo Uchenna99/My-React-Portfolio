@@ -28,7 +28,13 @@ const Skills = () => {
 
         <div className="inner-wrap" ref={ref}>
 
-          <div className="skills" ref={skillsRef}></div>
+          <div className="skills" ref={skillsRef}>
+
+            <div className="logo-grid"></div>
+
+            <div className="skills-photo"></div>
+
+          </div>
 
         </div>
 

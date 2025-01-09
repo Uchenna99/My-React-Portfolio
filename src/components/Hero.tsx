@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 
 const Hero = () => {
-  const {home, setHome, setAbout, setSkills, setContact, setWork, heroRef, navPress} = useNavbarContext();
+  const {home, setHome, setAbout, setSkills, setContact, setWork, heroRef, contactRef, navPress} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
 
   useEffect(()=>{
@@ -28,10 +28,13 @@ const Hero = () => {
             <div className="hero-text-section">
               <h2 id="h1">Hello,</h2>
               <h2 id="h2">My name is UCHE</h2>
-              <h2 id="h3">I am a Full Stack</h2>
+              <h2 id="h3">I'm a Full Stack</h2>
               <h2 id="h4">Web Developer</h2>
 
-              <button className="hero-butn">Contact Me</button>
+              <button className="hero-butn"
+                onClick={ ()=> contactRef?.current?.scrollIntoView({behavior:'smooth'}) }>
+                Contact Me
+              </button>
             </div>
 
             <div className="hero-image-section">

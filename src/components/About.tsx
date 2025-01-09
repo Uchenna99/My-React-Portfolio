@@ -31,7 +31,23 @@ const About = () => {
 
         <div className="inner-wrap" ref={ref}>
 
-          <div className="about" ref={aboutRef}></div>
+          <div className="about" ref={aboutRef}>
+
+            <div className="photo"></div>
+
+            <div className="about-text">
+              <p>
+                Hi, my name is Uchenna Agbu,
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, voluptatem veniam dignissimos quos vitae aliquam 
+                expedita velit accusantium quasi error consequuntur possimus, est hic harum impedit! Aspernatur, id recusandae 
+                excepturi ducimus pariatur aut fugiat voluptatem itaque corporis maxime sequi dolores, provident magni. Ex, assumenda 
+                blanditiis impedit eos voluptatem ducimus. Quaerat ipsa saepe distinctio. Facere aliquid unde quae perspiciatis 
+                molestiae quis doloribus nam, quod perferendis et aperiam, explicabo, iure quo illo.
+              </p>
+            </div>
+          </div>
 
         </div>
       </div>
