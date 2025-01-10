@@ -71,7 +71,7 @@
     background-color: white;
     display: flex;
     justify-content: center;
-    color: #636363;
+    color: #1A1A1A;
     position: fixed;
     top: 0;
     left: 0;
@@ -116,7 +116,6 @@
     justify-content: center;
     padding: 5px 0;
     position: relative;
-    color: #1A1A1A;
 }
 
 .nav-options:hover{
@@ -133,7 +132,7 @@
 .underline{
     width: 40px;
     height: 3px;
-    background-color: darkviolet;
+    background-color: #008080;
     border-radius: 5px;
     position: absolute;
     bottom: 15px;
@@ -328,12 +327,12 @@ button.hero-butn{
 }
 
 button.hero-butn:hover{
-    box-shadow: 0 0 10px rgba(148, 0, 211, 0.3);
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.7);
     scale: 1.03;
 }
 
 button.hero-butn:active{
-    background-color: darkviolet;
+    background-color: gray;
 }
 
 

@@ -50,29 +50,29 @@ const NavBar = () => {
 
             <div className="nav-options" onClick={()=> { handleClick({state: home, setState: setHome});
               heroRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-              <p id="p-reg" style={{fontFamily: home? 'mbold':'', color: home? 'darkviolet' : ''}}>Home</p>
+              <p id="p-reg" style={{fontFamily: home? 'mbold':'', color: home? '#008080' : ''}}>Home</p>
               <div className="faded-underline" style={{display: home? 'none':''}}></div>
             </div>
             
             <div className="nav-options" onClick={()=> {handleClick({state: about, setState: setAbout}); 
               aboutRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-              <p id="p-reg" style={{fontFamily: about? 'mbold':'', color: about? 'darkviolet' : ''}}>About</p>
+              <p id="p-reg" style={{fontFamily: about? 'mbold':'', color: about? '#008080' : ''}}>About</p>
               <div className="faded-underline" style={{display: about? 'none':''}}></div>
             </div>
 
             <div className="nav-options" onClick={()=> {handleClick({state: skills, setState: setSkills}); 
               skillsRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-              <p id="p-reg" style={{fontFamily: skills? 'mbold':'', color: skills? 'darkviolet' : ''}}>Skills</p>
+              <p id="p-reg" style={{fontFamily: skills? 'mbold':'', color: skills? '#008080' : ''}}>Skills</p>
               <div className="faded-underline" style={{display: skills? 'none':''}}></div>
             </div>
             <div className="nav-options" onClick={()=> {handleClick({state: work, setState: setWork}); 
               workRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-              <p id="p-reg" style={{fontFamily: work? 'mbold':'', color: work? 'darkviolet' : ''}}>Work</p>
+              <p id="p-reg" style={{fontFamily: work? 'mbold':'', color: work? '#008080' : ''}}>Work</p>
               <div className="faded-underline" style={{display: work? 'none':''}}></div>
             </div>
             <div className="nav-options" onClick={()=> {handleClick({state: contact, setState: setContact}); 
               contactRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-              <p id="p-reg" style={{fontFamily: contact? 'mbold':'', color: contact? 'darkviolet' : ''}}>Contact</p>
+              <p id="p-reg" style={{fontFamily: contact? 'mbold':'', color: contact? '#008080' : ''}}>Contact</p>
               <div className="faded-underline" style={{display: contact? 'none':''}}></div>
             </div>
           </div>
