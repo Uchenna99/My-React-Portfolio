@@ -143,7 +143,7 @@
 .faded-underline{
     width: 40px;
     height: 2px;
-    background-color: #636363;
+    background-color: #008080;
     border-radius: 5px;
     position: absolute;
     bottom: 0;
@@ -411,7 +411,7 @@ button.hero-butn:active{
     /* background-color: plum; */
     padding: 6px 0;
     font-size: 22px;
-    color: darkviolet;
+    color: #008080;
     display: flex;
     justify-content: center;
     position: absolute;
@@ -421,7 +421,7 @@ button.hero-butn:active{
 .header-underline{
     width: 70px;
     height: 4px;
-    background-color: darkviolet;
+    background-color: #008080;
     border-radius: 5px;
     position: absolute;
     bottom: 0;

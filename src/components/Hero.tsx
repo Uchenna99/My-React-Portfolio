@@ -28,7 +28,7 @@ const Hero = () => {
 
             <div className="hero-text-section">
               <h2 id="h1">Hello,</h2>
-              <h2 id="h2">My name is UCHE</h2>
+              <h2 id="h2">My name is <span style={{color:'#008080'}}>UCHE</span></h2>
               <h2 id="h3">I'm a Full Stack</h2>
               <h2 id="h4">Web Developer</h2>
 
