@@ -45,6 +45,14 @@
     to{ width: 70px; }
 }
 
+@keyframes pulse {
+    0% { width: 160%; translate: -130px -110px; }
+    50% { width: 170%; translate: -150px -130px; }
+    100% { width: 160%; translate: -130px -110px; }
+}
+
+
+
 
 
 
@@ -311,7 +319,11 @@ button.hero-butn{
 
 button.hero-butn:hover{
     box-shadow: 0 0 10px rgba(148, 0, 211, 0.3);
-    scale: 1.05;
+    scale: 1.03;
+}
+
+button.hero-butn:active{
+    background-color: darkviolet;
 }
 
 
@@ -348,8 +360,13 @@ button.hero-butn:hover{
 }
 
 .circle > img{
-    width: 150%;
-    translate: -100px -80px;
+    width: 160%;
+    translate: -130px -110px;
+    /* animation: pulse 3s 4s infinite linear; */
+}
+
+.circle > img:hover{
+    animation: pulse 3s infinite linear;
 }
 
 

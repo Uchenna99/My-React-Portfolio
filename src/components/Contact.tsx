@@ -38,8 +38,8 @@ const Contact = () => {
               </div>
 
               <div className="input-wrap">
-                <label htmlFor="address">Address</label>
-                <input id="address" type="text" />
+                <label htmlFor="email">Email</label>
+                <input id="email" type="email" />
               </div>
 
               <textarea name="Message" id="" placeholder="Message"></textarea>
