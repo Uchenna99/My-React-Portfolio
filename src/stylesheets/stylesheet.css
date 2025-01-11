@@ -496,7 +496,7 @@ button.hero-butn:active{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: max-content;
-    column-gap: 20px;
+    column-gap: 30px;
     justify-content: center;
     padding: 150px 20px 20px;
 }
@@ -560,6 +560,9 @@ button.hero-butn:active{
 
 
 
+
+
+
 .skill-groups{
     height: fit-content;
     /* background-color: gray; */
@@ -567,11 +570,15 @@ button.hero-butn:active{
     grid-column: 2/span2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 20px;
+    column-gap: 20px;
+    row-gap: 30px;
+    padding: 20px 0;
 }
 
 
+
 .skill-group-card{
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -584,6 +591,39 @@ button.hero-butn:active{
 
 .skill-group-card:hover{
     animation: appear-b 400ms 1 forwards linear;
+}
+
+
+.card-indent{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: 5px;
+}
+
+.indent-arrow{
+    width: fit-content;
+    height: fit-content;
+}
+
+#arr-right{
+    font-size: 20px;
+    color: #008080;
+}
+
+
+#arrow{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #008080;
+    transition: 300ms;
+}
+
+#arrow:hover{
+    translate: 0 3px;
 }
 
 
