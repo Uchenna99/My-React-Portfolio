@@ -92,7 +92,45 @@ const Skills = () => {
               </div>
             </div>
 
-            <div className="skills-photo"></div>
+            <div className="skill-groups">
+
+              <div className="skill-group-card">
+                <h4>Front-end development</h4>
+                <p>
+                  I can craft responsive, user-friendly interfaces with modern web technologies such as HTML, CSS, Javascript 
+                  and Typescript.
+                </p>
+
+                <div className="language-skills">
+
+                  <div className="skill-card">
+                    <div className="skill-logo" style={{backgroundImage:`url(${html})`}}></div>
+                    <p>HTML</p>
+                  </div>
+
+                  <div className="skill-card">
+                    <div className="skill-logo" style={{backgroundImage:`url(${css})`}}></div>
+                    <p>CSS</p>
+                  </div>
+
+                  <div className="skill-card">
+                    <div className="skill-logo" style={{backgroundImage:`url(${js})`}}></div>
+                    <p>Javascript</p>
+                  </div>
+
+                  <div className="skill-card">
+                    <div className="skill-logo" style={{backgroundImage:`url(${ts})`}}></div>
+                    <p>Typescript</p>
+                  </div>
+
+                  <div className="skill-card">
+                    <div className="skill-logo" style={{backgroundImage:`url(${reactjs})`}}></div>
+                    <p>React</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
 
           </div>
 
