@@ -26,7 +26,7 @@ const About = () => {
 
   return (
     <>
-      <div className="outer-wrap">
+      <div className="outer-wrap" style={{backgroundColor:'#E5E5E5'}}>
 
         <HeaderText title="About" />
 
@@ -37,18 +37,20 @@ const About = () => {
             <div className="photo">
               <img src={me} alt="photo" />
             </div>
-
-            <div className="about-text">
-              <p>
-                Hi, my name is Uchenna Agbu,
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, voluptatem veniam dignissimos quos vitae aliquam 
-                expedita velit accusantium quasi error consequuntur possimus, est hic harum impedit! Aspernatur, id recusandae 
-                excepturi ducimus pariatur aut fugiat voluptatem itaque corporis maxime sequi dolores, provident magni. Ex, assumenda 
-                blanditiis impedit eos voluptatem ducimus. Quaerat ipsa saepe distinctio. Facere aliquid unde quae perspiciatis 
-                molestiae quis doloribus nam, quod perferendis et aperiam, explicabo, iure quo illo.
-              </p>
+            
+            <div className="about-text-wrap">
+              <div className="about-text">
+                <p>
+                  Hi, my name is Uchenna Agbu,
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, voluptatem veniam dignissimos quos vitae aliquam 
+                  expedita velit accusantium quasi error consequuntur possimus, est hic harum impedit! Aspernatur, id recusandae 
+                  excepturi ducimus pariatur aut fugiat voluptatem itaque corporis maxime sequi dolores, provident magni. Ex, assumenda 
+                  blanditiis impedit eos voluptatem ducimus. Quaerat ipsa saepe distinctio. Facere aliquid unde quae perspiciatis 
+                  molestiae quis doloribus nam, quod perferendis et aperiam, explicabo, iure quo illo.
+                </p>
+              </div>
             </div>
           </div>
 
