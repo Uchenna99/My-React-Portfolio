@@ -574,7 +574,7 @@ button.hero-butn:active{
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
-    row-gap: 30px;
+    row-gap: 40px;
     padding: 20px 0;
 }
 

@@ -210,42 +210,37 @@ const Skills = () => {
               <div className="skill-group-card-wrap">
                 <div className="skill-group-card">
                   <h4>Soft Skills</h4>
-                  <p>
-                    I can craft responsive, user-friendly interfaces with modern web technologies such as HTML, CSS, Javascript 
-                    and Typescript.
-                    {
-                      seVisible? <RiArrowUpDoubleLine id="arrow" onClick={()=>setSeVisible(false)}/> :
-                      <RiArrowDownDoubleLine id="arrow" onClick={()=>setSeVisible(true)}/>
-                    }
-                  </p>
 
-                  <div className="language-skills" style={{display: seVisible? 'flex':'none'}}>
-
-                    <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${html})`}}></div>
-                      <p>HTML</p>
+                  <div className="card-indent">
+                    <div className="indent-arrow">
+                      <RiArrowDropRightFill id="arr-right" />
                     </div>
 
-                    <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${css})`}}></div>
-                      <p>CSS</p>
-                    </div>
-
-                    <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${js})`}}></div>
-                      <p>Javascript</p>
-                    </div>
-
-                    <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${ts})`}}></div>
-                      <p>Typescript</p>
-                    </div>
-
-                    <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${reactjs})`}}></div>
-                      <p>React</p>
+                    <div className="indent-text">
+                      <p>Problem solving & Debugging</p>
                     </div>
                   </div>
+
+                  <div className="card-indent">
+                    <div className="indent-arrow">
+                      <RiArrowDropRightFill id="arr-right" />
+                    </div>
+
+                    <div className="indent-text">
+                      <p>Effective Communication & Team Collaboration</p>
+                    </div>
+                  </div>
+
+                  <div className="card-indent">
+                    <div className="indent-arrow">
+                      <RiArrowDropRightFill id="arr-right" />
+                    </div>
+
+                    <div className="indent-text">
+                      <p>Adaptability and Continuous Learning</p>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
