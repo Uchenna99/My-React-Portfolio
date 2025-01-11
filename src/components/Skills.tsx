@@ -64,14 +64,44 @@ const Skills = () => {
               <div className="skill-group-card-wrap">
                 <div className="skill-group-card">
                   <h4>Front-End development</h4>
-                  <p>
-                    I can craft responsive, user-friendly interfaces with modern web technologies such as HTML, CSS, Javascript 
-                    and Typescript. I'm also adept at utilizing libraries such as React.js and Tailwind.
-                    {
-                      feVisible? <RiArrowUpDoubleLine id="arrow" onClick={()=>setFeVisible(false)}/> :
-                      <RiArrowDownDoubleLine id="arrow" onClick={()=>setFeVisible(true)}/>
-                    }
-                  </p>
+
+                  <div className="card-indent">
+                    <div className="indent-arrow">
+                      <RiArrowDropRightFill id="arr-right" />
+                    </div>
+
+                    <div className="indent-text">
+                      <p>
+                        I can craft responsive, user-friendly interfaces with modern web technologies such as HTML, CSS, Javascript 
+                        and Typescript.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="card-indent">
+                    <div className="indent-arrow">
+                      <RiArrowDropRightFill id="arr-right" />
+                    </div>
+
+                    <div className="indent-text">
+                      <p>I'm also adept at utilizing libraries such as React.js and Tailwind CSS.</p>
+                    </div>
+                  </div>
+
+                  <div className="card-indent">
+                    <div className="indent-arrow">
+                      <RiArrowDropRightFill id="arr-right" />
+                    </div>
+
+                    <div className="indent-text">
+                      <p>I work efficiently with designs from Figma and Adobe XD.</p>
+                    </div>
+                  </div>
+                  
+                  {
+                    feVisible? <RiArrowUpDoubleLine id="arrow" onClick={()=>setFeVisible(false)}/> :
+                    <RiArrowDownDoubleLine id="arrow" onClick={()=>setFeVisible(true)}/>
+                  }
 
                   <div className="language-skills" style={{display: feVisible? 'flex':'none'}}>
 
@@ -139,6 +169,8 @@ const Skills = () => {
                       <p>Databases: MongoDB, PostgreSQL & Appwrite</p>
                     </div>
                   </div>
+
+                  <p>I can also build and consume RESTful APIs.</p>
 
                   {
                     beVisible? <RiArrowUpDoubleLine id="arrow" onClick={()=>setBeVisible(false)}/> :

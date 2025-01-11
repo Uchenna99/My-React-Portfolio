@@ -466,6 +466,9 @@ button.hero-butn:active{
     width: 500px;
     height: fit-content;
     /* background-color: lightgray; */
+    border-left: 3px solid teal;
+    border-radius: 5px;
+    padding: 0 15px;
 }
 
 .about-text > p{
@@ -498,7 +501,7 @@ button.hero-butn:active{
     grid-template-rows: max-content;
     column-gap: 30px;
     justify-content: center;
-    padding: 150px 20px 20px;
+    padding: 170px 20px 20px;
 }
 
 .skills-display{
