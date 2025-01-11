@@ -597,6 +597,7 @@ button.hero-butn:active{
 .card-indent{
     width: 100%;
     height: fit-content;
+    /* background-color: pink; */
     display: flex;
     gap: 5px;
 }
