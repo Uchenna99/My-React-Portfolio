@@ -50,7 +50,7 @@ const Skills = () => {
 
             <div className="skills-display">
 
-              <h3>Professional Skills</h3>
+              <h4 id="h4">Professional Skills</h4>
               <p>
               As a committed web developer, I possess a strong combination of technical proficiency and creative problem-solving 
               abilities. My skills span across modern web development practices and frameworks, including front-end and back-end 
@@ -63,7 +63,7 @@ const Skills = () => {
 
               <div className="skill-group-card-wrap">
                 <div className="skill-group-card">
-                  <h4>Front-End development</h4>
+                  <h4 id="h4">Front-End development</h4>
 
                   <div className="card-indent">
                     <div className="indent-arrow">

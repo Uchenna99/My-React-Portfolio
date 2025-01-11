@@ -22,15 +22,15 @@ const Work = () => {
 
   return (
     <>
-      <div className="outer-wrap">
+      <div className="outer-wrap" style={{borderTop:'1px solid teal'}}>
 
         <HeaderText title="Work" />
 
         <div className="inner-wrap" ref={ref}>
 
           <div className="work" ref={workRef}>
-            <div className="project-card">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laudantium inventore molestiae fuga cumque dolor cum atque facere laborum doloremque quasi aliquam, ab veritatis perferendis dolores, eligendi exercitationem rem velit asperiores, quos deserunt. Sint ullam harum cumque minima sed veniam modi, voluptatem dicta architecto nesciunt. Architecto iure placeat possimus ipsum!</p>
+            <div className="work-sample">
+              <div className="thumbnail"></div>
             </div>
           </div>
 

@@ -27,10 +27,10 @@ const Hero = () => {
           <div className="hero" ref={heroRef}>
 
             <div className="hero-text-section">
-              <h2 id="h1">Hello,</h2>
-              <h2 id="h2">My name is <span style={{color:'#008080'}}>UCHE</span></h2>
-              <h2 id="h3">I'm a Full Stack</h2>
-              <h2 id="h4">Web Developer</h2>
+              <h2 >Hello,</h2>
+              <h2 >My name is <span style={{color:'#008080'}}>UCHE</span></h2>
+              <h2 >I'm a Full Stack</h2>
+              <h2 >Web Developer</h2>
 
               <button className="hero-butn"
                 onClick={ ()=> contactRef?.current?.scrollIntoView({behavior:'smooth'}) }>
