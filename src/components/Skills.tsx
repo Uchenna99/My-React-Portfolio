@@ -21,7 +21,6 @@ import { RiArrowDropRightFill } from "react-icons/ri";
 const Skills = () => {
   const [feVisible, setFeVisible] = useState(false);
   const [beVisible, setBeVisible] = useState(false);
-  const [seVisible, setSeVisible] = useState(false);
 
   const {setHome, setAbout, skills, setSkills, setContact, setWork, skillsRef, navPress} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
@@ -202,6 +201,11 @@ const Skills = () => {
                     <div className="skill-card">
                       <div className="skill-logo" style={{backgroundImage:`url(${appwrite})`}}></div>
                       <p>Appwrite</p>
+                    </div>
+
+                    <div className="skill-card">
+                      <div className="skill-logo" style={{backgroundImage:`url(${prisma})`}}></div>
+                      <p>Prisma</p>
                     </div>
                   </div>
                 </div>

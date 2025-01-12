@@ -11,11 +11,6 @@ interface StateProps {
 
 
 const NavBar = () => {
-  // const [home, setHome] = useState<boolean>(true);
-  // const [about, setAbout] = useState<boolean>(false);
-  // const [skills, setSkills] = useState<boolean>(false);
-  // const [work, setWork] = useState<boolean>(false);
-  // const [contact, setContact] = useState<boolean>(false);
 
   const {
     about, setAbout, home, setHome, skills, setSkills, contact, setContact, work, setWork,
