@@ -30,7 +30,14 @@ const Work = () => {
 
           <div className="work" ref={workRef}>
             <div className="work-sample">
-              <div className="thumbnail"></div>
+              <div className="thumbnail">
+                <div className="thumbnail-hover">
+                  <button id="thumb-butn">Visit</button>
+                </div>
+              </div>
+              <div className="desc-text">
+                <p>A clone of Bitmama.io home page and blog page</p>
+              </div>
             </div>
           </div>
 
