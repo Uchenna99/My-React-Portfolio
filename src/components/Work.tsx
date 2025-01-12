@@ -2,6 +2,7 @@ import { useInView } from "react-intersection-observer";
 import HeaderText from "./HeaderText"
 import { useNavbarContext } from "../context/ContextProvider";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 const Work = () => {
@@ -32,7 +33,9 @@ const Work = () => {
             <div className="work-sample">
               <div className="thumbnail">
                 <div className="thumbnail-hover">
-                  <button id="thumb-butn">Visit</button>
+                  <Link target="_blank" to={'https://bitmama-clone-ts.vercel.app/'}>
+                    <button id="thumb-butn">Visit</button>
+                  </Link>
                 </div>
               </div>
               <div className="desc-text">
