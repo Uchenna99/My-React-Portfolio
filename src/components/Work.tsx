@@ -3,6 +3,7 @@ import HeaderText from "./HeaderText"
 import { useNavbarContext } from "../context/ContextProvider";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import bitmama from '../assets/IMAGES/photos/bitmama_clone.png'
 
 
 const Work = () => {
@@ -30,8 +31,9 @@ const Work = () => {
         <div className="inner-wrap" ref={ref}>
 
           <div className="work" ref={workRef}>
+
             <div className="work-sample">
-              <div className="thumbnail">
+              <div className="thumbnail" style={{backgroundImage:`url(${bitmama})`}}>
                 <div className="thumbnail-hover">
                   <Link target="_blank" to={'https://bitmama-clone-ts.vercel.app/'}>
                     <button id="thumb-butn">Visit</button>
@@ -40,6 +42,21 @@ const Work = () => {
               </div>
               <div className="desc-text">
                 <p>A clone of Bitmama.io home page and blog page</p>
+              </div>
+            </div>
+
+            <div className="work-sample">
+              <div className="thumbnail">
+                <img src={bitmama} alt="work_thumbnail"
+                  style={{width:'100%'}}
+                />
+              </div>
+              <div className="desc-text">
+                <h4>Bitmama</h4>
+                <p>A clone of Bitmama.io home page and blog page</p>
+                <Link target="_blank" to={'https://bitmama-clone-ts.vercel.app/'}>
+                  <button id="thumb-butn">Visit</button>
+                </Link>
               </div>
             </div>
           </div>
