@@ -4,6 +4,8 @@ import { useNavbarContext } from "../context/ContextProvider";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import bitmama from '../assets/IMAGES/photos/bitmama_clone.png'
+import nvidia from "../assets/IMAGES/photos/nvidia.png"
+import airbnb from "../assets/IMAGES/photos/airbnb.png"
 
 
 const Work = () => {
@@ -33,19 +35,6 @@ const Work = () => {
           <div className="work" ref={workRef}>
 
             <div className="work-sample">
-              <div className="thumbnail" style={{backgroundImage:`url(${bitmama})`}}>
-                <div className="thumbnail-hover">
-                  <Link target="_blank" to={'https://bitmama-clone-ts.vercel.app/'}>
-                    <button id="thumb-butn">Visit</button>
-                  </Link>
-                </div>
-              </div>
-              <div className="desc-text">
-                <p>A clone of Bitmama.io home page and blog page</p>
-              </div>
-            </div>
-
-            <div className="work-sample">
               <div className="thumbnail">
                 <img src={bitmama} alt="work_thumbnail"
                   style={{width:'100%'}}
@@ -53,8 +42,38 @@ const Work = () => {
               </div>
               <div className="desc-text">
                 <h4>Bitmama</h4>
-                <p>A clone of Bitmama.io home page and blog page</p>
-                <Link target="_blank" to={'https://bitmama-clone-ts.vercel.app/'}>
+                <p>A clone of Bitmama.io home page and blog page(2024)</p>
+                <Link id="b-link" target="_blank" to={'https://bitmama-clone-ts.vercel.app/'}>
+                  <button id="thumb-butn">Visit</button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="work-sample">
+              <div className="thumbnail">
+                <img src={nvidia} alt="work_thumbnail"
+                  style={{width:'100%'}}
+                />
+              </div>
+              <div className="desc-text">
+                <h4>NVIDIA</h4>
+                <p>A clone of NVIDIA home page(2024)</p>
+                <Link id="b-link" target="_blank" to={'https://nvidia-clone-ts.vercel.app/'}>
+                  <button id="thumb-butn">Visit</button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="work-sample">
+              <div className="thumbnail">
+                <img src={airbnb} alt="work_thumbnail"
+                  style={{width:'100%'}}
+                />
+              </div>
+              <div className="desc-text">
+                <h4>Airbnb</h4>
+                <p>A clone of Airbnb home page (2024)</p>
+                <Link id="b-link" target="_blank" to={'https://air-bnb-orpin.vercel.app/'}>
                   <button id="thumb-butn">Visit</button>
                 </Link>
               </div>
