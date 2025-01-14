@@ -1,12 +1,37 @@
 import { useInView } from "react-intersection-observer"
 import { useNavbarContext } from "../context/ContextProvider";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import me from "../assets/IMAGES/photos/Me.jpg"
+import axios from "axios";
 
+interface DataProps{
+  id: number;
+  imgName: string;
+  imgUrl: string;
+  createdAt: any;
+  updatedAt: any;
+}
 
 const Hero = () => {
+  const getUrl = 'http://localhost:2006/myapi/v1/images';
   const {home, setHome, setAbout, setSkills, setContact, setWork, heroRef, contactRef, navPress} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
+
+  const [images, setimages] = useState<DataProps[] | null>(null);
+  const [imgLoading, setImgLoading] = useState(true);
+
+  useEffect(()=>{
+    const getImages = async ()=>{
+      await axios.get<DataProps[]>(getUrl)
+      .then(response => setimages(response.data))
+      .catch(error => console.log(error)
+      
+      )
+      setImgLoading(false);
+    };
+    getImages();
+  }, []);
+
 
   useEffect(()=>{
     if(inView){
@@ -40,7 +65,10 @@ const Hero = () => {
 
             <div className="hero-image-section">
               <div className="circle">
-                <img src={me} alt="photo" />
+                {
+                  imgLoading? <img src={me} alt="" style={{rotate:'45deg'}} /> :
+                  <img src={images![0].imgUrl} alt="" />
+                }
               </div>
             </div>
             
