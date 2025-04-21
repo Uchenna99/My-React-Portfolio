@@ -65,10 +65,6 @@ const Hero = () => {
             <div className="hero-image-section">
               <div className="circle">
                 <img src={me} alt="" />
-                {/* {
-                  imgLoading? <img src={me} alt="" style={{rotate:'45deg'}} /> :
-                  <img src={images![0].imgUrl} alt="" />
-                } */}
               </div>
             </div>
             

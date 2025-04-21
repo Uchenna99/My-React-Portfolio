@@ -41,14 +41,16 @@ const About = () => {
             <div className="about-text-wrap">
               <div className="about-text">
                 <p>
-                  Hi, my name is Uchenna Agbu,
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, voluptatem veniam dignissimos quos vitae aliquam 
-                  expedita velit accusantium quasi error consequuntur possimus, est hic harum impedit! Aspernatur, id recusandae 
-                  excepturi ducimus pariatur aut fugiat voluptatem itaque corporis maxime sequi dolores, provident magni. Ex, assumenda 
-                  blanditiis impedit eos voluptatem ducimus. Quaerat ipsa saepe distinctio. Facere aliquid unde quae perspiciatis 
-                  molestiae quis doloribus nam, quod perferendis et aperiam, explicabo, iure quo illo.
+                  Hi, I'm Uchenna Agbu, a passionate Full Stack Web Developer with a strong drive for building scalable, user-friendly 
+                  applications. With a solid foundation in both front-end and back-end technologies, I specialize in crafting seamless 
+                  digital experiences that blend clean code with great design. From building responsive web interfaces to developing 
+                  robust APIs, I enjoy turning complex problems into elegant solutions. I'm experienced with modern tech stacks like 
+                  React, Node.js, TypeScript, Express, and PostgreSQL, and I thrive in environments that encourage continuous learning 
+                  and collaboration. Whether I'm working on a solo project or contributing to a team, I bring a proactive mindset, 
+                  attention to detail, and a genuine enthusiasm for development. I'm currently seeking opportunities where I can grow, 
+                  contribute meaningfully, and help create impactful software products. When I'm not coding, you'll find me exploring 
+                  new tech trends, mentoring others, or enjoying a good book or game.
+                  Let's build something great together.
                 </p>
               </div>
             </div>

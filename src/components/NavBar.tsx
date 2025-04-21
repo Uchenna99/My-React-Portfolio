@@ -88,7 +88,7 @@ const NavBar = () => {
             <div className="name-logo"> <h2 id="h-reg">WELCOME</h2> </div>
 
             <div className="tab-nav-right" onClick={()=>{burger === 'show'? setBurger('hide') : setBurger('show') }}>
-              { burger === 'show'? <ImMenu4 style={{color: "darkviolet"}} /> : <ImMenu3 /> }
+              { burger === 'show'? <ImMenu4 style={{color: "#008080"}} /> : <ImMenu3 style={{color: "#008080"}}/> }
             </div>
 
           </div>
@@ -97,35 +97,35 @@ const NavBar = () => {
 
             <div className="highlighter">
               <div className="nav-options" onClick={()=> handleClick({state: home, setState: setHome})}>
-                <p id="p-reg" style={{fontFamily: home? 'mbold':'', color: home? 'darkviolet' : ''}}>Home</p>
+                <p id="p-reg" style={{fontFamily: home? 'mbold':'', color: home? '#008080' : ''}}>Home</p>
                 <div className="faded-underline2" style={{display: home? 'flex':'none'}}></div>
               </div>
             </div>
 
             <div className="highlighter">
               <div className="nav-options" onClick={()=> handleClick({state: about, setState: setAbout})}>
-                <p id="p-reg" style={{fontFamily: about? 'mbold':'', color: about? 'darkviolet' : ''}}>About</p>
+                <p id="p-reg" style={{fontFamily: about? 'mbold':'', color: about? '#008080' : ''}}>About</p>
                 <div className="faded-underline2" style={{display: about? 'flex':'none'}}></div>
               </div>
             </div>
 
             <div className="highlighter">
               <div className="nav-options" onClick={()=> handleClick({state: skills, setState: setSkills})}>
-                <p id="p-reg" style={{fontFamily: skills? 'mbold':'', color: skills? 'darkviolet' : ''}}>Skills</p>
+                <p id="p-reg" style={{fontFamily: skills? 'mbold':'', color: skills? '#008080' : ''}}>Skills</p>
                 <div className="faded-underline2" style={{display: skills? 'flex':'none'}}></div>
               </div>
             </div>
 
             <div className="highlighter">
               <div className="nav-options" onClick={()=> handleClick({state: work, setState: setWork})}>
-                <p id="p-reg" style={{fontFamily: work? 'mbold':'', color: work? 'darkviolet' : ''}}>Work</p>
+                <p id="p-reg" style={{fontFamily: work? 'mbold':'', color: work? '#008080' : ''}}>Work</p>
                 <div className="faded-underline2" style={{display: work? 'flex':'none'}}></div>
               </div>
             </div>
 
             <div className="highlighter">
               <div className="nav-options" onClick={()=> handleClick({state: contact, setState: setContact})}>
-                <p id="p-reg" style={{fontFamily: contact? 'mbold':'', color: contact? 'darkviolet' : ''}}>Contact</p>
+                <p id="p-reg" style={{fontFamily: contact? 'mbold':'', color: contact? '#008080' : ''}}>Contact</p>
                 <div className="faded-underline2" style={{display: contact? 'flex':'none'}}></div>
               </div>
             </div>
