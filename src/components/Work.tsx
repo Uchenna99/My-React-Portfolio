@@ -9,17 +9,12 @@ import airbnb from "../assets/IMAGES/photos/airbnb.png"
 
 
 const Work = () => {
-  const {setHome, setAbout, setSkills, setContact, work, setWork, workRef, navPress} = useNavbarContext();
+  const {currentSection, setCurrentSection, scrolling, workRef} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
 
   useEffect(()=>{
-    if(inView){
-      if(work || navPress){
-        null;
-      }else{
-        setHome(false); setAbout(false); setSkills(false);
-        setWork(true); setContact(false);
-      }
+    if(inView && currentSection !== "work" && !scrolling) {
+      setCurrentSection("work");
     }
   }, [inView]);
   

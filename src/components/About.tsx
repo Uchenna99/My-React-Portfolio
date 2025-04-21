@@ -1,30 +1,20 @@
 import { useInView } from "react-intersection-observer";
 import HeaderText from "./HeaderText"
 import { useNavbarContext } from "../context/ContextProvider";
-import { Ref, useEffect } from "react";
+import { useEffect } from "react";
 import me from "../assets/IMAGES/photos/Me_smile.jpg"
 
 interface Props {
 }
 
 const About = ({  }: Props) => {
-  const {currentSection, setCurrentSection, aboutRef} = useNavbarContext();
+  const {currentSection, setCurrentSection, aboutRef, scrolling} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
 
   useEffect(()=>{
-    // if(inView){
-    //   if(about || navPress){
-    //     null;
-    //   }else{
-    //     setHome(false);  setSkills(false);
-    //     setWork(false); setContact(false); setAbout(true);
-    //   }
-    // }
-
-    if(inView && currentSection !== "about") {
+    if(inView && currentSection !== "about" && !scrolling) {
       setCurrentSection("about");
     }
-
   }, [inView]);
 
   

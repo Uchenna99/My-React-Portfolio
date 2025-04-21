@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 1299px) {
+@media screen and (max-width: 1200px) {
     .laptop-navbar{
         width: 100%;
     }
@@ -9,7 +9,7 @@
 }
 
 
-@media screen and (max-width: 949px) {
+@media screen and (max-width: 900px) {
     .laptop-navbar{
         display: none;
     }
@@ -20,4 +20,11 @@
         font-size: 16px;
     }
 
+}
+
+
+@media screen and (max-width: 560px) {
+    .navbar-container{
+        padding: 0 15px;
+    }
 }

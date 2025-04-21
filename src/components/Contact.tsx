@@ -6,17 +6,12 @@ import { useEffect } from "react";
 
 
 const Contact = () => {
-  const {contact, setContact, setHome, setAbout, setSkills, setWork, contactRef, navPress} = useNavbarContext();
+  const {scrolling, currentSection, setCurrentSection, contactRef} = useNavbarContext();
   const {inView, ref} = useInView({threshold: 0.5});
 
   useEffect(()=>{
-    if(inView){
-      if(contact || navPress){
-        null;
-      }else{
-        setHome(false); setAbout(false); setSkills(false);
-        setWork(false); setContact(true);
-      }
+    if(inView && currentSection !== "contact" && !scrolling) {
+      setCurrentSection("contact");
     }
   }, [inView]);
   

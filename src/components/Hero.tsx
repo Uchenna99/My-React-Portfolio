@@ -12,19 +12,14 @@ import me from "../assets/IMAGES/photos/Me.jpg"
 // }
 
 const Hero = () => {
-  const {home, setHome, setAbout, setSkills, setContact, setWork, heroRef, contactRef, navPress} = useNavbarContext();
+  const {scrolling, currentSection, setCurrentSection, heroRef, contactRef} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
 
 
 
   useEffect(()=>{
-    if(inView){
-      if(home || navPress){
-        null;
-      }else{
-         setAbout(false); setSkills(false);
-        setWork(false); setContact(false); setHome(true);
-      }
+    if(inView && currentSection !== "home" && !scrolling) {
+      setCurrentSection("home");
     }
   }, [inView]);
   

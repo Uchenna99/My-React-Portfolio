@@ -22,17 +22,12 @@ const Skills = () => {
   const [feVisible, setFeVisible] = useState(false);
   const [beVisible, setBeVisible] = useState(false);
 
-  const {setHome, setAbout, skills, setSkills, setContact, setWork, skillsRef, navPress} = useNavbarContext();
+  const {scrolling, currentSection, setCurrentSection, skillsRef} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
 
   useEffect(()=>{
-    if(inView){
-      if(skills || navPress){
-        null;
-      }else{
-        setHome(false); setAbout(false); setSkills(true);
-        setWork(false); setContact(false);
-      }
+    if(inView && currentSection !== "skills" && !scrolling) {
+      setCurrentSection("skills");
     }
   }, [inView]);
   
