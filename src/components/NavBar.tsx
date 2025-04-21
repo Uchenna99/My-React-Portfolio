@@ -60,11 +60,13 @@ const NavBar = () => {
               <p id="p-reg" style={{fontFamily: skills? 'mbold':'', color: skills? '#008080' : ''}}>Skills</p>
               <div className="faded-underline" style={{display: skills? 'none':''}}></div>
             </div>
+
             <div className="nav-options" onClick={()=> {handleClick({state: work, setState: setWork}); 
               workRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: work? 'mbold':'', color: work? '#008080' : ''}}>Work</p>
               <div className="faded-underline" style={{display: work? 'none':''}}></div>
             </div>
+            
             <div className="nav-options" onClick={()=> {handleClick({state: contact, setState: setContact}); 
               contactRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: contact? 'mbold':'', color: contact? '#008080' : ''}}>Contact</p>

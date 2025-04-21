@@ -101,11 +101,11 @@ p{
 
 
 .laptop-navbar{
-    width: 1300px;
+    width: 1200px;
     height: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    /* background-color: aquamarine; */
     position: relative;
 }
 
@@ -125,6 +125,7 @@ p{
     /* background-color: plum; */
     display: flex;
     align-items: center;
+    justify-content: end;
     gap: 30px;
 }
 
@@ -409,7 +410,6 @@ button.hero-butn:active{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 150px;
 }
 
 .header-text{
@@ -459,7 +459,7 @@ button.hero-butn:active{
 }
 
 .about-text{
-    width: 500px;
+    width: 100%;
     height: fit-content;
     /* background-color: lightgray; */
     border-left: 3px solid teal;
