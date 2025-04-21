@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="navbar-container">
+      <div className="navbar-container" onClick={()=>{burger==='show'? setBurger('hide'): null}}>
 
         <div className="laptop-navbar">
           <div className="name-logo"> <h2 id="h-reg">WELCOME</h2> </div>
@@ -85,51 +85,53 @@ const NavBar = () => {
 
         </div>
 
-          <div className={`drop-down ${burger === 'show'? 'drop-in' : ''}`} >
+        <div className="drop-bacground" onClick={()=> setBurger('hide')} style={{display: burger==='show'? 'block':'none'}}></div>
 
-            <div className="highlighter">
-              <div className="nav-options" onClick={()=> { setCurrentSection("home"); 
-                heroRef?.current?.scrollIntoView({behavior:'smooth'}) }} >
-                <p id="p-reg" 
-                  style={{fontFamily: currentSection==='home'? 'mbold':'', color: currentSection==='home'? '#008080' : ''}}
-                >Home</p>
-                <div className="faded-underline2" style={{display: currentSection==='home'? 'flex':'none'}}></div>
-              </div>
+        <div className={`drop-down ${burger === 'show'? 'drop-in' : ''}`} >
+
+          <div className="highlighter" onClick={()=> { setCurrentSection("home"); 
+            heroRef?.current?.scrollIntoView({behavior:'smooth'}) }} >
+            <div className="nav-options" >
+              <p id="p-reg" 
+                style={{fontFamily: currentSection==='home'? 'mbold':'', color: currentSection==='home'? '#008080' : ''}}
+              >Home</p>
+              <div className="faded-underline2" style={{display: currentSection==='home'? 'flex':'none'}}></div>
             </div>
-
-            <div className="highlighter">
-              <div className="nav-options" onClick={()=> { setCurrentSection("about"); 
-                aboutRef?.current?.scrollIntoView({behavior:'smooth'}) }} >
-                <p id="p-reg" style={{fontFamily: currentSection==='about'? 'mbold':'', color: currentSection==='about'? '#008080' : ''}}>About</p>
-                <div className="faded-underline2" style={{display: currentSection==='about'? 'flex':'none'}}></div>
-              </div>
-            </div>
-
-            <div className="highlighter">
-              <div className="nav-options" onClick={()=> { setCurrentSection("skills"); 
-                skillsRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-                <p id="p-reg" style={{fontFamily: currentSection==='skills'? 'mbold':'', color: currentSection==='skills'? '#008080' : ''}}>Skills</p>
-                <div className="faded-underline2" style={{display: currentSection==='skills'? 'flex':'none'}}></div>
-              </div>
-            </div>
-
-            <div className="highlighter">
-              <div className="nav-options" onClick={()=> { setCurrentSection("work"); 
-                workRef?.current?.scrollIntoView({behavior:'smooth'}) }} >
-                <p id="p-reg" style={{fontFamily: currentSection==='work'? 'mbold':'', color: currentSection==='work'? '#008080' : ''}}>Work</p>
-                <div className="faded-underline2" style={{display: currentSection==='work'? 'flex':'none'}}></div>
-              </div>
-            </div>
-
-            <div className="highlighter">
-              <div className="nav-options" onClick={()=> { setCurrentSection("contact"); 
-              contactRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-                <p id="p-reg" style={{fontFamily: currentSection==='contact'? 'mbold':'', color: currentSection==='contact'? '#008080' : ''}}>Contact</p>
-                <div className="faded-underline2" style={{display: currentSection==='contact'? 'flex':'none'}}></div>
-              </div>
-            </div>
-
           </div>
+
+          <div className="highlighter" onClick={()=> { setCurrentSection("about"); 
+            aboutRef?.current?.scrollIntoView({behavior:'smooth'}) }}  >
+            <div className="nav-options" >
+              <p id="p-reg" style={{fontFamily: currentSection==='about'? 'mbold':'', color: currentSection==='about'? '#008080' : ''}}>About</p>
+              <div className="faded-underline2" style={{display: currentSection==='about'? 'flex':'none'}}></div>
+            </div>
+          </div>
+
+          <div className="highlighter" onClick={()=> { setCurrentSection("skills"); 
+            skillsRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
+            <div className="nav-options" >
+              <p id="p-reg" style={{fontFamily: currentSection==='skills'? 'mbold':'', color: currentSection==='skills'? '#008080' : ''}}>Skills</p>
+              <div className="faded-underline2" style={{display: currentSection==='skills'? 'flex':'none'}}></div>
+            </div>
+          </div>
+
+          <div className="highlighter" onClick={()=> { setCurrentSection("work"); 
+            workRef?.current?.scrollIntoView({behavior:'smooth'}) }} >
+            <div className="nav-options" >
+              <p id="p-reg" style={{fontFamily: currentSection==='work'? 'mbold':'', color: currentSection==='work'? '#008080' : ''}}>Work</p>
+              <div className="faded-underline2" style={{display: currentSection==='work'? 'flex':'none'}}></div>
+            </div>
+          </div>
+
+          <div className="highlighter" onClick={()=> { setCurrentSection("contact"); 
+            contactRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
+            <div className="nav-options" >
+              <p id="p-reg" style={{fontFamily: currentSection==='contact'? 'mbold':'', color: currentSection==='contact'? '#008080' : ''}}>Contact</p>
+              <div className="faded-underline2" style={{display: currentSection==='contact'? 'flex':'none'}}></div>
+            </div>
+          </div>
+
+        </div>
         
       </div>
     </>

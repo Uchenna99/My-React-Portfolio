@@ -31,9 +31,8 @@ const Hero = () => {
           <div className="hero" ref={heroRef}>
 
             <div className="hero-text-section">
-              <h2 >Hello,</h2>
-              <h2 >My name is <span style={{color:'#008080'}}>UCHE</span></h2>
-              <h2 >I'm a Full Stack</h2>
+              <h2 >I'm Uchenna Agbu</h2>
+              <h2 >A Full Stack</h2>
               <h2 >Web Developer</h2>
 
               <button className="hero-butn"

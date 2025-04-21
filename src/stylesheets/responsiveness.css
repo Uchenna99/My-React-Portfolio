@@ -6,10 +6,32 @@
     .inner-wrap{
         width: 100%;
     }
+    .circle{
+        width: 300px;
+        height: 300px;
+    }
+    .circle > img{
+        width: 160%;
+        translate: -100px -90px;
+    }
+    .about-text-wrap{
+        width: 500px;
+    }
+    .about{
+        padding-top: 50px;
+    }
+    .photo{
+        width: 260px;
+        height: 290px;
+    }
+
 }
 
 
 @media screen and (max-width: 900px) {
+    .outer-wrap{
+        height: fit-content;
+    }
     .laptop-navbar{
         display: none;
     }
@@ -19,12 +41,61 @@
     #h-reg{
         font-size: 16px;
     }
+    .hero{
+        flex-direction: column-reverse;
+        background-color: teal;
+        padding: 50px 40px;
+        gap: 40px;
+    }
+    .hero-image-section{
+        position: static;
+        animation: none;
+        padding-top: 50px;
+    }
+    .hero-text-section{
+        width: 100%;
+        align-items: center;
+    }
+    .hero-text-section > h2{
+        font-size: 50px;
+        font-family: mbold;
+        color: white;
+    }
+    button.hero-butn{
+        background-color: white;
+        color: teal;
+    }
+    button.hero-butn:hover{
+        background-color: lightgray;
+    }
+    
+    button.hero-butn:active{
+        background-color: white;
+    }
 
+    .about{
+        flex-direction: column;
+        gap: 20px;
+        padding: 150px 40px 50px;
+    }
+    .about-text-wrap{
+        width: 100%;
+    }
 }
 
 
 @media screen and (max-width: 560px) {
     .navbar-container{
         padding: 0 15px;
+    }
+    .hero{
+        padding: 50px 15px;
+    }
+    .hero-text-section > h2{
+        font-size: 32px;
+    }
+
+    .about{
+        padding: 150px 15px 50px;
     }
 }
