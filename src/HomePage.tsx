@@ -1,4 +1,3 @@
-import { useState } from "react"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
@@ -11,21 +10,17 @@ import { NavbarContext } from "./context/ContextProvider"
 
 
 const HomePage = () => {
-  const [onScreen, setOnScreen] = useState('');
 
   return (
     <>
     <NavbarContext>
         <div className="portfolio-wrap">
 
-          <NavBar 
-            goTo={(section)=> setOnScreen(section)}
-          />
+          <NavBar />
 
           <Hero />
 
-          <About 
-          />
+          <About />
 
           <Skills />
           

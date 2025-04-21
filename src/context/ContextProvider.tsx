@@ -18,8 +18,8 @@ interface NavbarProps {
     skillsRef: React.MutableRefObject<HTMLDivElement | null> | undefined;
     workRef: React.MutableRefObject<HTMLDivElement | null> | undefined;
     contactRef: React.MutableRefObject<HTMLDivElement | null> | undefined;
-    navPress: boolean;
-    setNavPress: React.Dispatch<React.SetStateAction<boolean>>;
+    scrolling: boolean;
+    setScrolling: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const Context = createContext<NavbarProps | null>(null);
@@ -32,7 +32,7 @@ export const NavbarContext = ({children}:any)=>{
     const [skills, setSkills] = useState<boolean>(false);
     const [work, setWork] = useState<boolean>(false);
     const [contact, setContact] = useState<boolean>(false);
-    const [navPress, setNavPress] = useState(false);
+    const [scrolling, setScrolling] = useState(false);
 
     const heroRef = useRef<HTMLDivElement | null>(null);
     const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -40,9 +40,9 @@ export const NavbarContext = ({children}:any)=>{
     const workRef = useRef<HTMLDivElement | null>(null);
     const contactRef = useRef<HTMLDivElement | null>(null);
 
-    if(navPress){
+    if(scrolling){
         setTimeout(() => {
-            setNavPress(false)
+            setScrolling(false);
         }, 1000);
     }
     
