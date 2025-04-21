@@ -4,13 +4,12 @@ import { ImMenu3 } from "react-icons/im";
 import { ImMenu4 } from "react-icons/im";
 import { useNavbarContext } from "../context/ContextProvider";
 
-interface StateProps {
-  state: boolean;
-  setState: React.Dispatch<React.SetStateAction<boolean>>;
+interface Props {
+  goTo: (section: string)=>void;
 }
 
 
-const NavBar = () => {
+const NavBar = ({ goTo }: Props) => {
 
   const {
     about, setAbout, home, setHome, skills, setSkills, contact, setContact, work, setWork,
@@ -22,15 +21,8 @@ const NavBar = () => {
   const navState = [ home, about, skills, work, contact ];
   
 
-  const handleClick = ( {state, setState}: StateProps )=>{
-    if(state === true){
-      null;
-    }else{
-      setHome(false); setAbout(false); setSkills(false);
-      setWork(false); setContact(false); setState(true);
-      setNavPress(true);
-    }
-    
+  const handleClick = ()=>{
+    // console.log("clicked")
   };
 
 
@@ -43,31 +35,31 @@ const NavBar = () => {
 
           <div className="nav-right">
 
-            <div className="nav-options" onClick={()=> { handleClick({state: home, setState: setHome});
+            <div className="nav-options" onClick={()=> { goTo("home");
               heroRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: home? 'mbold':'', color: home? '#008080' : ''}}>Home</p>
               <div className="faded-underline" style={{display: home? 'none':''}}></div>
             </div>
             
-            <div className="nav-options" onClick={()=> {handleClick({state: about, setState: setAbout}); 
+            <div className="nav-options" onClick={()=> { goTo("about"); 
               aboutRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: about? 'mbold':'', color: about? '#008080' : ''}}>About</p>
               <div className="faded-underline" style={{display: about? 'none':''}}></div>
             </div>
 
-            <div className="nav-options" onClick={()=> {handleClick({state: skills, setState: setSkills}); 
+            <div className="nav-options" onClick={()=> { goTo("skills"); 
               skillsRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: skills? 'mbold':'', color: skills? '#008080' : ''}}>Skills</p>
               <div className="faded-underline" style={{display: skills? 'none':''}}></div>
             </div>
 
-            <div className="nav-options" onClick={()=> {handleClick({state: work, setState: setWork}); 
+            <div className="nav-options" onClick={()=> { goTo("work"); 
               workRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: work? 'mbold':'', color: work? '#008080' : ''}}>Work</p>
               <div className="faded-underline" style={{display: work? 'none':''}}></div>
             </div>
             
-            <div className="nav-options" onClick={()=> {handleClick({state: contact, setState: setContact}); 
+            <div className="nav-options" onClick={()=> { goTo("contact");
               contactRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
               <p id="p-reg" style={{fontFamily: contact? 'mbold':'', color: contact? '#008080' : ''}}>Contact</p>
               <div className="faded-underline" style={{display: contact? 'none':''}}></div>
@@ -98,35 +90,35 @@ const NavBar = () => {
           <div className={`drop-down ${burger === 'show'? 'drop-in': burger === 'hide'? 'drop-out' : ''}`} >
 
             <div className="highlighter">
-              <div className="nav-options" onClick={()=> handleClick({state: home, setState: setHome})}>
+              <div className="nav-options" onClick={()=> goTo("home")}>
                 <p id="p-reg" style={{fontFamily: home? 'mbold':'', color: home? '#008080' : ''}}>Home</p>
                 <div className="faded-underline2" style={{display: home? 'flex':'none'}}></div>
               </div>
             </div>
 
             <div className="highlighter">
-              <div className="nav-options" onClick={()=> handleClick({state: about, setState: setAbout})}>
+              <div className="nav-options" onClick={()=> goTo("about")}>
                 <p id="p-reg" style={{fontFamily: about? 'mbold':'', color: about? '#008080' : ''}}>About</p>
                 <div className="faded-underline2" style={{display: about? 'flex':'none'}}></div>
               </div>
             </div>
 
             <div className="highlighter">
-              <div className="nav-options" onClick={()=> handleClick({state: skills, setState: setSkills})}>
+              <div className="nav-options" onClick={()=> goTo("skills")}>
                 <p id="p-reg" style={{fontFamily: skills? 'mbold':'', color: skills? '#008080' : ''}}>Skills</p>
                 <div className="faded-underline2" style={{display: skills? 'flex':'none'}}></div>
               </div>
             </div>
 
             <div className="highlighter">
-              <div className="nav-options" onClick={()=> handleClick({state: work, setState: setWork})}>
+              <div className="nav-options" onClick={()=> goTo("work")}>
                 <p id="p-reg" style={{fontFamily: work? 'mbold':'', color: work? '#008080' : ''}}>Work</p>
                 <div className="faded-underline2" style={{display: work? 'flex':'none'}}></div>
               </div>
             </div>
 
             <div className="highlighter">
-              <div className="nav-options" onClick={()=> handleClick({state: contact, setState: setContact})}>
+              <div className="nav-options" onClick={()=> goTo("contact")}>
                 <p id="p-reg" style={{fontFamily: contact? 'mbold':'', color: contact? '#008080' : ''}}>Contact</p>
                 <div className="faded-underline2" style={{display: contact? 'flex':'none'}}></div>
               </div>

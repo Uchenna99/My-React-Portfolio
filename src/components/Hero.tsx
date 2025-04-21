@@ -12,24 +12,9 @@ import me from "../assets/IMAGES/photos/Me.jpg"
 // }
 
 const Hero = () => {
-  // const getUrl = 'http://localhost:2006/myapi/v1/images';
   const {home, setHome, setAbout, setSkills, setContact, setWork, heroRef, contactRef, navPress} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
 
-  // const [images, setimages] = useState<DataProps[] | null>(null);
-  // const [imgLoading, setImgLoading] = useState(true);
-
-  // useEffect(()=>{
-  //   const getImages = async ()=>{
-  //     await axios.get<DataProps[]>(getUrl)
-  //     .then(response => {setimages(response.data); console.log(response.data)})
-  //     .catch(error => console.log(error)
-      
-  //     )
-  //     setImgLoading(false);
-  //   };
-  //   getImages();
-  // }, []);
 
 
   useEffect(()=>{

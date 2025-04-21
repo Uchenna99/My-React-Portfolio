@@ -1,12 +1,14 @@
 import { useInView } from "react-intersection-observer";
 import HeaderText from "./HeaderText"
 import { useNavbarContext } from "../context/ContextProvider";
-import { useEffect } from "react";
+import { Ref, useEffect } from "react";
 import me from "../assets/IMAGES/photos/Me_smile.jpg"
 
+interface Props {
+}
 
-const About = () => {
-  const {setHome, about, setAbout, aboutRef, setSkills, setContact, setWork, navPress} = useNavbarContext();
+const About = ({  }: Props) => {
+  const {setHome, about, aboutRef, setAbout, setSkills, setContact, setWork, navPress} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
 
   useEffect(()=>{
