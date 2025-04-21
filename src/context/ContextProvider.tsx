@@ -1,6 +1,8 @@
 import { createContext, useContext, useRef, useState } from "react";
 
 interface NavbarProps {
+    currentSection: string;
+    setCurrentSection: React.Dispatch<React.SetStateAction<string>>;
     home: boolean;
     setHome: React.Dispatch<React.SetStateAction<boolean>>;
     about: boolean;
@@ -24,6 +26,7 @@ export const Context = createContext<NavbarProps | null>(null);
 
 export const NavbarContext = ({children}:any)=>{
     
+    const [currentSection, setCurrentSection] = useState<string>("home");
     const [home, setHome] = useState<boolean>(true);
     const [about, setAbout] = useState<boolean>(false);
     const [skills, setSkills] = useState<boolean>(false);
@@ -46,6 +49,7 @@ export const NavbarContext = ({children}:any)=>{
     return(
         <>
             <Context.Provider value={{
+                currentSection, setCurrentSection,
                 about, setAbout, contact, setContact, home, setHome,
                 skills, setSkills, work, setWork, aboutRef, heroRef,
                 skillsRef, workRef, contactRef, navPress, setNavPress

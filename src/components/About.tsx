@@ -8,18 +8,23 @@ interface Props {
 }
 
 const About = ({  }: Props) => {
-  const {setHome, about, aboutRef, setAbout, setSkills, setContact, setWork, navPress} = useNavbarContext();
+  const {currentSection, setCurrentSection, aboutRef} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
 
   useEffect(()=>{
-    if(inView){
-      if(about || navPress){
-        null;
-      }else{
-        setHome(false);  setSkills(false);
-        setWork(false); setContact(false); setAbout(true);
-      }
+    // if(inView){
+    //   if(about || navPress){
+    //     null;
+    //   }else{
+    //     setHome(false);  setSkills(false);
+    //     setWork(false); setContact(false); setAbout(true);
+    //   }
+    // }
+
+    if(inView && currentSection !== "about") {
+      setCurrentSection("about");
     }
+
   }, [inView]);
 
   
