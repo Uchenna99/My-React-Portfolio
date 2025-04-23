@@ -659,22 +659,29 @@ button.hero-butn:active{
 .work{
     width: 100%;
     height: 100%;
-    background-color: white;
+    /* background-color: red; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: max-content;
+    grid-template-rows: 270px;
     gap: 40px;
-    padding-top: 170px;
+    padding: 170px 40px 50px;
 }
 
 
 .work-sample{
-    background-color: #E5E5E5;
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    box-shadow: 2px 2px 8px rgba(0, 128, 128, 0.464);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     padding: 15px 15px 25px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.work-sample:hover{
+    background-blend-mode: darken;
 }
 
 
@@ -701,7 +708,7 @@ button.hero-butn:active{
     gap: 5px;
 }
 
-.desc-text > h4{
+/* .desc-text > h4{
     font-size: 15px;
     font-family: mbold;
 }
@@ -747,7 +754,7 @@ button#thumb-butn:hover{
 #b-link{
     width: fit-content;
     height: fit-content;
-}
+} */
 
 
 
