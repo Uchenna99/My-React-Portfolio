@@ -106,5 +106,6 @@
     }
     .work{
         grid-template-columns: 1fr;
+        padding: 170px 15px 50px;
     }
 }
