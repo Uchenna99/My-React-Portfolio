@@ -81,6 +81,9 @@
     .about-text-wrap{
         width: 100%;
     }
+    .work{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
@@ -100,5 +103,8 @@
     }
     .about-text > p{
         font-size: 15px;
+    }
+    .work{
+        grid-template-columns: 1fr;
     }
 }

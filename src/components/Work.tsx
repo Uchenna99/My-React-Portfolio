@@ -6,6 +6,8 @@ import bitmama from '../assets/IMAGES/photos/bitmama_clone.png'
 import nvidia from "../assets/IMAGES/photos/nvidia.png"
 import airbnb from "../assets/IMAGES/photos/airbnb.png"
 import nairalender from "../assets/IMAGES/photos/nairalender.png"
+import evtol from "../assets/IMAGES/photos/evtol.png"
+import homestyler from "../assets/IMAGES/photos/homestyler.png"
 import { LuExternalLink } from "react-icons/lu";
 
 
@@ -44,7 +46,7 @@ const Work = () => {
                     <LuExternalLink 
                       size={25} 
                       color="#008080"
-                      style={{cursor:'pointer'}} 
+                      style={{cursor:'pointer'}}
                     />
                   </a>
                 </div>
@@ -99,7 +101,7 @@ const Work = () => {
 
             </div>
 
-            <div className="work-sample" style={{backgroundImage:`url(${airbnb})`}}>
+            <div className="work-sample" style={{backgroundImage:`url(${evtol})`, backgroundPosition:'center'}}>
 
               <div className="info-tag">
 
@@ -145,17 +147,17 @@ const Work = () => {
 
             </div>
 
-            <div className="work-sample" style={{backgroundImage:`url(${airbnb})`}}>
+            <div className="work-sample" style={{backgroundImage:`url(${homestyler})`}}>
 
               <div className="info-tag">
 
                 <div className="info-tag-text">
-                  <h4>airbnb</h4>
-                  <p style={{fontSize: 14}}>A clone of airbnb website</p>
+                  <h4>HomeStyler</h4>
+                  <p style={{fontSize: 14}}>A website for interior design services</p>
                 </div>
 
                 <div className="info-tag-link">
-                  <a href="https://air-bnb-orpin.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://homestyler-by-elite-devs-5rjf.vercel.app/" target="_blank" rel="noopener noreferrer">
                     <LuExternalLink 
                       size={25} 
                       color="#008080"

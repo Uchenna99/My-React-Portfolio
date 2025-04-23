@@ -662,13 +662,14 @@ button.hero-butn:active{
     /* background-color: red; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 270px;
-    gap: 40px;
+    grid-template-rows: auto;
+    gap: 25px;
     padding: 170px 40px 50px;
 }
 
 
 .work-sample{
+    height: 250px;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     display: flex;
