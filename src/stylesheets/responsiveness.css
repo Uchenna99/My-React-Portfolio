@@ -98,4 +98,7 @@
     .about{
         padding: 150px 15px 50px;
     }
+    .about-text > p{
+        font-size: 15px;
+    }
 }
