@@ -545,14 +545,15 @@ button.hero-butn:active{
 
 
 .language-skills{
-    height: fit-content;
+    max-height: 0;
     /* background-color: lightgray; */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 15px;
-    margin-top: 10px;
+    margin: 10px 0;
+    transition: max-height 300ms linear;
 }
 
 

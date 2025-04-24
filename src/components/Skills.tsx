@@ -97,11 +97,11 @@ const Skills = () => {
                     <RiArrowDownDoubleLine id="arrow" onClick={()=>setFeVisible(true)}/>
                   }
 
-                  <div className="language-skills" style={{display: feVisible? 'flex':'none'}}>
+                  <div className="language-skills" style={{display: feVisible? 'flex':'none', maxHeight:600}}>
 
                     <div className="skill-card">
                       <div className="skill-info" >
-                        <div style={{display:'flex', alignItems:'end', gap:5}}>
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
                           <p style={{fontSize:14}}>HTML</p>
                           <img src={html} style={{width:22, height:22}} alt="" />
                         </div>
@@ -113,25 +113,72 @@ const Skills = () => {
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-info" style={{backgroundImage:`url(${css})`}}></div>
-                      <p>CSS</p>
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>CSS</p>
+                          <img src={css} style={{width:22, height:22}} alt="" />
+                        </div>
+                        <p>90%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'90%'}}></div>
+                      </div>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-info" style={{backgroundImage:`url(${js})`}}></div>
-                      <p>Javascript</p>
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>Javascript</p>
+                          <img src={js} style={{width:22, height:22}} alt="" />
+                        </div>
+                        <p>87%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'87%'}}></div>
+                      </div>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-info" style={{backgroundImage:`url(${ts})`}}></div>
-                      <p>Typescript</p>
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>Typescript</p>
+                          <img src={ts} style={{width:22, height:22}} alt="" />
+                        </div>
+                        <p>85%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'85%'}}></div>
+                      </div>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-info" style={{backgroundImage:`url(${reactjs})`}}></div>
-                      <p>React</p>
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>React</p>
+                          <img src={reactjs} style={{width:22, height:22}} alt="" />
+                        </div>
+                        <p>85%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'85%'}}></div>
+                      </div>
                     </div>
+
+                    <div className="skill-card">
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>Tailwind CSS</p>
+                          <img src={reactjs} style={{width:22, height:22}} alt="" />
+                        </div>
+                        <p>80%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'80%'}}></div>
+                      </div>
+                    </div>
+
                   </div>
+
                 </div>
               </div>  
 
