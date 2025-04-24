@@ -37,14 +37,25 @@ const About = ({  }: Props) => {
                 <img src={me} alt="photo" />
               </div>
 
-              <div className="about-info"></div>
+              <div className="about-info">
+                <p>
+                  <span style={{fontWeight:600}}>Name: </span> <br /> 
+                  Uchenna Agbu
+                </p>
+                <p> <span style={{fontWeight:600}}>Profile: </span> <br /> 
+                Full stack developer</p>
+                <p> <span style={{fontWeight:600}}>Email: </span> <br /> 
+                uchennaagbu@gmail.com</p>
+                <p> <span style={{fontWeight:600}}>Phone: </span> <br /> 
+                +234 7035229994</p>
+              </div>
 
             </div>
             
             <div className="about-text-wrap">
               <div className="about-text">
                 <p>
-                  Hi, I'm Uchenna Agbu, a passionate Full Stack Web Developer with a strong drive for building scalable, user-friendly 
+                  I'm a passionate Full Stack Web Developer with a strong drive for building scalable, user-friendly 
                   applications. With a solid foundation in both front-end and back-end technologies, I specialize in crafting seamless 
                   digital experiences that blend clean code with great design. <br />
                   I'm experienced with modern tech stacks like React, Node.js, TypeScript, Express, and PostgreSQL, and I thrive in 

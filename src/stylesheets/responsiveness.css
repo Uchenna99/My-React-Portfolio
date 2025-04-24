@@ -18,8 +18,9 @@
         padding-top: 50px;
     }
     .photo{
-        width: 260px;
-        height: 290px;
+        width: 200px;
+        min-width: 200px;
+        height: 200px;
     }
 
 }
@@ -72,7 +73,7 @@
 
     .about{
         flex-direction: column;
-        gap: 20px;
+        align-items: start;
         padding: 150px 40px 50px;
     }
     .about-text-wrap{
@@ -100,6 +101,14 @@
     }
     .about-text > p{
         font-size: 15px;
+    }
+    .photo-info-wrap{
+        flex-direction: column;
+    }
+    .photo{
+        width: 100%;
+        min-width: 100%;
+        height: fit-content;
     }
     .work{
         grid-template-columns: 1fr;
