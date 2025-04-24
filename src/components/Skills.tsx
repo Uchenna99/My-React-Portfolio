@@ -34,7 +34,7 @@ const Skills = () => {
 
   return (
     <>
-      <div className="outer-wrap">
+      <div className="outer-wrap" style={{height:'fit-content'}}>
 
         <HeaderText title="Skills" />
 

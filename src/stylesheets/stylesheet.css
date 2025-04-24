@@ -527,12 +527,11 @@ button.hero-butn:active{
     width: 100%;
     height: 100%;
     background-color: white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: max-content;
-    column-gap: 30px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 170px 20px 20px;
+    padding: 170px 40px 50px;
+    /* background-color: gray; */
 }
 
 .skills-display{
@@ -604,7 +603,7 @@ button.hero-butn:active{
     height: fit-content;
     /* background-color: gray; */
     border-radius: 5px;
-    grid-column: 2/span2;
+    /* grid-column: 2/span2; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
@@ -698,15 +697,19 @@ button.hero-butn:active{
     display: flex;
     justify-content: center;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid transparent;
     padding: 15px 15px 25px;
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    transition: all 300ms linear;
 }
 
 .work-sample:hover{
     background-blend-mode: darken;
+    border-bottom: 3px solid teal;
+    transform: translateY(-5px);
 }
 
 .work-sample:hover .info-tag{
@@ -745,76 +748,6 @@ button.hero-butn:active{
     align-items: center;
 }
 
-
-
-/* .thumbnail{
-    width: 100%;
-    height: 210px;
-    border-radius: 5px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 300ms;
-    overflow: hidden;
-}
-
-
-.desc-text{
-    width: 100%;
-    height: fit-content;
-    background-color: plum;
-    padding: 5px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-} */
-
-/* .desc-text > h4{
-    font-size: 15px;
-    font-family: mbold;
-}
-
-.desc-text > p{
-    font-size: 15px;
-}
-
-
-.thumbnail-hover{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(128, 128, 128, 0.426);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: 300ms;
-}
-
-.thumbnail-hover:hover{
-    opacity: 1;
-}
-
-
-button#thumb-butn{
-    padding: 5px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 5px;
-    background-color: teal;
-    color: white;
-    font-size: 15px;
-    font-family: mbold;
-    transition: 300ms;
-}
-
-button#thumb-butn:hover{
-    cursor: pointer;
-    background-color: #006666;
-}
-
-#b-link{
-    width: fit-content;
-    height: fit-content;
-} */
 
 
 
