@@ -100,27 +100,35 @@ const Skills = () => {
                   <div className="language-skills" style={{display: feVisible? 'flex':'none'}}>
 
                     <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${html})`}}></div>
-                      <p>HTML</p>
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:5}}>
+                          <p style={{fontSize:14}}>HTML</p>
+                          <img src={html} style={{width:22, height:22}} alt="" />
+                        </div>
+                        <p>95%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'95%'}}></div>
+                      </div>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${css})`}}></div>
+                      <div className="skill-info" style={{backgroundImage:`url(${css})`}}></div>
                       <p>CSS</p>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${js})`}}></div>
+                      <div className="skill-info" style={{backgroundImage:`url(${js})`}}></div>
                       <p>Javascript</p>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${ts})`}}></div>
+                      <div className="skill-info" style={{backgroundImage:`url(${ts})`}}></div>
                       <p>Typescript</p>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${reactjs})`}}></div>
+                      <div className="skill-info" style={{backgroundImage:`url(${reactjs})`}}></div>
                       <p>React</p>
                     </div>
                   </div>
@@ -174,32 +182,32 @@ const Skills = () => {
                   <div className="language-skills" style={{display: beVisible? 'flex':'none'}}>
 
                     <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${node})`}}></div>
+                      <div className="skill-info" style={{backgroundImage:`url(${node})`}}></div>
                       <p>Node.js</p>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${exp})`}}></div>
+                      <div className="skill-info" style={{backgroundImage:`url(${exp})`}}></div>
                       <p>Express.js</p>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${mongodb})`}}></div>
+                      <div className="skill-info" style={{backgroundImage:`url(${mongodb})`}}></div>
                       <p>MongoDB</p>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${pg})`}}></div>
+                      <div className="skill-info" style={{backgroundImage:`url(${pg})`}}></div>
                       <p>PostgreSQL</p>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${appwrite})`}}></div>
+                      <div className="skill-info" style={{backgroundImage:`url(${appwrite})`}}></div>
                       <p>Appwrite</p>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-logo" style={{backgroundImage:`url(${prisma})`}}></div>
+                      <div className="skill-info" style={{backgroundImage:`url(${prisma})`}}></div>
                       <p>Prisma</p>
                     </div>
                   </div>
