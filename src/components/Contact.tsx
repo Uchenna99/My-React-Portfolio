@@ -1,13 +1,16 @@
 import { useInView } from "react-intersection-observer"
 import HeaderText from "./HeaderText"
 import { useNavbarContext } from "../context/ContextProvider";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { MdOutlineCall } from "react-icons/md";
+import { IoMailOutline } from "react-icons/io5";
 
 
 
 const Contact = () => {
   const {scrolling, currentSection, setCurrentSection, contactRef} = useNavbarContext();
   const {inView, ref} = useInView({threshold: 0.5});
+  const [hover, setHover] = useState(false);
 
   useEffect(()=>{
     if(inView && currentSection !== "contact" && !scrolling) {
@@ -29,7 +32,37 @@ const Contact = () => {
             <div className="contact-addresses">
 
               <div className="adress-container">
-                <div className="adress-logo"></div>
+                <div className="adress-logo" 
+                  onMouseEnter={()=> setHover(true)} 
+                  onMouseLeave={()=> setHover(false)}
+                  style={{backgroundColor: hover? '#008080':''}}>
+                  <MdOutlineCall 
+                    size={30}
+                    color={hover? '#FFFF':'#008080'}
+                  />
+                </div>
+
+                <div className="adress-info">
+                  <p style={{fontWeight:600}}>Call Me</p>
+                  <p>+234 7035229994</p>
+                </div>
+              </div>
+
+              <div className="adress-container">
+                <div className="adress-logo" 
+                  onMouseEnter={()=> setHover(true)} 
+                  onMouseLeave={()=> setHover(false)}
+                  style={{backgroundColor: hover? '#008080':''}}>
+                  <IoMailOutline 
+                    size={30}
+                    color={hover? '#FFFF':'#008080'}
+                  />
+                </div>
+
+                <div className="adress-info">
+                  <p style={{fontWeight:600}}>Email Me</p>
+                  <p>uchennaagbu@gmail.com</p>
+                </div>
               </div>
 
             </div>

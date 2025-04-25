@@ -81,6 +81,12 @@
     .work{
         grid-template-columns: repeat(2, 1fr);
     }
+    .contact-addresses{
+        flex-direction: column;
+    }
+    .adress-container{
+        width: 100%;
+    }
 }
 
 
@@ -115,5 +121,16 @@
     }
     .skills{
         padding: 170px 15px 50px;
+    }
+    .contact{
+        padding: 170px 15px 50px;
+    }
+    .adress-logo{
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+    }
+    .contact-addresses{
+        padding: 10px;
     }
 }
