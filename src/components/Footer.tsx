@@ -1,8 +1,18 @@
+import { MdCopyright } from "react-icons/md";
 
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <>
+      <div className="footer">
+
+        <p>
+          <MdCopyright/> Copyright Uchenna
+        </p>
+
+        <p>Designed by Uchenna Agbu</p>
+      </div>
+    </>
   )
 }
 
