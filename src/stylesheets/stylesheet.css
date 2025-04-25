@@ -785,7 +785,8 @@ button.hero-butn:active{
 .contact-addresses{
     width: 100%;
     height: fit-content;
-    border: 1px solid teal;
+    /* border: 1px solid teal; */
+    box-shadow: 0 1px 5px rgba(0, 128, 128, 0.4);
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -824,7 +825,8 @@ button.hero-butn:active{
     width: 100%;
     height: fit-content;
     /* background-color: #E5E5E5; */
-    border: 1px solid #008080;
+    /* border: 1px solid #008080; */
+    box-shadow: 0 1px 5px rgba(0, 128, 128, 0.4);
     border-radius: 5px;
     padding: 10px;
     display: flex;
