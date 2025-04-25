@@ -97,7 +97,7 @@ const Skills = () => {
                     <RiArrowDownDoubleLine id="arrow" onClick={()=>setFeVisible(true)}/>
                   }
 
-                  <div className="language-skills" style={{display: feVisible? 'flex':'none', maxHeight:600}}>
+                  <div className={`language-skills ${feVisible? 'visible':''}`} >
 
                     <div className="skill-card">
                       <div className="skill-info" >
@@ -176,7 +176,6 @@ const Skills = () => {
                         <div className="bar-filler" style={{width:'80%'}}></div>
                       </div>
                     </div>
-
                   </div>
 
                 </div>
@@ -229,34 +228,83 @@ const Skills = () => {
                   <div className="language-skills" style={{display: beVisible? 'flex':'none'}}>
 
                     <div className="skill-card">
-                      <div className="skill-info" style={{backgroundImage:`url(${node})`}}></div>
-                      <p>Node.js</p>
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>Node.js</p>
+                          <img src={node} style={{width:22, height:22}} alt="" />
+                        </div>
+                        <p>80%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'90%'}}></div>
+                      </div>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-info" style={{backgroundImage:`url(${exp})`}}></div>
-                      <p>Express.js</p>
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>Express.js</p>
+                          <img src={exp} style={{width:22, height:16}} alt="" />
+                        </div>
+                        <p>80%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'90%'}}></div>
+                      </div>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-info" style={{backgroundImage:`url(${mongodb})`}}></div>
-                      <p>MongoDB</p>
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>MongoDB</p>
+                          <img src={mongodb} style={{width:12, height:22}} alt="" />
+                        </div>
+                        <p>90%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'90%'}}></div>
+                      </div>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-info" style={{backgroundImage:`url(${pg})`}}></div>
-                      <p>PostgreSQL</p>
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>PostgreSQL</p>
+                          <img src={pg} style={{width:22, height:22}} alt="" />
+                        </div>
+                        <p>90%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'90%'}}></div>
+                      </div>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-info" style={{backgroundImage:`url(${appwrite})`}}></div>
-                      <p>Appwrite</p>
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>Prisma</p>
+                          <img src={prisma} style={{width:22, height:22}} alt="" />
+                        </div>
+                        <p>90%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'90%'}}></div>
+                      </div>
                     </div>
 
                     <div className="skill-card">
-                      <div className="skill-info" style={{backgroundImage:`url(${prisma})`}}></div>
-                      <p>Prisma</p>
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>Appwrite</p>
+                          <img src={appwrite} style={{width:22, height:22}} alt="" />
+                        </div>
+                        <p>90%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{width:'90%'}}></div>
+                      </div>
                     </div>
+
                   </div>
                 </div>
               </div>

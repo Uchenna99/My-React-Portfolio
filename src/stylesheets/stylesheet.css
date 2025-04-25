@@ -545,26 +545,28 @@ button.hero-butn:active{
 
 
 .language-skills{
-    max-height: 0;
+    height: fit-content;
     /* background-color: lightgray; */
     border-radius: 5px;
-    display: flex;
+    display: none;
     flex-direction: column;
-    flex-wrap: wrap;
     gap: 15px;
     margin: 10px 0;
-    transition: max-height 300ms linear;
 }
+
+.language-skills.visible{
+    display: flex;
+}
+
 
 
 .skill-card{
     width: 100%;
-    /* background-color: lightgray; */
+    /* background-color: pink; */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    font-size: 17px;
     font-family: mmedium;
     transition: 300ms;
 }
@@ -586,9 +588,11 @@ button.hero-butn:active{
     width: 100%;
     height: 8px;
     background-color: #E5E5E5;
+    transition: all 600ms linear;
 }
 
 .bar-filler{
+    width: 0%;
     height: 100%;
     background-color: teal;
     transition: all 600ms linear;
@@ -611,7 +615,7 @@ button.hero-butn:active{
 
 
 .skill-group-card{
-    height: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 5px;
