@@ -25,6 +25,16 @@ const Contact = () => {
         <div className="inner-wrap" ref={ref}>
 
           <div className="contact" ref={contactRef}>
+
+            <div className="contact-addresses">
+
+              <div className="adress-container">
+                <div className="adress-logo"></div>
+              </div>
+
+            </div>
+
+
             <div className="contact-box">
 
               <div className="input-wrap">
