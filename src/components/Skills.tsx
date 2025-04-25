@@ -12,6 +12,7 @@ import prisma from "../assets/IMAGES/skills/prisma.png"
 import mongodb from "../assets/IMAGES/skills/mongo_db.png"
 import node from "../assets/IMAGES/skills/node-js.227x256.png"
 import exp from "../assets/IMAGES/skills/express-original.256x149.png"
+import tailwind from "../assets/IMAGES/skills/Tailwind_CSS_Logo.png"
 import appwrite from "../assets/IMAGES/skills/appwrite_logo.png"
 import { RiArrowDownDoubleLine } from "react-icons/ri";
 import { RiArrowUpDoubleLine } from "react-icons/ri";
@@ -108,7 +109,7 @@ const Skills = () => {
                         <p>95%</p>
                       </div>
                       <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'95%'}}></div>
+                        <div className="bar-filler" style={{animationName: 'ninety-five'}}></div>
                       </div>
                     </div>
 
@@ -121,7 +122,7 @@ const Skills = () => {
                         <p>90%</p>
                       </div>
                       <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'90%'}}></div>
+                        <div className="bar-filler" style={{animationName: 'ninety', animationDelay: '100ms'}}></div>
                       </div>
                     </div>
 
@@ -131,10 +132,10 @@ const Skills = () => {
                           <p style={{fontSize:14}}>Javascript</p>
                           <img src={js} style={{width:22, height:22}} alt="" />
                         </div>
-                        <p>87%</p>
+                        <p>85%</p>
                       </div>
                       <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'87%'}}></div>
+                        <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '200ms'}}></div>
                       </div>
                     </div>
 
@@ -147,7 +148,7 @@ const Skills = () => {
                         <p>85%</p>
                       </div>
                       <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'85%'}}></div>
+                        <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '300ms'}}></div>
                       </div>
                     </div>
 
@@ -160,7 +161,7 @@ const Skills = () => {
                         <p>85%</p>
                       </div>
                       <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'85%'}}></div>
+                        <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '400ms'}}></div>
                       </div>
                     </div>
 
@@ -168,12 +169,12 @@ const Skills = () => {
                       <div className="skill-info" >
                         <div style={{display:'flex', alignItems:'end', gap:8}}>
                           <p style={{fontSize:14}}>Tailwind CSS</p>
-                          <img src={reactjs} style={{width:22, height:22}} alt="" />
+                          <img src={tailwind} style={{width:22, height:18}} alt="" />
                         </div>
                         <p>80%</p>
                       </div>
                       <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'80%'}}></div>
+                        <div className="bar-filler" style={{animationName: 'eighty', animationDelay: '500ms'}}></div>
                       </div>
                     </div>
                   </div>
@@ -230,39 +231,13 @@ const Skills = () => {
                     <div className="skill-card">
                       <div className="skill-info" >
                         <div style={{display:'flex', alignItems:'end', gap:8}}>
-                          <p style={{fontSize:14}}>Node.js</p>
-                          <img src={node} style={{width:22, height:22}} alt="" />
+                          <p style={{fontSize:14}}>Prisma</p>
+                          <img src={prisma} style={{width:22, height:22}} alt="" />
                         </div>
-                        <p>80%</p>
+                        <p>95%</p>
                       </div>
                       <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'90%'}}></div>
-                      </div>
-                    </div>
-
-                    <div className="skill-card">
-                      <div className="skill-info" >
-                        <div style={{display:'flex', alignItems:'end', gap:8}}>
-                          <p style={{fontSize:14}}>Express.js</p>
-                          <img src={exp} style={{width:22, height:16}} alt="" />
-                        </div>
-                        <p>80%</p>
-                      </div>
-                      <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'90%'}}></div>
-                      </div>
-                    </div>
-
-                    <div className="skill-card">
-                      <div className="skill-info" >
-                        <div style={{display:'flex', alignItems:'end', gap:8}}>
-                          <p style={{fontSize:14}}>MongoDB</p>
-                          <img src={mongodb} style={{width:12, height:22}} alt="" />
-                        </div>
-                        <p>90%</p>
-                      </div>
-                      <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'90%'}}></div>
+                        <div className="bar-filler" style={{animationName: 'ninety-five'}}></div>
                       </div>
                     </div>
 
@@ -275,22 +250,50 @@ const Skills = () => {
                         <p>90%</p>
                       </div>
                       <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'90%'}}></div>
+                        <div className="bar-filler" style={{animationName: 'ninety', animationDelay: '100ms'}}></div>
                       </div>
                     </div>
 
                     <div className="skill-card">
                       <div className="skill-info" >
                         <div style={{display:'flex', alignItems:'end', gap:8}}>
-                          <p style={{fontSize:14}}>Prisma</p>
-                          <img src={prisma} style={{width:22, height:22}} alt="" />
+                          <p style={{fontSize:14}}>Node.js</p>
+                          <img src={node} style={{width:22, height:22}} alt="" />
                         </div>
-                        <p>90%</p>
+                        <p>85%</p>
                       </div>
                       <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'90%'}}></div>
+                        <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '200ms'}}></div>
                       </div>
                     </div>
+
+                    <div className="skill-card">
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>Express.js</p>
+                          <img src={exp} style={{width:22, height:16}} alt="" />
+                        </div>
+                        <p>85%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '300ms'}}></div>
+                      </div>
+                    </div>
+
+                    <div className="skill-card">
+                      <div className="skill-info" >
+                        <div style={{display:'flex', alignItems:'end', gap:8}}>
+                          <p style={{fontSize:14}}>MongoDB</p>
+                          <img src={mongodb} style={{width:12, height:22}} alt="" />
+                        </div>
+                        <p>85%</p>
+                      </div>
+                      <div className="skill-bar">
+                        <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '400ms'}}></div>
+                      </div>
+                    </div>
+
+
 
                     <div className="skill-card">
                       <div className="skill-info" >
@@ -298,10 +301,10 @@ const Skills = () => {
                           <p style={{fontSize:14}}>Appwrite</p>
                           <img src={appwrite} style={{width:22, height:22}} alt="" />
                         </div>
-                        <p>90%</p>
+                        <p>70%</p>
                       </div>
                       <div className="skill-bar">
-                        <div className="bar-filler" style={{width:'90%'}}></div>
+                        <div className="bar-filler" style={{animationName: 'seventy', animationDelay: '500ms'}}></div>
                       </div>
                     </div>
 
