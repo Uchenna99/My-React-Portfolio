@@ -10,10 +10,6 @@
         width: 300px;
         height: 300px;
     }
-    .circle > img{
-        width: 160%;
-        translate: -100px -90px;
-    }
     .about{
         padding-top: 50px;
     }

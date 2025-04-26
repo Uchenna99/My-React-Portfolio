@@ -78,7 +78,7 @@ const NavBar = () => {
             <div className="name-logo"> <h2 id="h-reg">WELCOME</h2> </div>
 
             <div className="tab-nav-right" onClick={()=>{burger === 'show'? setBurger('hide') : setBurger('show') }}>
-              { burger === 'show'? <ImMenu4 style={{color: "#008080"}} /> : <ImMenu3 style={{color: "#008080"}}/> }
+              { burger === 'show'? <ImMenu4 size={34} style={{color: "#008080"}} /> : <ImMenu3 size={34} style={{color: "#008080"}}/> }
             </div>
 
           </div>

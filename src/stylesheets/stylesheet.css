@@ -62,11 +62,6 @@ p{
     to{ width: 70px; }
 }
 
-@keyframes pulse {
-    0% { width: 160%; translate: -130px -110px; }
-    50% { width: 170%; translate: -150px -130px; }
-    100% { width: 160%; translate: -130px -110px; }
-}
 
 @keyframes hero {
     from { width: 100%; }
@@ -235,7 +230,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 10px 0;
+    padding: 10px 15px;
     gap: 10px;
     transition: all 200ms linear;
 }
@@ -254,7 +249,6 @@ p{
     justify-content: center;
     /* background-color: rgba(211, 211, 211, 0.5); */
     border-bottom: 2px solid rgba(211, 211, 211, 0.5);
-    border-radius: 5px;
 }
 
 
@@ -369,39 +363,26 @@ button.hero-butn:active{
     right: 0;
     z-index: 3;
     animation: hero 800ms 1s 1 forwards linear;
-    /* transition: 400ms; */
 }
 
 .circle{
     width: 400px;
     height: 400px;
-    aspect-ratio: 1/1;
     border: 10px solid #E5E5E5;
     border-radius: 50%;
-    /* opacity: 0; */
-    /* animation: appear 800ms 3s 1 forwards linear; */
     transition: 400ms;
     position: relative;
     overflow: hidden;
-    /* background-image: url(../assets/IMAGES/photos/Me.jpg);
-    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .circle:hover{
     box-shadow: 0 5px 20px 5px #008080;
 }
 
-.circle > img{
-    width: 160%;
-    translate: -130px -110px;
-    /* animation: pulse 3s 4s infinite linear; */
-}
 
-.circle > img:hover{
-    animation: pulse 3s infinite linear;
-}
 
 
 

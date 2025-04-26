@@ -42,9 +42,7 @@ const Hero = () => {
             </div>
 
             <div className="hero-image-section">
-              <div className="circle">
-                <img src={me} alt="" />
-              </div>
+              <div className="circle" style={{backgroundImage:`url(${me})`}} ></div>
             </div>
             
           </div>
