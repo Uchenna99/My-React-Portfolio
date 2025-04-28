@@ -9,6 +9,8 @@ import nairalender from "../assets/IMAGES/photos/nairalender.png"
 import evtol from "../assets/IMAGES/photos/evtol.png"
 import homestyler from "../assets/IMAGES/photos/homestyler.png"
 import sap from "../assets/IMAGES/photos/sap_screenshot.png"
+import hubspot from "../assets/IMAGES/photos/hubspot.png"
+import salesforce from "../assets/IMAGES/photos/salesforce.png"
 import { LuExternalLink } from "react-icons/lu";
 
 
@@ -182,6 +184,52 @@ const Work = () => {
 
                 <div className="info-tag-link">
                   <a href="https://sap-clone-by-uchenna-agbu.netlify.app/" target="_blank" rel="noopener noreferrer">
+                    <LuExternalLink 
+                      size={25} 
+                      color="#008080"
+                      style={{cursor:'pointer'}} 
+                    />
+                  </a>
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div className="work-sample" style={{backgroundImage:`url(${hubspot})`}}>
+
+              <div className="info-tag">
+
+                <div className="info-tag-text">
+                  <h4>Hubspot</h4>
+                  <p style={{fontSize: 14}}>A clone of Hubspot website</p>
+                </div>
+
+                <div className="info-tag-link">
+                  <a href="https://hubspot-clone-html.netlify.app/" target="_blank" rel="noopener noreferrer">
+                    <LuExternalLink 
+                      size={25} 
+                      color="#008080"
+                      style={{cursor:'pointer'}} 
+                    />
+                  </a>
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div className="work-sample" style={{backgroundImage:`url(${salesforce})`}}>
+
+              <div className="info-tag">
+
+                <div className="info-tag-text">
+                  <h4>Salesforce</h4>
+                  <p style={{fontSize: 14}}>A clone of Salesforce website</p>
+                </div>
+
+                <div className="info-tag-link">
+                  <a href="https://salesforce-clone-html.netlify.app/" target="_blank" rel="noopener noreferrer">
                     <LuExternalLink 
                       size={25} 
                       color="#008080"
