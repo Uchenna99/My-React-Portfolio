@@ -111,9 +111,17 @@
         min-width: 100%;
         height: fit-content;
     }
+    .work-wrap{
+        padding: 170px 15px 50px;
+    }
+    .work-options{
+        gap: 15px;
+    }
+    p.work-head{
+        font-size: 14px;
+    }
     .work{
         grid-template-columns: 1fr;
-        padding: 170px 15px 50px;
     }
     .skills{
         padding: 170px 15px 50px;
