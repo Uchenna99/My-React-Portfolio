@@ -1,7 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import HeaderText from "./HeaderText"
 import { useNavbarContext } from "../context/ContextProvider";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import bitmama from '../assets/IMAGES/photos/bitmama_clone.png'
 import nvidia from "../assets/IMAGES/photos/nvidia.png"
 import airbnb from "../assets/IMAGES/photos/airbnb.png"
@@ -17,6 +17,7 @@ import { LuExternalLink } from "react-icons/lu";
 const Work = () => {
   const {currentSection, setCurrentSection, scrolling, workRef} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
+  const [options, setOptions] = useState('all');
 
   useEffect(()=>{
     if(inView && currentSection !== "work" && !scrolling) {
@@ -33,13 +34,28 @@ const Work = () => {
 
         <div className="inner-wrap" ref={ref}>
 
-          <div className="work-wrap">
+          <div className="work-wrap" ref={workRef}>
 
-            <div className="work-options"></div>
+            <div className="work-options">
 
-            <div className="work" ref={workRef}>
+              <p className="work-head" onClick={()=> setOptions('all')}
+              style={{color: options === 'all'? 'teal':''}}>ALL</p>
 
-              <div className="work-sample" style={{backgroundImage:`url(${bitmama})`}}>
+              <p className="work-head" onClick={()=> setOptions('react')}
+              style={{color: options === 'react'? 'teal':''}}>REACT</p>
+
+              <p className="work-head" onClick={()=> setOptions('html')}
+              style={{color: options === 'html'? 'teal':''}}>HTML/CSS</p>
+
+              <p className="work-head" onClick={()=> setOptions('mobile')}
+              style={{color: options === 'mobile'? 'teal':''}}>MOBILE APP</p>
+
+            </div>
+
+            <div className="work" >
+
+              <div className="work-sample" style={{backgroundImage:`url(${bitmama})`, 
+                display: options === 'all' || options === 'react'? 'flex':'none'}}>
 
                 <div className="info-tag">
 
@@ -62,7 +78,8 @@ const Work = () => {
 
               </div>
 
-              <div className="work-sample" style={{backgroundImage:`url(${nvidia})`}}>
+              <div className="work-sample" style={{backgroundImage:`url(${nvidia})`,
+                display: options === 'all' || options === 'react'? 'flex':'none'}}>
 
                 <div className="info-tag">
 
@@ -85,7 +102,8 @@ const Work = () => {
 
               </div>
 
-              <div className="work-sample" style={{backgroundImage:`url(${airbnb})`}}>
+              <div className="work-sample" style={{backgroundImage:`url(${airbnb})`,
+                display: options === 'all' || options === 'react'? 'flex':'none'}}>
 
                 <div className="info-tag">
 
@@ -108,7 +126,8 @@ const Work = () => {
 
               </div>
 
-              <div className="work-sample" style={{backgroundImage:`url(${evtol})`, backgroundPosition:'center'}}>
+              <div className="work-sample" style={{backgroundImage:`url(${evtol})`, backgroundPosition:'center',
+                display: options === 'all' || options === 'react'? 'flex':'none'}}>
 
                 <div className="info-tag">
 
@@ -131,7 +150,8 @@ const Work = () => {
 
               </div>
 
-              <div className="work-sample" style={{backgroundImage:`url(${nairalender})`}}>
+              <div className="work-sample" style={{backgroundImage:`url(${nairalender})`,
+                display: options === 'all' || options === 'react'? 'flex':'none'}}>
 
                 <div className="info-tag">
 
@@ -154,7 +174,8 @@ const Work = () => {
 
               </div>
 
-              <div className="work-sample" style={{backgroundImage:`url(${homestyler})`}}>
+              <div className="work-sample" style={{backgroundImage:`url(${homestyler})`,
+                display: options === 'all' || options === 'react'? 'flex':'none'}}>
 
                 <div className="info-tag">
 
@@ -177,7 +198,8 @@ const Work = () => {
 
               </div>
 
-              <div className="work-sample" style={{backgroundImage:`url(${sap})`}}>
+              <div className="work-sample" style={{backgroundImage:`url(${sap})`,
+                display: options === 'all' || options === 'html'? 'flex':'none'}}>
 
                 <div className="info-tag">
 
@@ -200,7 +222,8 @@ const Work = () => {
 
               </div>
 
-              <div className="work-sample" style={{backgroundImage:`url(${hubspot})`}}>
+              <div className="work-sample" style={{backgroundImage:`url(${hubspot})`,
+                display: options === 'all' || options === 'html'? 'flex':'none'}}>
 
                 <div className="info-tag">
 
@@ -223,7 +246,8 @@ const Work = () => {
 
               </div>
 
-              <div className="work-sample" style={{backgroundImage:`url(${salesforce})`}}>
+              <div className="work-sample" style={{backgroundImage:`url(${salesforce})`,
+                display: options === 'all' || options === 'html'? 'flex':'none'}}>
 
                 <div className="info-tag">
 
@@ -240,6 +264,32 @@ const Work = () => {
                         style={{cursor:'pointer'}} 
                       />
                     </a>
+                  </div>
+                  
+                </div>
+
+              </div>
+
+              <div className="work-sample" style={{backgroundImage:``, alignItems:'center',
+                display: options === 'mobile'? 'flex':'none'}}>
+                  
+                  <h4>Coming soon</h4>
+
+                <div className="info-tag">
+
+                  <div className="info-tag-text">
+                    <h4>Coming soon</h4>
+                    <p style={{fontSize: 14}}></p>
+                  </div>
+
+                  <div className="info-tag-link">
+                    {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
+                      <LuExternalLink 
+                        size={25} 
+                        color="#008080"
+                        style={{cursor:'pointer'}} 
+                      />
+                    {/* </a> */}
                   </div>
                   
                 </div>

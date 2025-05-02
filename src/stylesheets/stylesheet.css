@@ -672,7 +672,31 @@ button.hero-butn:active{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+    padding: 170px 40px 50px;
 }
+
+.work-options{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+p.work-head{
+    font-weight: 600;
+    color: #1A1A1A;
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+
+p.work-head:hover{
+    color: teal;
+}
+
+
 .work{
     width: 100%;
     height: 100%;
@@ -681,7 +705,7 @@ button.hero-butn:active{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 25px;
-    padding: 170px 40px 50px;
+    transition: all 200ms linear;
 }
 
 
