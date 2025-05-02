@@ -47,7 +47,7 @@ const About = ({  }: Props) => {
                 <p> <span style={{fontWeight:600}}>Email: </span> <br /> 
                 uchennaagbu@gmail.com</p>
                 <p> <span style={{fontWeight:600}}>Phone: </span> <br /> 
-                +234 7035229994</p>
+                +234 703 522 9994</p>
               </div>
 
             </div>

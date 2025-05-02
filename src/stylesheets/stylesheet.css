@@ -460,7 +460,7 @@ button.hero-butn:active{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border-left: 3px solid teal;
+    /* border-left: 3px solid teal; */
     padding-left: 10px;
     border-radius: 5px;
     /* background-color: palevioletred; */
@@ -478,7 +478,7 @@ button.hero-butn:active{
     width: 100%;
     height: fit-content;
     /* background-color: lightgray; */
-    border-left: 3px solid teal;
+    /* border-left: 3px solid teal; */
     border-radius: 5px;
     padding-left: 15px;
 }
@@ -600,14 +600,17 @@ button.hero-butn:active{
     flex-direction: column;
     gap: 5px;
     /* background-color: #E5E5E5; */
-    border-left: 3px solid #008080;
+    border: 1px solid teal;
+    border-left-width: 3px;
     border-radius: 5px;
     padding: 15px;
     transition: all 300ms linear;
 }
 
 .skill-group-card:hover{
-    animation: appear-b 400ms 1 forwards linear;
+    /* animation: appear-b 400ms 1 forwards linear; */
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
 }
 
 
@@ -663,6 +666,13 @@ button.hero-butn:active{
 
 /* WORK */
 
+.work-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .work{
     width: 100%;
     height: 100%;
@@ -678,10 +688,9 @@ button.hero-butn:active{
 .work-sample{
     height: 250px;
     background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 2px;
     display: flex;
     justify-content: center;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     border-bottom: 3px solid transparent;
     padding: 15px 15px 25px;
     background-position: left;
@@ -695,6 +704,7 @@ button.hero-butn:active{
     background-blend-mode: darken;
     border-bottom: 3px solid teal;
     transform: translateY(-5px);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .work-sample:hover .info-tag{
