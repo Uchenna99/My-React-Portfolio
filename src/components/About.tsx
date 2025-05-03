@@ -37,7 +37,7 @@ const About = ({  }: Props) => {
                 <img src={me} alt="photo" />
               </div>
 
-              <div className="about-info">
+              <div className="about-info" style={{translate: inView? 0:-220}}>
                 <p>
                   <span style={{fontWeight:600}}>Name: </span> <br /> 
                   Uchenna Agbu

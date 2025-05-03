@@ -11,9 +11,9 @@
         height: 300px;
     }
     .photo{
-        width: 200px;
-        min-width: 200px;
-        height: 200px;
+        width: 210px;
+        min-width: 210px;
+        height: 210px;
     }
 }
 
@@ -92,6 +92,7 @@
     }
     .hero-text-section > h2{
         font-size: 32px;
+        text-align: center;
     }
 
     .about{
