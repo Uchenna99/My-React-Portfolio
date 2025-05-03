@@ -57,11 +57,15 @@ const About = ({  }: Props) => {
                 <p>
                   I'm a passionate Full Stack Web Developer with a strong drive for building scalable, user-friendly 
                   applications. With a solid foundation in both front-end and back-end technologies, I specialize in crafting seamless 
-                  digital experiences that blend clean code with great design. <br />
+                  digital experiences that blend clean code with great design.
+                </p>
+                <p>
                   I'm experienced with modern tech stacks like React, Node.js, TypeScript, Express, and PostgreSQL, and I thrive in 
                   environments that encourage continuous learning and collaboration. Whether I'm working on a solo project or 
                   contributing to a team, I bring a proactive mindset, 
-                  attention to detail, and a genuine enthusiasm for development. <br />
+                  attention to detail, and a genuine enthusiasm for development.
+                </p>
+                <p>
                   I'm currently seeking opportunities where I can grow, 
                   contribute meaningfully, and help create impactful software products. When I'm not coding, you'll find me exploring 
                   new tech trends, mentoring others, or enjoying a good book or game.

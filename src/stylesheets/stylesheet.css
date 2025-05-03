@@ -488,6 +488,7 @@ button.hero-butn:active{
     font-family: mregular;
     line-height: 1.5;
     color: #1A1A1A;
+    margin-bottom: 4px;
 }
 
 
