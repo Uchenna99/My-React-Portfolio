@@ -127,6 +127,9 @@
     .skills{
         padding: 150px 15px 50px;
     }
+    .skill-bar{
+        height: 5px;
+    }
     .contact{
         padding: 150px 15px 50px;
     }
