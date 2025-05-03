@@ -97,8 +97,12 @@
     .about{
         padding: 150px 15px 50px;
     }
+    .about-text{
+        border-left: none;
+        padding-left: 0;
+    }
     .about-text > p{
-        font-size: 15px;
+        font-size: 16px;
     }
     .photo-info-wrap{
         flex-direction: column;
@@ -135,6 +139,6 @@
         padding: 10px;
     }
     .header-text{
-        font-size: 19px;
+        font-size: 18px;
     }
 }
