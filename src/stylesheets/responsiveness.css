@@ -10,9 +10,6 @@
         width: 300px;
         height: 300px;
     }
-    .about{
-        padding-top: 50px;
-    }
     .photo{
         width: 200px;
         min-width: 200px;
@@ -112,7 +109,7 @@
         height: fit-content;
     }
     .work-wrap{
-        padding: 170px 15px 50px;
+        padding: 150px 15px 50px;
     }
     .work-options{
         gap: 15px;
@@ -124,10 +121,10 @@
         grid-template-columns: 1fr;
     }
     .skills{
-        padding: 170px 15px 50px;
+        padding: 150px 15px 50px;
     }
     .contact{
-        padding: 170px 15px 50px;
+        padding: 150px 15px 50px;
     }
     .adress-logo{
         width: 50px;
@@ -136,5 +133,8 @@
     }
     .contact-addresses{
         padding: 10px;
+    }
+    .header-text{
+        font-size: 19px;
     }
 }

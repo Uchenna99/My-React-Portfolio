@@ -102,18 +102,18 @@ const Work = () => {
 
               </div>
 
-              <div className="work-sample" style={{backgroundImage:`url(${airbnb})`,
-                display: options === 'all' || options === 'react'? 'flex':'none'}}>
+              <div className="work-sample" style={{backgroundImage:`url(${hubspot})`,
+                display: options === 'all' || options === 'html'? 'flex':'none'}}>
 
                 <div className="info-tag">
 
                   <div className="info-tag-text">
-                    <h4>airbnb</h4>
-                    <p style={{fontSize: 14}}>A clone of airbnb website</p>
+                    <h4>Hubspot</h4>
+                    <p style={{fontSize: 14}}>A clone of Hubspot website</p>
                   </div>
 
                   <div className="info-tag-link">
-                    <a href="https://air-bnb-orpin.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://hubspot-clone-html.netlify.app/" target="_blank" rel="noopener noreferrer">
                       <LuExternalLink 
                         size={25} 
                         color="#008080"
@@ -222,18 +222,18 @@ const Work = () => {
 
               </div>
 
-              <div className="work-sample" style={{backgroundImage:`url(${hubspot})`,
-                display: options === 'all' || options === 'html'? 'flex':'none'}}>
+              <div className="work-sample" style={{backgroundImage:`url(${airbnb})`,
+                display: options === 'all' || options === 'react'? 'flex':'none'}}>
 
                 <div className="info-tag">
 
                   <div className="info-tag-text">
-                    <h4>Hubspot</h4>
-                    <p style={{fontSize: 14}}>A clone of Hubspot website</p>
+                    <h4>airbnb</h4>
+                    <p style={{fontSize: 14}}>A clone of airbnb website</p>
                   </div>
 
                   <div className="info-tag-link">
-                    <a href="https://hubspot-clone-html.netlify.app/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://air-bnb-orpin.vercel.app/" target="_blank" rel="noopener noreferrer">
                       <LuExternalLink 
                         size={25} 
                         color="#008080"
