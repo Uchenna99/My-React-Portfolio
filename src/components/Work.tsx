@@ -38,17 +38,24 @@ const Work = () => {
 
             <div className="work-options">
 
-              <p className="work-head" onClick={()=> setOptions('all')}
-              style={{color: options === 'all'? 'teal':''}}>ALL</p>
+              <div className="head-wrap" style={{borderColor: options === 'all'? 'teal':'transparent' }}>
+                <p className="work-head" onClick={()=> setOptions('all')}
+                style={{color: options === 'all'? 'teal':''}}>ALL</p>
+              </div>
+              <div className="head-wrap" style={{borderColor: options === 'react'? 'teal':'transparent' }}>
+                <p className="work-head" onClick={()=> setOptions('react')}
+                style={{color: options === 'react'? 'teal':''}}>REACT</p>
+              </div>
 
-              <p className="work-head" onClick={()=> setOptions('react')}
-              style={{color: options === 'react'? 'teal':''}}>REACT</p>
+              <div className="head-wrap" style={{borderColor: options === 'html'? 'teal':'transparent' }}>
+                <p className="work-head" onClick={()=> setOptions('html')}
+                style={{color: options === 'html'? 'teal':''}}>HTML/CSS</p>
+              </div>
 
-              <p className="work-head" onClick={()=> setOptions('html')}
-              style={{color: options === 'html'? 'teal':''}}>HTML/CSS</p>
-
-              <p className="work-head" onClick={()=> setOptions('mobile')}
-              style={{color: options === 'mobile'? 'teal':''}}>MOBILE APP</p>
+              <div className="head-wrap" style={{borderColor: options === 'mobile'? 'teal':'transparent' }}>
+                <p className="work-head" onClick={()=> setOptions('mobile')}
+                style={{color: options === 'mobile'? 'teal':''}}>MOBILE APP</p>
+              </div>
 
             </div>
 

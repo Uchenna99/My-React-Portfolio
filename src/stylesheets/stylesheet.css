@@ -695,6 +695,13 @@ p.work-head:hover{
     color: teal;
 }
 
+.head-wrap{
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 0 5px;
+    transition: all 200ms linear;
+}
+
 
 .work{
     width: 100%;
