@@ -109,11 +109,12 @@ p{
 
 
 .name-logo{
-    width: 250px;
+    width: 120px;
     height: 100%;
-    /* background-color: plum; */
+    background-color: plum;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 

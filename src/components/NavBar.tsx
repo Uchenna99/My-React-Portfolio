@@ -2,6 +2,7 @@ import { useState } from "react"
 import { ImMenu3 } from "react-icons/im";
 import { ImMenu4 } from "react-icons/im";
 import { useNavbarContext } from "../context/ContextProvider";
+import logo from "../assets/IMAGES/photos/logo.png"
 
 
 
@@ -18,7 +19,10 @@ const NavBar = () => {
       <div className="navbar-container" onClick={()=>{burger==='show'? setBurger('hide'): null}}>
 
         <div className="laptop-navbar">
-          <div className="name-logo"> <h2 id="h-reg">WELCOME</h2> </div>
+          <div className="name-logo">
+            {/* <h2 id="h-reg">WELCOME</h2> */}
+            <img src={logo} alt="" style={{width:'100%'}}/>
+          </div>
 
           <div className="nav-right" onClick={()=> setScrolling(true)} >
 
@@ -75,7 +79,9 @@ const NavBar = () => {
         <div className="tablet-navbar-wrap">
           <div className="tablet-navbar">
 
-            <div className="name-logo"> <h2 id="h-reg">WELCOME</h2> </div>
+            <div className="name-logo">
+              <img src={logo} alt="" style={{width:'100%'}}/>
+            </div>
 
             <div className="tab-nav-right" onClick={()=>{burger === 'show'? setBurger('hide') : setBurger('show') }}>
               { burger === 'show'? <ImMenu4 size={34} style={{color: "#008080"}} /> : <ImMenu3 size={34} style={{color: "#008080"}}/> }
