@@ -9,7 +9,7 @@ interface Props {
 
 const About = ({  }: Props) => {
   const {currentSection, setCurrentSection, aboutRef, scrolling} = useNavbarContext();
-  const {ref, inView} = useInView({threshold: 0.5});
+  const {ref, inView} = useInView({threshold: 0.5, triggerOnce: true});
 
   useEffect(()=>{
     if(inView && currentSection !== "about" && !scrolling) {
@@ -53,7 +53,7 @@ const About = ({  }: Props) => {
             </div>
             
             <div className="about-text-wrap">
-              <div className="about-text">
+              <div className="about-text" style={{translate: inView? 0:'0 200px', opacity: inView? 1:0}}>
                 <p>
                   I'm a passionate Full Stack Web Developer with a strong drive for building scalable, user-friendly 
                   applications. With a solid foundation in both front-end and back-end technologies, I specialize in crafting seamless 

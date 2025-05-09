@@ -98,8 +98,10 @@
     .about{
         padding: 150px 15px 50px;
     }
-    .about-text{
+    .about-text-wrap{
         border-left: none;
+    }
+    .about-text{
         padding-left: 0;
     }
     .about-text > p{

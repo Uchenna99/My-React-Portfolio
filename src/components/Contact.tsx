@@ -11,6 +11,7 @@ const Contact = () => {
   const {scrolling, currentSection, setCurrentSection, contactRef} = useNavbarContext();
   const {inView, ref} = useInView({threshold: 0.5});
   const [hover, setHover] = useState(false);
+  const [hover2, setHover2] = useState(false);
 
   useEffect(()=>{
     if(inView && currentSection !== "contact" && !scrolling) {
@@ -50,12 +51,12 @@ const Contact = () => {
 
               <div className="adress-container">
                 <div className="adress-logo" 
-                  onMouseEnter={()=> setHover(true)} 
-                  onMouseLeave={()=> setHover(false)}
-                  style={{backgroundColor: hover? '#008080':''}}>
+                  onMouseEnter={()=> setHover2(true)} 
+                  onMouseLeave={()=> setHover2(false)}
+                  style={{backgroundColor: hover2? '#008080':''}}>
                   <IoMailOutline 
                     size={30}
-                    color={hover? '#FFFF':'#008080'}
+                    color={hover2? '#FFFF':'#008080'}
                   />
                 </div>
 
