@@ -48,6 +48,10 @@ const About = ({  }: Props) => {
                 uchennaagbu@gmail.com</p>
                 <p> <span style={{fontWeight:600}}>Phone: </span> <br /> 
                 +234 703 522 9994</p>
+                <p> 
+                  <span style={{fontWeight:600}}>Github: </span> <br /> 
+                  <a href="https://github.com/Uchenna99" target="_blank" rel="noopener noreferrer">htps://github.com/Uchenna99</a>
+                </p>
               </div>
 
             </div>

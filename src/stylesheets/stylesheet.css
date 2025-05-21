@@ -479,6 +479,16 @@ button.hero-butn:active{
     z-index: 1;
 }
 
+.about-info >p a{
+    color: #1A1A1A;
+    text-decoration: none;
+}
+
+.about-info >p a:hover{
+    text-decoration: underline;
+}
+
+
 
 .about-text-wrap{
     width: 50%;

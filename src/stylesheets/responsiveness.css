@@ -71,6 +71,11 @@
     .about-text-wrap{
         width: 100%;
     }
+    .photo{
+        width: 280px;
+        min-width: 280px;
+        height: 280px;
+    }
     .work{
         grid-template-columns: repeat(2, 1fr);
     }
