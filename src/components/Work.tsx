@@ -13,11 +13,31 @@ import hubspot from "../assets/IMAGES/photos/hubspot.png"
 import salesforce from "../assets/IMAGES/photos/salesforce.png"
 import { LuExternalLink } from "react-icons/lu";
 
+interface Card {
+  name: string;
+  desc: string;
+  url: string;
+  image: string;
+  tech: string;
+}
+
 
 const Work = () => {
   const {currentSection, setCurrentSection, scrolling, workRef} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
   const [options, setOptions] = useState('all');
+  const pageCards: Card[] = [
+    { name: 'Bitmama', desc: 'A clone of Bitmama website', url: "https://bitmama-clone-ts.vercel.app/", image: bitmama, tech: 'react' },
+    { name: 'NVIDIA', desc: 'A clone of NVIDIA website', url: "https://nvidia-clone-ts.vercel.app/", image: nvidia, tech: 'react' },
+    { name: 'Hubspot', desc: 'A clone of Hubspot website', url: "https://hubspot-clone-html.netlify.app/", image: hubspot, tech: 'html' },
+    { name: 'Evtol', desc: 'A drone delivery web app I designed', url: "https://evtol-vert.vercel.app/", image: evtol, tech: 'react' },
+    { name: 'Nairalender', desc: 'A loan web app I designed', url: "https://nairalender.vercel.app/", image: nairalender, tech: 'react' },
+    { name: 'HomeStyler', desc: 'A website for interior design services', url: "https://nairalender.vercel.app/", image: homestyler, tech: 'react' },
+    { name: 'SAP', desc: 'A clone of SAP website', url: "https://sap-clone-by-uchenna-agbu.netlify.app/", image: sap, tech: 'html' },
+    { name: 'airbnb', desc: 'A clone of airbnb website', url: "https://air-bnb-orpin.vercel.app/", image: airbnb, tech: 'react' },
+    { name: 'Salesforce', desc: 'A clone of Salesforce website', url: "https://salesforce-clone-html.netlify.app/", image: salesforce, tech: 'html' },
+    { name: 'Asana', desc: 'A clone of Asana website', url: "https://air-bnb-orpin.vercel.app/", image: airbnb, tech: 'html' },
+  ]
 
   useEffect(()=>{
     if(inView && currentSection !== "work" && !scrolling) {
@@ -61,29 +81,36 @@ const Work = () => {
 
             <div className="work" >
 
-              <div className="work-sample" style={{backgroundImage:`url(${bitmama})`, 
-                display: options === 'all' || options === 'react'? 'flex':'none'}}>
+              {
+                pageCards.map((card, index)=>(
 
-                <div className="info-tag">
+                  <div className="work-sample" style={{backgroundImage:`url(${bitmama})`, 
+                    display: options === 'all' || options === card.tech? 'flex':'none'}} key={index}>
 
-                  <div className="info-tag-text">
-                    <h4>Bitmama</h4>
-                    <p style={{fontSize: 14}}>A clone of Bitmama website</p>
+                    <div className="info-tag">
+
+                      <div className="info-tag-text">
+                        <h4>Bitmama</h4>
+                        <p style={{fontSize: 14}}>A clone of Bitmama website</p>
+                      </div>
+
+                      <div className="info-tag-link">
+                        <a href="https://bitmama-clone-ts.vercel.app/" target="_blank" rel="noopener noreferrer">
+                          <LuExternalLink 
+                            size={25} 
+                            color="#008080"
+                            style={{cursor:'pointer'}}
+                          />
+                        </a>
+                      </div>
+
+                    </div>
+
                   </div>
 
-                  <div className="info-tag-link">
-                    <a href="https://bitmama-clone-ts.vercel.app/" target="_blank" rel="noopener noreferrer">
-                      <LuExternalLink 
-                        size={25} 
-                        color="#008080"
-                        style={{cursor:'pointer'}}
-                      />
-                    </a>
-                  </div>
+                ))
+              }
 
-                </div>
-
-              </div>
 
               <div className="work-sample" style={{backgroundImage:`url(${nvidia})`,
                 display: options === 'all' || options === 'react'? 'flex':'none'}}>
