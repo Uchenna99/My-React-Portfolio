@@ -800,6 +800,18 @@ p.work-head:hover{
     align-items: center;
 }
 
+.skeleton-card{
+    height: 250px;
+    border-radius: 2px;
+    background-color: #e2e2e2;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { background-color: #e2e2e2; }
+  50% { background-color: #a9a9a9; }
+  100% { background-color: #e2e2e2; }
+}
 
 
 

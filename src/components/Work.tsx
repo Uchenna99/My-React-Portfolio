@@ -12,6 +12,7 @@ import sap from "../assets/IMAGES/photos/sap_screenshot.png"
 import hubspot from "../assets/IMAGES/photos/hubspot.png"
 import salesforce from "../assets/IMAGES/photos/salesforce.png"
 import { LuExternalLink } from "react-icons/lu";
+import WorkCard from "./WorkCard";
 
 export interface Card {
   name: string;
@@ -86,29 +87,35 @@ const Work = () => {
               {
                 pageCards.map((card, index)=>(
 
-                  <div className="work-sample" style={{backgroundImage:`url(${card.image})`,
-                    display: options === 'all' || options === card.tech? 'flex':'none'}} key={index}>
+                  <WorkCard
+                    options={options}
+                    card={card}
+                    key={index}
+                  />
 
-                    <div className="info-tag">
+                  // <div className="work-sample" style={{backgroundImage:`url(${card.image})`,
+                  //   display: options === 'all' || options === card.tech? 'flex':'none'}} key={index}>
 
-                      <div className="info-tag-text">
-                        <h4>{card.name}</h4>
-                        <p style={{fontSize: 14}}>{card.desc}</p>
-                      </div>
+                  //   <div className="info-tag">
 
-                      <div className="info-tag-link">
-                        <a href={card.url} target="_blank" rel="noopener noreferrer">
-                          <LuExternalLink 
-                            size={25} 
-                            color="#008080"
-                            style={{cursor:'pointer'}}
-                          />
-                        </a>
-                      </div>
+                  //     <div className="info-tag-text">
+                  //       <h4>{card.name}</h4>
+                  //       <p style={{fontSize: 14}}>{card.desc}</p>
+                  //     </div>
 
-                    </div>
+                  //     <div className="info-tag-link">
+                  //       <a href={card.url} target="_blank" rel="noopener noreferrer">
+                  //         <LuExternalLink 
+                  //           size={25} 
+                  //           color="#008080"
+                  //           style={{cursor:'pointer'}}
+                  //         />
+                  //       </a>
+                  //     </div>
 
-                  </div>
+                  //   </div>
+
+                  // </div>
 
                 ))
               }
