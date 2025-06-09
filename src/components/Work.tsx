@@ -36,7 +36,7 @@ const Work = () => {
     { name: 'SAP', desc: 'A clone of SAP website', url: "https://sap-clone-by-uchenna-agbu.netlify.app/", image: sap, tech: 'html' },
     { name: 'airbnb', desc: 'A clone of airbnb website', url: "https://air-bnb-orpin.vercel.app/", image: airbnb, tech: 'react' },
     { name: 'Salesforce', desc: 'A clone of Salesforce website', url: "https://salesforce-clone-html.netlify.app/", image: salesforce, tech: 'html' },
-    { name: 'Asana', desc: 'A clone of Asana website', url: "https://air-bnb-orpin.vercel.app/", image: airbnb, tech: 'html' },
+    { name: 'Asana', desc: 'A clone of Asana website', url: "https://air-bnb-orpin.vercel.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749474036/Screenshot_2025-06-09_133601-min_atwt1d.png", tech: 'html' },
   ]
 
   useEffect(()=>{
@@ -84,18 +84,18 @@ const Work = () => {
               {
                 pageCards.map((card, index)=>(
 
-                  <div className="work-sample" style={{backgroundImage:`url(${bitmama})`, 
+                  <div className="work-sample" style={{backgroundImage:`url(${card.image})`,
                     display: options === 'all' || options === card.tech? 'flex':'none'}} key={index}>
 
                     <div className="info-tag">
 
                       <div className="info-tag-text">
-                        <h4>Bitmama</h4>
-                        <p style={{fontSize: 14}}>A clone of Bitmama website</p>
+                        <h4>{card.name}</h4>
+                        <p style={{fontSize: 14}}>{card.desc}</p>
                       </div>
 
                       <div className="info-tag-link">
-                        <a href="https://bitmama-clone-ts.vercel.app/" target="_blank" rel="noopener noreferrer">
+                        <a href={card.url} target="_blank" rel="noopener noreferrer">
                           <LuExternalLink 
                             size={25} 
                             color="#008080"
@@ -111,198 +111,6 @@ const Work = () => {
                 ))
               }
 
-
-              <div className="work-sample" style={{backgroundImage:`url(${nvidia})`,
-                display: options === 'all' || options === 'react'? 'flex':'none'}}>
-
-                <div className="info-tag">
-
-                  <div className="info-tag-text">
-                    <h4>NVIDIA</h4>
-                    <p style={{fontSize: 14}}>A clone of NVIDIA website</p>
-                  </div>
-
-                  <div className="info-tag-link">
-                    <a href="https://nvidia-clone-ts.vercel.app/" target="_blank" rel="noopener noreferrer">
-                      <LuExternalLink 
-                        size={25} 
-                        color="#008080"
-                        style={{cursor:'pointer'}} 
-                      />
-                    </a>
-                  </div>
-                  
-                </div>
-
-              </div>
-
-              <div className="work-sample" style={{backgroundImage:`url(${hubspot})`,
-                display: options === 'all' || options === 'html'? 'flex':'none'}}>
-
-                <div className="info-tag">
-
-                  <div className="info-tag-text">
-                    <h4>Hubspot</h4>
-                    <p style={{fontSize: 14}}>A clone of Hubspot website</p>
-                  </div>
-
-                  <div className="info-tag-link">
-                    <a href="https://hubspot-clone-html.netlify.app/" target="_blank" rel="noopener noreferrer">
-                      <LuExternalLink 
-                        size={25} 
-                        color="#008080"
-                        style={{cursor:'pointer'}} 
-                      />
-                    </a>
-                  </div>
-                  
-                </div>
-
-              </div>
-
-              <div className="work-sample" style={{backgroundImage:`url(${evtol})`, backgroundPosition:'center',
-                display: options === 'all' || options === 'react'? 'flex':'none'}}>
-
-                <div className="info-tag">
-
-                  <div className="info-tag-text">
-                    <h4>Evtol</h4>
-                    <p style={{fontSize: 14}}>A drone delivery web app I designed</p>
-                  </div>
-
-                  <div className="info-tag-link">
-                    <a href="https://evtol-vert.vercel.app/" target="_blank" rel="noopener noreferrer">
-                      <LuExternalLink 
-                        size={25} 
-                        color="#008080"
-                        style={{cursor:'pointer'}} 
-                      />
-                    </a>
-                  </div>
-                  
-                </div>
-
-              </div>
-
-              <div className="work-sample" style={{backgroundImage:`url(${nairalender})`,
-                display: options === 'all' || options === 'react'? 'flex':'none'}}>
-
-                <div className="info-tag">
-
-                  <div className="info-tag-text">
-                    <h4>Nairalender</h4>
-                    <p style={{fontSize: 14}}>A loan web app I designed</p>
-                  </div>
-
-                  <div className="info-tag-link">
-                    <a href="https://nairalender.vercel.app/" target="_blank" rel="noopener noreferrer">
-                      <LuExternalLink 
-                        size={25} 
-                        color="#008080"
-                        style={{cursor:'pointer'}} 
-                      />
-                    </a>
-                  </div>
-                  
-                </div>
-
-              </div>
-
-              <div className="work-sample" style={{backgroundImage:`url(${homestyler})`,
-                display: options === 'all' || options === 'react'? 'flex':'none'}}>
-
-                <div className="info-tag">
-
-                  <div className="info-tag-text">
-                    <h4>HomeStyler</h4>
-                    <p style={{fontSize: 14}}>A website for interior design services</p>
-                  </div>
-
-                  <div className="info-tag-link">
-                    <a href="https://homestyler-by-elite-devs-5rjf.vercel.app/" target="_blank" rel="noopener noreferrer">
-                      <LuExternalLink 
-                        size={25} 
-                        color="#008080"
-                        style={{cursor:'pointer'}} 
-                      />
-                    </a>
-                  </div>
-                  
-                </div>
-
-              </div>
-
-              <div className="work-sample" style={{backgroundImage:`url(${sap})`,
-                display: options === 'all' || options === 'html'? 'flex':'none'}}>
-
-                <div className="info-tag">
-
-                  <div className="info-tag-text">
-                    <h4>SAP</h4>
-                    <p style={{fontSize: 14}}>A clone of SAP website</p>
-                  </div>
-
-                  <div className="info-tag-link">
-                    <a href="https://sap-clone-by-uchenna-agbu.netlify.app/" target="_blank" rel="noopener noreferrer">
-                      <LuExternalLink 
-                        size={25} 
-                        color="#008080"
-                        style={{cursor:'pointer'}} 
-                      />
-                    </a>
-                  </div>
-                  
-                </div>
-
-              </div>
-
-              <div className="work-sample" style={{backgroundImage:`url(${airbnb})`,
-                display: options === 'all' || options === 'react'? 'flex':'none'}}>
-
-                <div className="info-tag">
-
-                  <div className="info-tag-text">
-                    <h4>airbnb</h4>
-                    <p style={{fontSize: 14}}>A clone of airbnb website</p>
-                  </div>
-
-                  <div className="info-tag-link">
-                    <a href="https://air-bnb-orpin.vercel.app/" target="_blank" rel="noopener noreferrer">
-                      <LuExternalLink 
-                        size={25} 
-                        color="#008080"
-                        style={{cursor:'pointer'}} 
-                      />
-                    </a>
-                  </div>
-                  
-                </div>
-
-              </div>
-
-              <div className="work-sample" style={{backgroundImage:`url(${salesforce})`,
-                display: options === 'all' || options === 'html'? 'flex':'none'}}>
-
-                <div className="info-tag">
-
-                  <div className="info-tag-text">
-                    <h4>Salesforce</h4>
-                    <p style={{fontSize: 14}}>A clone of Salesforce website</p>
-                  </div>
-
-                  <div className="info-tag-link">
-                    <a href="https://salesforce-clone-html.netlify.app/" target="_blank" rel="noopener noreferrer">
-                      <LuExternalLink 
-                        size={25} 
-                        color="#008080"
-                        style={{cursor:'pointer'}} 
-                      />
-                    </a>
-                  </div>
-                  
-                </div>
-
-              </div>
 
               <div className="work-sample" style={{backgroundImage:``, alignItems:'center',
                 display: options === 'mobile'? 'flex':'none'}}>
