@@ -27,16 +27,17 @@ const Work = () => {
   const {ref, inView} = useInView({threshold: 0.5});
   const [options, setOptions] = useState('all');
   const pageCards: Card[] = [
-    { name: 'Bitmama', desc: 'A clone of Bitmama website', url: "https://bitmama-clone-ts.vercel.app/", image: bitmama, tech: 'react' },
-    { name: 'NVIDIA', desc: 'A clone of NVIDIA website', url: "https://nvidia-clone-ts.vercel.app/", image: nvidia, tech: 'react' },
-    { name: 'Hubspot', desc: 'A clone of Hubspot website', url: "https://hubspot-clone-html.netlify.app/", image: hubspot, tech: 'html' },
+    { name: 'Bitmama', desc: 'A clone of Bitmama home page', url: "https://bitmama-clone-ts.vercel.app/", image: bitmama, tech: 'react' },
+    { name: 'NVIDIA', desc: 'A clone of NVIDIA home page', url: "https://nvidia-clone-ts.vercel.app/", image: nvidia, tech: 'react' },
+    { name: 'Hubspot', desc: 'A clone of Hubspot home page', url: "https://hubspot-clone-html.netlify.app/", image: hubspot, tech: 'html' },
     { name: 'Evtol', desc: 'A drone delivery web app I designed', url: "https://evtol-vert.vercel.app/", image: evtol, tech: 'react' },
     { name: 'Nairalender', desc: 'A loan web app I designed', url: "https://nairalender.vercel.app/", image: nairalender, tech: 'react' },
+    { name: 'Carbon', desc: 'A clone of Carbon home page', url: "https://carbon-clone-uche.netlify.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749480397/Screenshot_2025-06-09_153823-min_fvik1l.png", tech: 'html' },
+    { name: 'SAP', desc: 'A clone of SAP home page', url: "https://sap-clone-by-uchenna-agbu.netlify.app/", image: sap, tech: 'html' },
+    { name: 'airbnb', desc: 'A clone of airbnb home page', url: "https://air-bnb-orpin.vercel.app/", image: airbnb, tech: 'react' },
+    { name: 'Salesforce', desc: 'A clone of Salesforce home page', url: "https://salesforce-clone-html.netlify.app/", image: salesforce, tech: 'html' },
     { name: 'HomeStyler', desc: 'A website for interior design services', url: "https://nairalender.vercel.app/", image: homestyler, tech: 'react' },
-    { name: 'SAP', desc: 'A clone of SAP website', url: "https://sap-clone-by-uchenna-agbu.netlify.app/", image: sap, tech: 'html' },
-    { name: 'airbnb', desc: 'A clone of airbnb website', url: "https://air-bnb-orpin.vercel.app/", image: airbnb, tech: 'react' },
-    { name: 'Salesforce', desc: 'A clone of Salesforce website', url: "https://salesforce-clone-html.netlify.app/", image: salesforce, tech: 'html' },
-    { name: 'Asana', desc: 'A clone of Asana website', url: "https://air-bnb-orpin.vercel.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749474036/Screenshot_2025-06-09_133601-min_atwt1d.png", tech: 'html' },
+    { name: 'Asana', desc: 'A clone of Asana home page', url: "https://air-bnb-orpin.vercel.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749474036/Screenshot_2025-06-09_133601-min_atwt1d.png", tech: 'html' },
   ]
 
   useEffect(()=>{
