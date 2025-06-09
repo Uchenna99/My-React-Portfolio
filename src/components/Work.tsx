@@ -13,7 +13,7 @@ import hubspot from "../assets/IMAGES/photos/hubspot.png"
 import salesforce from "../assets/IMAGES/photos/salesforce.png"
 import { LuExternalLink } from "react-icons/lu";
 
-interface Card {
+export interface Card {
   name: string;
   desc: string;
   url: string;
