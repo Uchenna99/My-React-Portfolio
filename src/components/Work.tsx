@@ -37,7 +37,8 @@ const Work = () => {
     { name: 'airbnb', desc: 'A clone of airbnb home page', url: "https://air-bnb-orpin.vercel.app/", image: airbnb, tech: 'react' },
     { name: 'Salesforce', desc: 'A clone of Salesforce home page', url: "https://salesforce-clone-html.netlify.app/", image: salesforce, tech: 'html' },
     { name: 'HomeStyler', desc: 'A website for interior design services', url: "https://nairalender.vercel.app/", image: homestyler, tech: 'react' },
-    { name: 'Asana', desc: 'A clone of Asana home page', url: "https://air-bnb-orpin.vercel.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749474036/Screenshot_2025-06-09_133601-min_atwt1d.png", tech: 'html' },
+    { name: 'Asana', desc: 'A clone of Asana home page', url: "https://asanaclone.netlify.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749474036/Screenshot_2025-06-09_133601-min_atwt1d.png", tech: 'html' },
+    { name: 'Notion', desc: 'A clone of Notion home page', url: "https://notion-clone-uche.netlify.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749508654/Screenshot_2025-06-09_233355-min_yoexhd.png", tech: 'html' },
   ]
 
   useEffect(()=>{
