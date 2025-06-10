@@ -1,13 +1,14 @@
 import { useInView } from "react-intersection-observer";
 import HeaderText from "./HeaderText"
 import { useNavbarContext } from "../context/ContextProvider";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import me from "../assets/IMAGES/photos/Me_smile.jpg"
 
 interface Props {
 }
 
 const About = ({  }: Props) => {
+  const [loading, setLoading] = useState(true);
   const {currentSection, setCurrentSection, aboutRef, scrolling} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5, triggerOnce: true});
 
@@ -16,8 +17,6 @@ const About = ({  }: Props) => {
       setCurrentSection("about");
     }
   }, [inView]);
-
-  
 
   
 
@@ -34,7 +33,11 @@ const About = ({  }: Props) => {
             <div className="photo-info-wrap">
 
               <div className="photo">
-                <img src={me} alt="photo" />
+                {
+                  loading &&
+                  <div className="skeleton-about-photo" />
+                }
+                <img src={me} alt="photo" onLoad={()=> setLoading(false)} />
               </div>
 
               <div className="about-info" style={{translate: inView? 0:-220}}>

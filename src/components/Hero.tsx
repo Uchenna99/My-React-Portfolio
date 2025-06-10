@@ -1,17 +1,11 @@
 import { useInView } from "react-intersection-observer"
 import { useNavbarContext } from "../context/ContextProvider";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import me from "../assets/IMAGES/photos/Me.jpg"
 
-// interface DataProps{
-//   id: number;
-//   imgName: string;
-//   imgUrl: string;
-//   createdAt: any;
-//   updatedAt: any;
-// }
 
 const Hero = () => {
+  const [loading, setLoading] = useState(true);
   const {scrolling, currentSection, setCurrentSection, heroRef, contactRef} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
 
@@ -23,6 +17,11 @@ const Hero = () => {
     }
   }, [inView]);
   
+  useEffect(() => {
+    const img = new Image();
+    img.src = me;
+    img.onload = () => setLoading(false);
+  }, [me]);
 
   return (
     <>
@@ -42,7 +41,13 @@ const Hero = () => {
             </div>
 
             <div className="hero-image-section">
-              <div className="circle" style={{backgroundImage:`url(${me})`}} ></div>
+              {
+                loading?
+                <div className="circle skeleton-circle" ></div>
+                :
+                <div className={`circle ${loading? 'skeleton-circle':''}`} 
+                style={{backgroundImage: `url(${me})`}} ></div>
+              }
             </div>
             
           </div>
