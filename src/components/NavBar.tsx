@@ -20,7 +20,6 @@ const NavBar = () => {
 
         <div className="laptop-navbar">
           <div className="name-logo">
-            {/* <h2 id="h-reg">WELCOME</h2> */}
             <img src={logo} alt="" style={{width:'100%'}}/>
           </div>
 
