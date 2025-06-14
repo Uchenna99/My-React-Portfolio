@@ -1,14 +1,27 @@
+import { useNavbarContext } from "../context/ContextProvider";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 
 
 const Hero2 = () => {
   const imageUrl = "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749919456/me_no_bg_crop_gwa5wr.png"
+
+  const {scrolling, currentSection, setCurrentSection, heroRef, contactRef} = useNavbarContext();
+  const {ref, inView} = useInView({threshold: 0.5});
+
+  useEffect(()=>{
+    if(inView && currentSection !== "home" && !scrolling) {
+      setCurrentSection("home");
+    }
+  }, [inView]);
+
   return (
     <>
       <div className="relative h-[800px] w-full bg-slate-900 bg-[0px_-370px] bg-cover bg bg-no-repeat bg-blend-darken
-        flex flex-col items-center justify-center ">
+        flex flex-col items-center justify-center px-10 " ref={ref}>
 
-        <div className="w-full sm:w-[1200px] flex flex-col gap-5 ">
+        <div className="w-full lg:w-[1200px] flex flex-col gap-5 bg-amber-300 ">
 
           <p className="text-slate-200 text-5xl font-semibold ">I'm Uchenna Agbu</p>
 
