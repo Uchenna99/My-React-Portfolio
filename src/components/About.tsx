@@ -10,7 +10,7 @@ interface Props {
 const About = ({  }: Props) => {
   const [loading, setLoading] = useState(true);
   const {currentSection, setCurrentSection, aboutRef, scrolling} = useNavbarContext();
-  const {ref, inView} = useInView({threshold: 0.5, triggerOnce: true});
+  const {ref, inView} = useInView({threshold: 0.5});
 
   useEffect(()=>{
     if(inView && currentSection !== "about" && !scrolling) {
@@ -22,7 +22,7 @@ const About = ({  }: Props) => {
 
   return (
     <>
-      <div className="outer-wrap" style={{backgroundColor:'#E5E5E5'}}>
+      <div className="outer-wrap bg-slate-100">
 
         <HeaderText title="About" />
 

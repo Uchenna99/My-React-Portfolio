@@ -1,8 +1,6 @@
 import { useState } from "react"
-import { ImMenu3 } from "react-icons/im";
-import { ImMenu4 } from "react-icons/im";
 import { useNavbarContext } from "../context/ContextProvider";
-import logo from "../assets/IMAGES/photos/logo.png"
+
 
 const Navbar2 = () => {
     const { currentSection, setCurrentSection, setScrolling, aboutRef, heroRef, skillsRef, workRef, contactRef } = useNavbarContext();
@@ -11,7 +9,7 @@ const Navbar2 = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 z-50 w-full h-[60px] flex justify-center !px-10 " 
+      <div className="fixed top-0 left-0 z-50 w-full h-[60px] flex justify-center !px-4 " 
         onClick={()=>{burger==='show'? setBurger('hide'): null}}>
 
         <div className="w-full lg:w-[1200px] h-full flex justify-end sm:justify-center items-center relative ">
@@ -65,9 +63,9 @@ const Navbar2 = () => {
 
 
 
-          <div className="w-10 h-10 bg-teal-700 rounded-full flex items-center justify-center sm:hidden " 
+          <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center sm:hidden " 
             onClick={()=>{burger === 'show'? setBurger('hide') : setBurger('show') }}>
-            { burger === 'show'? <ImMenu4 size={34} style={{color: "#00bc7d"}} /> : <ImMenu3 size={34} style={{color: "#00bc7d"}}/> }
+            
           </div>
 
         </div>

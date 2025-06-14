@@ -53,7 +53,7 @@ const Work = () => {
     <>
       <div className="outer-wrap" style={{height:'fit-content', borderTop:'1px solid teal', borderBottom:'1px solid teal'}}>
 
-        <HeaderText title="Work" />
+        <HeaderText title="Projects" />
 
         <div className="inner-wrap" ref={ref}>
 
