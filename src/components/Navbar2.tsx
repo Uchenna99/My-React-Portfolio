@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavbarContext } from "../context/ContextProvider";
+import { Menu } from "lucide-react"
 
 
 const Navbar2 = () => {
@@ -65,7 +66,7 @@ const Navbar2 = () => {
 
           <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center sm:hidden " 
             onClick={()=>{burger === 'show'? setBurger('hide') : setBurger('show') }}>
-            
+            <Menu size={25} />
           </div>
 
         </div>
