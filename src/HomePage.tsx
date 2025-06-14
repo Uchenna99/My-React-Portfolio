@@ -2,9 +2,9 @@ import About from "./components/About"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
-// import Hero2 from "./components/Hero2"
+import Hero2 from "./components/Hero2"
 import NavBar from "./components/NavBar"
-// import Navbar2 from "./components/Navbar2"
+import Navbar2 from "./components/Navbar2"
 import Skills from "./components/Skills"
 import Work from "./components/Work"
 import { NavbarContext } from "./context/ContextProvider"
@@ -18,13 +18,13 @@ const HomePage = () => {
     <NavbarContext>
         <div className="portfolio-wrap">
 
-          <NavBar />
+          {/* <NavBar /> */}
 
-          {/* <Navbar2/> */}
+          <Navbar2/>
 
-          <Hero />
+          {/* <Hero /> */}
 
-          {/* <Hero2/> */}
+          <Hero2/>
 
           <About />
 

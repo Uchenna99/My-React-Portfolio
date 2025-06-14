@@ -16,58 +16,58 @@ const Navbar2 = () => {
 
         <div className="w-full lg:w-[1200px] h-full flex justify-end sm:justify-center items-center relative ">
 
-          <div className="w-[350px] h-full hidden sm:flex items-center gap-[30px] " onClick={()=> setScrolling(true)} >
+          <div className="w-[370px] min-w-[350px] h-full hidden sm:flex items-center gap-[30px] relative " 
+            onClick={()=> setScrolling(true)} >
 
             <div className="nav-options" onClick={()=> { setCurrentSection("home");
               heroRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-              <p className="text-slate-200 " 
-                style={{fontFamily: currentSection==='home'? 'mbold':'', color: currentSection==='home'? '#008080' : ''}}
+              <p className="text-slate-200 transition-all duration-200 " 
+                style={{fontFamily: currentSection==='home'? 'mbold':'', color: currentSection==='home'? '#00bc7d' : ''}}
               >Home</p>
-              <div className="faded-underline" style={{display: currentSection==='home'? 'none':''}}></div>
             </div>
             
             <div className="nav-options" onClick={()=> { setCurrentSection("about"); 
               aboutRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-              <p className="text-slate-200 " 
-                style={{fontFamily: currentSection==='about'? 'mbold':'', color: currentSection==='about'? '#008080' : ''}}
+              <p className="text-slate-200 transition-all duration-200 " 
+                style={{fontFamily: currentSection==='about'? 'mbold':'', color: currentSection==='about'? '#00bc7d' : ''}}
               >About</p>
-              <div className="faded-underline" style={{display: currentSection==='about'? 'none':''}}></div>
             </div>
 
             <div className="nav-options" onClick={()=> { setCurrentSection("skills"); 
               skillsRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-              <p className="text-slate-200 " 
-                style={{fontFamily: currentSection==='skills'? 'mbold':'', color: currentSection==='skills'? '#008080' : ''}}
+              <p className="text-slate-200 transition-all duration-200 " 
+                style={{fontFamily: currentSection==='skills'? 'mbold':'', color: currentSection==='skills'? '#00bc7d' : ''}}
               >Skills</p>
-              <div className="faded-underline" style={{display: currentSection==='skills'? 'none':''}}></div>
             </div>
 
             <div className="nav-options" onClick={()=> { setCurrentSection("work"); 
               workRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-              <p className="text-slate-200 " 
-                style={{fontFamily: currentSection==='work'? 'mbold':'', color: currentSection==='work'? '#008080' : ''}}
-              >Work</p>
-              <div className="faded-underline" style={{display: currentSection==='work'? 'none':''}}></div>
+              <p className="text-slate-200 transition-all duration-200 " 
+                style={{fontFamily: currentSection==='work'? 'mbold':'', color: currentSection==='work'? '#00bc7d' : ''}}
+              >Projects</p>
             </div>
             
             <div className="nav-options" onClick={()=> { setCurrentSection("contact");
               contactRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
-              <p className="text-slate-200 " style={{fontFamily: currentSection==='contact'? 'mbold':'', color: currentSection==='contact'? '#008080' : ''}}>Contact</p>
-              <div className="faded-underline" style={{display: currentSection==='contact'? 'none':''}}></div>
+              <p className="text-slate-200 transition-all duration-200 " 
+              style={{fontFamily: currentSection==='contact'? 'mbold':'', color: currentSection==='contact'? '#00bc7d' : ''}}>Contact</p>
             </div>
+
+
+            <div className="underline"
+              style={{
+                right: currentSection==='home'? '333px': currentSection==='about'? '257px':
+                currentSection==='skills'? '186px': currentSection==='work'? '106px': currentSection==='contact'? '18px':''
+              }}
+            ></div>
+
           </div>
 
-          <div className="underline"
-            style={{
-              right: currentSection==='home'? '307px': currentSection==='about'? '232px':
-              currentSection==='skills'? '160px': currentSection==='work'? '89px': currentSection==='contact'? '10px':''
-            }}
-          ></div>
 
 
           <div className="w-10 h-10 bg-teal-700 rounded-full flex items-center justify-center sm:hidden " 
             onClick={()=>{burger === 'show'? setBurger('hide') : setBurger('show') }}>
-            { burger === 'show'? <ImMenu4 size={34} style={{color: "#008080"}} /> : <ImMenu3 size={34} style={{color: "#008080"}}/> }
+            { burger === 'show'? <ImMenu4 size={34} style={{color: "#00bc7d"}} /> : <ImMenu3 size={34} style={{color: "#00bc7d"}}/> }
           </div>
 
         </div>

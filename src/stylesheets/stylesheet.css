@@ -154,9 +154,9 @@
     position: relative;
 }
 
-.nav-options:hover{
+.nav-options:hover p{
     cursor: pointer;
-    color: #008080;
+    color: #00bc7d;
 }
 
 .nav-options:hover .faded-underline{
@@ -166,9 +166,9 @@
 
 
 .underline{
-    width: 40px;
+    width: 30px;
     height: 3px;
-    background-color: #008080;
+    background-color: #00bc7d;
     border-radius: 5px;
     position: absolute;
     bottom: 15px;
@@ -239,7 +239,7 @@
     border: 2px solid lightgray;
     border-radius: 5px;
     position: fixed;
-    top: -300px;
+    top: -310px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 9;
