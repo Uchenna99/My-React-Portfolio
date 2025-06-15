@@ -10,7 +10,7 @@ const HeaderText = ( {title}: Props ) => {
   return (
     <>
         <div className="header-text" ref={ref}>
-          <h2> {title} </h2>
+          <h2 className="text-slate-900 text-xl font-bold "> {title} </h2>
           <div className="header-underline" style={{animationName: inView? 'width':''}}></div>
         </div>
     </>

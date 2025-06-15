@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavbarContext } from "../context/ContextProvider";
-import { Menu } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 
 const Navbar2 = () => {
@@ -10,7 +10,7 @@ const Navbar2 = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 z-50 w-full h-[60px] flex justify-center !px-4 " 
+      <div className="fixed top-0 left-0 z-50 w-full h-[60px] flex justify-center px-4 " 
         onClick={()=>{burger==='show'? setBurger('hide'): null}}>
 
         <div className="w-full lg:w-[1200px] h-full flex justify-end sm:justify-center items-center relative ">
@@ -66,7 +66,12 @@ const Navbar2 = () => {
 
           <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center sm:hidden " 
             onClick={()=>{burger === 'show'? setBurger('hide') : setBurger('show') }}>
-            <Menu size={25} />
+              {
+                burger === 'show'?
+                <X size={25} />
+                :
+                <Menu size={25} />
+              }
           </div>
 
         </div>
@@ -81,7 +86,7 @@ const Navbar2 = () => {
             heroRef?.current?.scrollIntoView({behavior:'smooth'}) }} >
             <div className="nav-options" >
               <p className="text-slate-200 " 
-                style={{fontFamily: currentSection==='home'? 'mbold':'', color: currentSection==='home'? '#008080' : ''}}
+                style={{fontFamily: currentSection==='home'? 'mbold':'', color: currentSection==='home'? '#00bc7d' : ''}}
               >Home</p>
               <div className="faded-underline2" style={{display: currentSection==='home'? 'flex':'none'}}></div>
             </div>
@@ -90,7 +95,7 @@ const Navbar2 = () => {
           <div className="highlighter" onClick={()=> { setCurrentSection("about"); 
             aboutRef?.current?.scrollIntoView({behavior:'smooth'}) }}  >
             <div className="nav-options" >
-              <p className="text-slate-200 " style={{fontFamily: currentSection==='about'? 'mbold':'', color: currentSection==='about'? '#008080' : ''}}>About</p>
+              <p className="text-slate-200 " style={{fontFamily: currentSection==='about'? 'mbold':'', color: currentSection==='about'? '#00bc7d' : ''}}>About</p>
               <div className="faded-underline2" style={{display: currentSection==='about'? 'flex':'none'}}></div>
             </div>
           </div>
@@ -98,7 +103,7 @@ const Navbar2 = () => {
           <div className="highlighter" onClick={()=> { setCurrentSection("skills"); 
             skillsRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
             <div className="nav-options" >
-              <p className="text-slate-200 " style={{fontFamily: currentSection==='skills'? 'mbold':'', color: currentSection==='skills'? '#008080' : ''}}>Skills</p>
+              <p className="text-slate-200 " style={{fontFamily: currentSection==='skills'? 'mbold':'', color: currentSection==='skills'? '#00bc7d' : ''}}>Skills</p>
               <div className="faded-underline2" style={{display: currentSection==='skills'? 'flex':'none'}}></div>
             </div>
           </div>
@@ -106,7 +111,7 @@ const Navbar2 = () => {
           <div className="highlighter" onClick={()=> { setCurrentSection("work"); 
             workRef?.current?.scrollIntoView({behavior:'smooth'}) }} >
             <div className="nav-options" >
-              <p className="text-slate-200 " style={{fontFamily: currentSection==='work'? 'mbold':'', color: currentSection==='work'? '#008080' : ''}}>Work</p>
+              <p className="text-slate-200 " style={{fontFamily: currentSection==='work'? 'mbold':'', color: currentSection==='work'? '#00bc7d' : ''}}>Projects</p>
               <div className="faded-underline2" style={{display: currentSection==='work'? 'flex':'none'}}></div>
             </div>
           </div>
@@ -114,7 +119,7 @@ const Navbar2 = () => {
           <div className="highlighter" onClick={()=> { setCurrentSection("contact"); 
             contactRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
             <div className="nav-options" >
-              <p className="text-slate-200 " style={{fontFamily: currentSection==='contact'? 'mbold':'', color: currentSection==='contact'? '#008080' : ''}}>Contact</p>
+              <p className="text-slate-200 " style={{fontFamily: currentSection==='contact'? 'mbold':'', color: currentSection==='contact'? '#00bc7d' : ''}}>Contact</p>
               <div className="faded-underline2" style={{display: currentSection==='contact'? 'flex':'none'}}></div>
             </div>
           </div>

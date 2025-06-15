@@ -51,35 +51,14 @@
     to{opacity: 1;}
 }
 
-@keyframes drop-out {
-    from{ rotate: 0; transform-origin: right 0; }
-    to{ rotate: 160deg; transform-origin: right 0; }
-}
-
-@keyframes drop-in {
-    from{ rotate: 160deg; transform-origin: right 0; }
-    to{ rotate: 0; transform-origin: right 0; }
-}
-
-@keyframes h2-slide {
-    from{ translate: -300px; opacity: 0; }
-    to{ translate: 0; opacity: 1; }
-}
-
 @keyframes width {
     from{ width: 0; }
-    to{ width: 60px; }
+    to{ width: 30px; }
 }
-
 
 @keyframes hero {
     from { width: 100%; }
     to { width: 40%; }
-}
-
-@keyframes appear-b {
-    from { outline: 1px solid rgba(0, 128, 128, 0); }
-    to { outline: 1px solid teal; }
 }
 
 @keyframes shadow {
@@ -176,26 +155,13 @@
     transition: 300ms;
 }
 
-.faded-underline{
-    width: 40px;
-    height: 2px;
-    background-color: #008080;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    cursor: pointer;
-    transition: 300ms;
-    display: none;
-}
-
 .faded-underline2{
-    width: 40px;
+    width: 30px;
     height: 2px;
-    background-color: #008080;
+    background-color: #00bc7d;
     border-radius: 5px;
     position: absolute;
     bottom: 0;
-    transition: 300ms;
 }
 
 
@@ -233,26 +199,24 @@
 
 
 .drop-down{
-    width: 90%;
-    height: fit-content;
-    background-color: white;
-    border: 2px solid lightgray;
-    border-radius: 5px;
+    width: 250px;
+    height: 100vh;
+    background-color: #0f172b;
+    border-right: 1px solid #1d293d;
     position: fixed;
-    top: -310px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 9;
+    top: 0;
+    left: -100%;
+    z-index: 20;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 15px;
+    padding-top: 100px;
     gap: 10px;
     transition: all 200ms linear;
 }
 
 .drop-in{
-    top: 60px;
+    left: 0;
 }
 
 
@@ -264,7 +228,7 @@
     display: flex;
     justify-content: center;
     /* background-color: rgba(211, 211, 211, 0.5); */
-    border-bottom: 2px solid rgba(211, 211, 211, 0.5);
+    /* border-bottom: 2px solid rgba(211, 211, 211, 0.5); */
 }
 
 
@@ -651,7 +615,6 @@ button.hero-butn:active{
 }
 
 .skill-group-card:hover{
-    /* animation: appear-b 400ms 1 forwards linear; */
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
     transform: translateY(-4px);
 }
