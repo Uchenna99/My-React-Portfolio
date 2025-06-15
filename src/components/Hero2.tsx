@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 
-
 const Hero2 = () => {
   const imageUrl = "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749919456/me_no_bg_crop_gwa5wr.png"
 
@@ -43,7 +42,8 @@ const Hero2 = () => {
         
         <div className="w-full lg:w-[1200px] absolute bottom-0 ">
           <img src={imageUrl} alt="My Photo" className="absolute right-[-240px] md:right-[-100px] bottom-[-120px] w-[900px] 
-          min-w-[900px] opacity-40 "/>
+            min-w-[900px] opacity-40 "
+          />
         </div>
 
       </motion.div>
