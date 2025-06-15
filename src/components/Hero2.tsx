@@ -26,7 +26,7 @@ const Hero2 = () => {
         initial={{opacity:0, scale:1.1}} animate={{opacity:1, scale:1}} transition={{duration:0.5, ease:'easeOut'}}>
 
         <motion.div className="w-full lg:w-[1200px] flex flex-col gap-6 z-20 items-center md:items-start " ref={ref}
-          initial={{opacity:0, y:80}} animate={{opacity:1, y:0}} transition={{duration:1, delay:0.5, ease:'easeOut'}} >
+          initial={{opacity:0, y:80}} animate={{opacity:1, y:0}} transition={{duration:1, delay:0.3, ease:'easeOut'}} >
 
           <p className="text-slate-200 text-4xl md:text-5xl text-center font-semibold ">I'm Uchenna Agbu</p>
 

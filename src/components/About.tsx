@@ -61,23 +61,36 @@ const About = ({  }: Props) => {
             
             <div className="about-text-wrap">
               <div className="about-text" style={{translate: inView? 0:'0 200px', opacity: inView? 1:0}}>
-                <p>
-                  I'm a passionate Full Stack Web Developer with a strong drive for building scalable, user-friendly 
-                  applications. With a solid foundation in both front-end and back-end technologies, I specialize in crafting seamless 
-                  digital experiences that blend clean code with great design.
-                </p>
-                <p>
-                  I'm experienced with modern tech stacks like React, Node.js, TypeScript, Express, and PostgreSQL, and I thrive in 
-                  environments that encourage continuous learning and collaboration. Whether I'm working on a solo project or 
-                  contributing to a team, I bring a proactive mindset, 
-                  attention to detail, and a genuine enthusiasm for development.
-                </p>
-                <p>
-                  I'm currently seeking opportunities where I can grow, 
-                  contribute meaningfully, and help create impactful software products. When I'm not coding, you'll find me exploring 
-                  new tech trends, mentoring others, or enjoying a good book or game.
-                  Let's build something great together.
-                </p>
+
+                <div className="w-full flex gap-2 ">
+                  <div className="w-2 h-2 min-w-2 min-h-2 rounded-full bg-emerald-500 mt-2 "></div>
+                  <p>
+                    I'm a passionate Full Stack Web Developer with a strong drive for building scalable, user-friendly 
+                    applications. With a solid foundation in both front-end and back-end technologies, I specialize in crafting seamless 
+                    digital experiences that blend clean code with great design.
+                  </p>
+
+                </div>
+
+                <div className="w-full flex gap-2 ">
+                  <div className="w-2 h-2 min-w-2 min-h-2 rounded-full bg-emerald-500 mt-2 "></div>
+                  <p>
+                    I'm experienced with modern tech stacks like React, Node.js, TypeScript, Express, and PostgreSQL, and I thrive in 
+                    environments that encourage continuous learning and collaboration. Whether I'm working on a solo project or 
+                    contributing to a team, I bring a proactive mindset, 
+                    attention to detail, and a genuine enthusiasm for development.
+                  </p>
+                </div>
+
+                <div className="w-full flex gap-2 ">
+                  <div className="w-2 h-2 min-w-2 min-h-2 rounded-full bg-emerald-500 mt-2 "></div>
+                  <p>
+                    I'm currently seeking opportunities where I can grow, 
+                    contribute meaningfully, and help create impactful software products. When I'm not coding, you'll find me exploring 
+                    new tech trends, mentoring others, or enjoying a good book or game.
+                    Let's build something great together.
+                  </p>
+                </div>
               </div>
             </div>
 
