@@ -5,6 +5,9 @@
   --breakpoint-sm: 560px;
   --breakpoint-md: 900px;
   --breakpoint-lg: 1200px;
+  --font-reg: "mregular";
+  --font-md: "mmedium";
+  --font-smbold: "msemibold";
 }
 
 *{

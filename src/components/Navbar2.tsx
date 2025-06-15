@@ -27,7 +27,7 @@ const Navbar2 = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 z-50 w-full h-[60px] hidden sm:flex justify-center px-4 transition-all duration-800 " 
+      <div className="fixed top-0 left-0 z-50 w-full h-[60px] hidden sm:flex justify-center px-4 transition-all duration-800 backdrop-blur-sm " 
         style={{backgroundColor: scrolled? 'white':''}}
         onClick={()=>{burger==='show'? setBurger('hide'): null}}>
 
@@ -102,7 +102,7 @@ const Navbar2 = () => {
       <div className={`drop-down ${burger === 'show'? 'drop-in' : ''}`} >
 
         <div className="highlighter" onClick={()=> { setCurrentSection("home"); 
-          heroRef?.current?.scrollIntoView({behavior:'smooth'}) }} >
+          heroRef?.current?.scrollIntoView({behavior:'smooth'}); setBurger('hide'); }} >
           <div className="nav-options" >
             <p className="text-slate-200 " 
               style={{fontFamily: currentSection==='home'? 'mbold':'', color: currentSection==='home'? '#00bc7d' : ''}}
@@ -112,7 +112,7 @@ const Navbar2 = () => {
         </div>
 
         <div className="highlighter" onClick={()=> { setCurrentSection("about"); 
-          aboutRef?.current?.scrollIntoView({behavior:'smooth'}) }}  >
+          aboutRef?.current?.scrollIntoView({behavior:'smooth'}); setBurger('hide'); }}  >
           <div className="nav-options" >
             <p className="text-slate-200 " style={{fontFamily: currentSection==='about'? 'mbold':'', color: currentSection==='about'? '#00bc7d' : ''}}>About</p>
             <div className="faded-underline2" style={{display: currentSection==='about'? 'flex':'none'}}></div>
@@ -120,7 +120,7 @@ const Navbar2 = () => {
         </div>
 
         <div className="highlighter" onClick={()=> { setCurrentSection("skills"); 
-          skillsRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
+          skillsRef?.current?.scrollIntoView({behavior:'smooth'}); setBurger('hide'); }}>
           <div className="nav-options" >
             <p className="text-slate-200 " style={{fontFamily: currentSection==='skills'? 'mbold':'', color: currentSection==='skills'? '#00bc7d' : ''}}>Skills</p>
             <div className="faded-underline2" style={{display: currentSection==='skills'? 'flex':'none'}}></div>
@@ -128,7 +128,7 @@ const Navbar2 = () => {
         </div>
 
         <div className="highlighter" onClick={()=> { setCurrentSection("work"); 
-          workRef?.current?.scrollIntoView({behavior:'smooth'}) }} >
+          workRef?.current?.scrollIntoView({behavior:'smooth'}); setBurger('hide'); }} >
           <div className="nav-options" >
             <p className="text-slate-200 " style={{fontFamily: currentSection==='work'? 'mbold':'', color: currentSection==='work'? '#00bc7d' : ''}}>Projects</p>
             <div className="faded-underline2" style={{display: currentSection==='work'? 'flex':'none'}}></div>
@@ -136,7 +136,7 @@ const Navbar2 = () => {
         </div>
 
         <div className="highlighter" onClick={()=> { setCurrentSection("contact"); 
-          contactRef?.current?.scrollIntoView({behavior:'smooth'}) }}>
+          contactRef?.current?.scrollIntoView({behavior:'smooth'}); setBurger('hide'); }}>
           <div className="nav-options" >
             <p className="text-slate-200 " style={{fontFamily: currentSection==='contact'? 'mbold':'', color: currentSection==='contact'? '#00bc7d' : ''}}>Contact</p>
             <div className="faded-underline2" style={{display: currentSection==='contact'? 'flex':'none'}}></div>
