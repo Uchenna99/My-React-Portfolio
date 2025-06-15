@@ -445,9 +445,7 @@ button.hero-butn:active{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border-radius: 5px;
     /* background-color: palevioletred; */
-    transition: all 500ms linear;
     z-index: 1;
 }
 

@@ -10,11 +10,6 @@
         width: 300px;
         height: 300px;
     }
-    /* .photo{
-        width: 210px;
-        min-width: 210px;
-        height: 210px;
-    } */
 }
 
 
@@ -70,11 +65,6 @@
     .about-text-wrap{
         width: 100%;
     }
-    /* .photo{
-        width: 280px;
-        min-width: 280px;
-        height: 280px;
-    } */
     .work{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -101,6 +91,7 @@
 
     .about{
         padding: 150px 15px 50px;
+        gap: 30px;
     }
     .about-text-wrap{
         border-left: none;

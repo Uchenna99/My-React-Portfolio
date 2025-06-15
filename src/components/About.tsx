@@ -44,13 +44,13 @@ const About = ({  }: Props) => {
 
               <div className="about-info" >
                 
-                <AboutInfo label="Name" info="Uchenna Agbu" />
+                <AboutInfo label="Name" info="Uchenna Agbu" delay={0} />
 
-                <AboutInfo label="Profile" info="Full stack developer" />
+                <AboutInfo label="Profile" info="Full stack developer" delay={0.1} />
 
-                <AboutInfo label="Email" info="uchennaagbu@gmail.com" />
+                <AboutInfo label="Email" info="uchennaagbu@gmail.com" delay={0.2} />
 
-                <AboutInfo label="Phone" info="+234 703 522 9994" />
+                <AboutInfo label="Phone" info="+234 703 522 9994" delay={0.3} />
 
               </div>
 
