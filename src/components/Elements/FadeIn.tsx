@@ -3,15 +3,16 @@ import { ReactNode, useRef } from "react";
 
 interface Props {
     children: ReactNode;
+    delay: number;
 }
 
-const FadeIn = ({ children }: Props) => {
+const FadeIn = ({ children, delay }: Props) => {
     const ref = useRef(null);
-    const inView = useInView(ref, {amount:0.5, once:true});
+    const inView = useInView(ref, {amount:1, once:true});
     
   return (
-    <motion.div className="w-fit h-fit" ref={ref}
-        initial={{opacity:0, y:40}} animate={inView? {opacity:1, y:0}:{}} transition={{duration:0.5, delay:0.1, ease:'easeOut'}} >
+    <motion.div className="" ref={ref}
+        initial={{opacity:0}} animate={inView? {opacity:1}:{}} transition={{duration:0.8, delay, ease:'easeOut'}} >
         {children}
     </motion.div>
   )
