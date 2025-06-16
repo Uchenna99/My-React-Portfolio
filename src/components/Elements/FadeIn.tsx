@@ -8,11 +8,11 @@ interface Props {
 
 const FadeIn = ({ children, delay }: Props) => {
     const ref = useRef(null);
-    const inView = useInView(ref, {amount:1, once:true});
+    const inView = useInView(ref, {amount:0.7, once:true});
     
   return (
     <motion.div className="" ref={ref}
-        initial={{opacity:0}} animate={inView? {opacity:1}:{}} transition={{duration:0.8, delay, ease:'easeOut'}} >
+        initial={{opacity:0}} animate={inView? {opacity:1}:{}} transition={{duration:0.7, delay, ease:'easeOut'}} >
         {children}
     </motion.div>
   )

@@ -24,7 +24,7 @@ const About = ({  }: Props) => {
 
   return (
     <>
-      <div className="outer-wrap bg-slate-100" style={{height: 'fit-content'}}>
+      <div className="outer-wrap bg-slate-200" style={{height: 'fit-content'}}>
 
         <HeaderText title="About" />
 

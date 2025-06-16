@@ -36,10 +36,10 @@ const Contact = () => {
                 <div className="adress-logo" 
                   onMouseEnter={()=> setHover(true)} 
                   onMouseLeave={()=> setHover(false)}
-                  style={{backgroundColor: hover? '#008080':''}}>
+                  style={{backgroundColor: hover? '#00bc7d':''}}>
                   <MdOutlineCall 
                     size={30}
-                    color={hover? '#FFFF':'#008080'}
+                    color={hover? '#FFFF':'#00bc7d'}
                   />
                 </div>
 
@@ -53,10 +53,10 @@ const Contact = () => {
                 <div className="adress-logo" 
                   onMouseEnter={()=> setHover2(true)} 
                   onMouseLeave={()=> setHover2(false)}
-                  style={{backgroundColor: hover2? '#008080':''}}>
+                  style={{backgroundColor: hover2? '#00bc7d':''}}>
                   <IoMailOutline 
                     size={30}
-                    color={hover2? '#FFFF':'#008080'}
+                    color={hover2? '#FFFF':'#00bc7d'}
                   />
                 </div>
 

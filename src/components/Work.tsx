@@ -63,7 +63,7 @@ const Work = () => {
 
   return (
     <>
-      <div className="outer-wrap" style={{height:'fit-content', borderTop:'1px solid teal', borderBottom:'1px solid teal'}}>
+      <div className="outer-wrap bg-slate-100" style={{height:'fit-content'}}>
 
         <HeaderText title="Projects" />
 
