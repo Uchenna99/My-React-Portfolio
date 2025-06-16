@@ -2,9 +2,7 @@ import { useEffect, useState } from "react"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
-// import Hero from "./components/Hero"
 import Hero2 from "./components/Hero2"
-// import NavBar from "./components/NavBar"
 import Navbar2 from "./components/Navbar2"
 import Skills from "./components/Skills"
 import Work from "./components/Work"
@@ -34,11 +32,7 @@ const HomePage = () => {
         :
         <div className={`portfolio-wrap ${loading? 'opacity-0': 'opacity-100'}`}>
 
-          {/* <NavBar /> */}
-
           <Navbar2/>
-
-          {/* <Hero /> */}
 
           <Hero2/>
 

@@ -17,6 +17,7 @@ import appwrite from "../assets/IMAGES/skills/appwrite_logo.png"
 import { RiArrowDownDoubleLine } from "react-icons/ri";
 import { RiArrowUpDoubleLine } from "react-icons/ri";
 import { RiArrowDropRightFill } from "react-icons/ri";
+import FadeUp from "./Elements/FadeUp";
 
 
 const Skills = () => {
@@ -43,16 +44,19 @@ const Skills = () => {
 
           <div className="skills" ref={skillsRef}>
 
-            <div className="skills-display">
+            <FadeUp>
+              <div className="skills-display" >
 
-              <h4 id="h4">Professional Skills</h4>
-              <p>
-              As a committed web developer, I possess a strong combination of technical proficiency and creative problem-solving 
-              abilities. My skills span across modern web development practices and frameworks, including front-end and back-end 
-              technologies, responsive designs, and user experience optimization.
-              </p>
+                <h4 id="h4">Professional Skills</h4>
+                <p>
+                As a committed web developer, I possess a strong combination of technical proficiency and creative problem-solving 
+                abilities. My skills span across modern web development practices and frameworks, including front-end and back-end 
+                technologies, responsive designs, and user experience optimization.
+                </p>
 
-            </div>
+              </div>
+            </FadeUp>
+
 
             <div className="skill-groups">
 
