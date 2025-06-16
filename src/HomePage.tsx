@@ -19,7 +19,9 @@ const HomePage = () => {
   useEffect(()=>{
     const img = new Image();
     img.src = "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749919456/me_no_bg_crop_gwa5wr.png";
-    img.onload = ()=> { setLoading(false) }
+    img.onload = ()=> { setTimeout(() => {
+      setLoading(false);
+    }, 200); }
   },[]);
 
   return (
