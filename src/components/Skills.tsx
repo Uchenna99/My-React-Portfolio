@@ -45,7 +45,7 @@ const Skills = () => {
 
           <div className="skills" ref={skillsRef}>
 
-            <FadeUp>
+            <FadeUp delay={0}>
               <div className="skills-display" >
 
                 <h4 id="h4">Professional Skills</h4>

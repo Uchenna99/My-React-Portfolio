@@ -3,25 +3,25 @@ import { Card } from "./Work";
 import { useEffect, useState } from "react";
 
 interface Props {
-    options: string;
     card: Card;
 }
 
-const WorkCard = ({ options, card }: Props) => {
+const WorkCard = ({ card }: Props) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const img = new Image();
-        img.src = card.image;
-        img.onload = () => setLoading(false);
+        if(!card.image) { setLoading(false); } else{
+            const img = new Image();
+            img.src = card.image;
+            img.onload = () => setLoading(false);
+        }
     }, [card.image]);
 
   return (
     <>
         {
-            !loading?
-            <div className="work-sample" style={{backgroundImage:`url(${card.image})`,
-                display: options === 'all' || options === card.tech? 'flex':'none'}}>
+            !loading && card.image?
+            <div className="work-sample" style={{backgroundImage:`url(${card.image})`}}>
 
                 <div className="info-tag">
 
@@ -44,7 +44,10 @@ const WorkCard = ({ options, card }: Props) => {
 
             </div>
             :
+            loading?
             <div className="skeleton-card" />
+            :
+            <div/>
         }
     </>
   )

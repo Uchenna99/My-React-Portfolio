@@ -11,8 +11,9 @@ import homestyler from "../assets/IMAGES/photos/homestyler.png"
 import sap from "../assets/IMAGES/photos/sap_screenshot.png"
 import hubspot from "../assets/IMAGES/photos/hubspot.png"
 import salesforce from "../assets/IMAGES/photos/salesforce.png"
-import { LuExternalLink } from "react-icons/lu";
+import soon from "../assets/IMAGES/photos/coming_soon.png"
 import WorkCard from "./WorkCard";
+import FadeUp from "./Elements/FadeUp";
 
 export interface Card {
   name: string;
@@ -27,6 +28,8 @@ const Work = () => {
   const {currentSection, setCurrentSection, scrolling, workRef} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
   const [options, setOptions] = useState('all');
+  const [projects, setProjects] = useState<Card[] | null>(null);
+
   const pageCards: Card[] = [
     { name: 'Bitmama', desc: 'A clone of Bitmama home page', url: "https://bitmama-clone-ts.vercel.app/", image: bitmama, tech: 'react' },
     { name: 'NVIDIA', desc: 'A clone of NVIDIA home page', url: "https://nvidia-clone-ts.vercel.app/", image: nvidia, tech: 'react' },
@@ -40,14 +43,23 @@ const Work = () => {
     { name: 'HomeStyler', desc: 'A website for interior design services', url: "https://nairalender.vercel.app/", image: homestyler, tech: 'react' },
     { name: 'Asana', desc: 'A clone of Asana home page', url: "https://asanaclone.netlify.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749474036/Screenshot_2025-06-09_133601-min_atwt1d.png", tech: 'html' },
     { name: 'Notion', desc: 'A clone of Notion home page', url: "https://notion-clone-uche.netlify.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749508654/Screenshot_2025-06-09_233355-min_yoexhd.png", tech: 'html' },
+    { name: ' ', desc: 'Coming soon', url: "", image: '', tech: 'mobile' },
   ]
+  const emptyCard: Card = { name: ' ', desc: 'Coming soon', url: "", image: soon, tech: 'mobile' };
 
   useEffect(()=>{
     if(inView && currentSection !== "work" && !scrolling) {
       setCurrentSection("work");
     }
   }, [inView]);
-  
+
+  useEffect(()=>{
+    const cardFilter = pageCards.filter((card)=> card.tech === options );
+    if(cardFilter.length === 0) {
+      setProjects(pageCards);
+    }else { setProjects(cardFilter); }
+  },[options]);
+
 
   return (
     <>
@@ -59,69 +71,50 @@ const Work = () => {
 
           <div className="work-wrap" ref={workRef}>
 
-            <div className="work-options">
+            <FadeUp delay={0}>
+              <div className="work-options">
 
-              <div className="head-wrap" style={{borderColor: options === 'all'? 'teal':'transparent' }}>
-                <p className="work-head" onClick={()=> setOptions('all')}
-                style={{color: options === 'all'? 'teal':''}}>ALL</p>
-              </div>
-              <div className="head-wrap" style={{borderColor: options === 'react'? 'teal':'transparent' }}>
-                <p className="work-head" onClick={()=> setOptions('react')}
-                style={{color: options === 'react'? 'teal':''}}>REACT</p>
-              </div>
+                <div className="head-wrap" style={{borderColor: options === 'all'? '#00bc7d':'transparent' }}>
+                  <p className="work-head" onClick={()=> setOptions('all')}
+                  style={{color: options === 'all'? '#00bc7d':''}}>ALL</p>
+                </div>
+                <div className="head-wrap" style={{borderColor: options === 'react'? '#00bc7d':'transparent' }}>
+                  <p className="work-head" onClick={()=> setOptions('react')}
+                  style={{color: options === 'react'? '#00bc7d':''}}>REACT</p>
+                </div>
 
-              <div className="head-wrap" style={{borderColor: options === 'html'? 'teal':'transparent' }}>
-                <p className="work-head" onClick={()=> setOptions('html')}
-                style={{color: options === 'html'? 'teal':''}}>HTML/CSS</p>
-              </div>
+                <div className="head-wrap" style={{borderColor: options === 'html'? '#00bc7d':'transparent' }}>
+                  <p className="work-head" onClick={()=> setOptions('html')}
+                  style={{color: options === 'html'? '#00bc7d':''}}>HTML/CSS</p>
+                </div>
 
-              <div className="head-wrap" style={{borderColor: options === 'mobile'? 'teal':'transparent' }}>
-                <p className="work-head" onClick={()=> setOptions('mobile')}
-                style={{color: options === 'mobile'? 'teal':''}}>MOBILE APP</p>
-              </div>
+                <div className="head-wrap" style={{borderColor: options === 'mobile'? '#00bc7d':'transparent' }}>
+                  <p className="work-head" onClick={()=> setOptions('mobile')}
+                  style={{color: options === 'mobile'? '#00bc7d':''}}>MOBILE APP</p>
+                </div>
 
-            </div>
+              </div>
+            </FadeUp>
 
             <div className="work" >
 
               {
-                pageCards.map((card, index)=>(
+                projects &&
+                projects.map((card, index)=>(
 
-                  <WorkCard
-                    options={options}
-                    card={card}
-                    key={index}
-                  />
+                  <FadeUp delay={0.2} key={index}>
+                    <WorkCard
+                      card={card}
+                    />
+                  </FadeUp>
 
                 ))
               }
 
-
-              <div className="work-sample" style={{backgroundImage:``, alignItems:'center',
-                display: options === 'mobile'? 'flex':'none'}}>
-                  
-                  <h4>Coming soon</h4>
-
-                <div className="info-tag">
-
-                  <div className="info-tag-text">
-                    <h4>Coming soon</h4>
-                    <p style={{fontSize: 14}}></p>
-                  </div>
-
-                  <div className="info-tag-link">
-                    {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
-                      <LuExternalLink 
-                        size={25} 
-                        color="#008080"
-                        style={{cursor:'pointer'}} 
-                      />
-                    {/* </a> */}
-                  </div>
-                  
-                </div>
-
-              </div>
+              {
+                options === 'mobile' &&
+                <WorkCard card={emptyCard}/>
+              }
 
             </div>
 
