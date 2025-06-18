@@ -756,6 +756,7 @@ p.work-head:hover{
     display: flex;
     align-items: center;
     gap: 20px;
+    /* background-color: #007a55; */
 }
 
 .adress-logo{
@@ -840,7 +841,7 @@ textarea{
     color: #1A1A1A;
     resize: none;
     border: none;
-    outline: 1px solid #008080;
+    outline: 1px solid #00bc7d;
     transition: 300ms;
 }
 
