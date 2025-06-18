@@ -34,10 +34,11 @@ const WorkCard = ({ card }: Props) => {
                         <a href={card.url} target="_blank" rel="noopener noreferrer">
                             <LuExternalLink 
                             size={25} 
-                            color="#008080"
+                            color="#00bc7d"
                             style={{cursor:'pointer'}}
                             />
                         </a>
+                        <p>Visit</p>
                     </div>
 
                 </div>
