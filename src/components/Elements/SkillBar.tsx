@@ -24,7 +24,7 @@ const SkillBar = ({ title, image, level, delay, wyt, hyt }: Props) => {
         </div>
         <div className="skill-bar" >
             <motion.div className="bar-filler " 
-                initial={{width:'0%'}} animate={inView? {width: level}:{}} transition={{duration: 0.8, ease:'easeOut', delay}}
+                initial={{width:'0%'}} animate={inView? {width: level}:{}} transition={{duration: 0.6, ease:'easeOut', delay}}
             />
         </div>
     </div>
