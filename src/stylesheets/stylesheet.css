@@ -484,7 +484,7 @@
     width: 0%;
     height: 100%;
     background: linear-gradient(to right, #007a55, #00bc7d);
-    animation: 600ms 1 forwards linear;
+    animation: 600ms 1 forwards ease-out;
 }
 
 

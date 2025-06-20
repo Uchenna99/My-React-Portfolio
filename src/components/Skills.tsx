@@ -19,6 +19,8 @@ import { RiArrowUpDoubleLine } from "react-icons/ri";
 import { RiArrowDropRightFill } from "react-icons/ri";
 import FadeUp from "./Elements/FadeUp";
 import FadeIn from "./Elements/FadeIn";
+import SkillBar from "./Elements/SkillBar";
+
 
 
 const Skills = () => {
@@ -106,83 +108,18 @@ const Skills = () => {
 
                     <div className={`language-skills ${feVisible? 'visible':''}`} >
 
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>HTML</p>
-                            <img src={html} style={{width:22, height:22}} alt="" />
-                          </div>
-                          <p>95%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'ninety-five'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="HTML" image={html} level="95%" delay={0} />
 
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>CSS</p>
-                            <img src={css} style={{width:22, height:22}} alt="" />
-                          </div>
-                          <p>90%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'ninety', animationDelay: '100ms'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="CSS" image={css} level="90%" delay={0.1} />
 
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>Javascript</p>
-                            <img src={js} style={{width:22, height:22}} alt="" />
-                          </div>
-                          <p>85%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '200ms'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="Javascript" image={js} level="85%" delay={0.2} />
 
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>Typescript</p>
-                            <img src={ts} style={{width:22, height:22}} alt="" />
-                          </div>
-                          <p>85%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '300ms'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="Typescript" image={ts} level="85%" delay={0.3} />
 
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>React</p>
-                            <img src={reactjs} style={{width:22, height:22}} alt="" />
-                          </div>
-                          <p>85%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '400ms'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="React" image={reactjs} level="85%" delay={0.4} />
 
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>Tailwind CSS</p>
-                            <img src={tailwind} style={{width:22, height:18}} alt="" />
-                          </div>
-                          <p>80%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'eighty', animationDelay: '500ms'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="Tailwind CSS" image={tailwind} level="80%" delay={0.5} />
+
                     </div>
 
                   </div>
@@ -237,85 +174,17 @@ const Skills = () => {
 
                     <div className="language-skills" style={{display: beVisible? 'flex':'none'}}>
 
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>Prisma</p>
-                            <img src={prisma} style={{width:22, height:22}} alt="" />
-                          </div>
-                          <p>95%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'ninety-five'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="Prisma" image={prisma} level="95%" delay={0} />
 
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>PostgreSQL</p>
-                            <img src={pg} style={{width:22, height:22}} alt="" />
-                          </div>
-                          <p>90%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'ninety', animationDelay: '100ms'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="PostgreSQL" image={pg} level="90%" delay={0.1} />
 
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>Node.js</p>
-                            <img src={node} style={{width:22, height:22}} alt="" />
-                          </div>
-                          <p>85%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '200ms'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="Node.js" image={node} level="85%" delay={0.2} />
 
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>Express.js</p>
-                            <img src={exp} style={{width:22, height:16}} alt="" />
-                          </div>
-                          <p>85%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '300ms'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="Express.js" image={exp} level="85%" delay={0.3} />
 
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>MongoDB</p>
-                            <img src={mongodb} style={{width:12, height:22}} alt="" />
-                          </div>
-                          <p>85%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'eighty-five', animationDelay: '400ms'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="MongoDB" image={mongodb} wyt={12} level="85%" delay={0.4} />
 
-
-
-                      <div className="skill-card">
-                        <div className="skill-info" >
-                          <div style={{display:'flex', alignItems:'end', gap:8}}>
-                            <p style={{fontSize:14}}>Appwrite</p>
-                            <img src={appwrite} style={{width:22, height:22}} alt="" />
-                          </div>
-                          <p>70%</p>
-                        </div>
-                        <div className="skill-bar">
-                          <div className="bar-filler" style={{animationName: 'seventy', animationDelay: '500ms'}}></div>
-                        </div>
-                      </div>
+                      <SkillBar title="Appwrite" image={appwrite} level="70%" delay={0.5} />
 
                     </div>
                   </div>
