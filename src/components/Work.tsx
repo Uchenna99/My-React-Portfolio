@@ -30,7 +30,7 @@ const Work = () => {
   const [projects, setProjects] = useState<Card[] | null>(null);
 
   const pageCards: Card[] = [
-    { name: 'Bitmama', desc: 'A clone of Bitmama home page', url: "https://bitmama-clone-ts.vercel.app/", image: bitmama, tech: 'react' },
+    { name: 'Bitmama', desc: 'A clone of Bitmama home page and Signin/Signup page', url: "https://bitmama-clone-ts.vercel.app/", image: bitmama, tech: 'react' },
     { name: 'NVIDIA', desc: 'A clone of NVIDIA home page', url: "https://nvidia-clone-ts.vercel.app/", image: nvidia, tech: 'react' },
     { name: 'Hubspot', desc: 'A clone of Hubspot home page', url: "https://hubspot-clone-html.netlify.app/", image: hubspot, tech: 'html' },
     { name: 'Invoyce', desc: 'A clone of Invoyce.pro homepage and user dashboard', url: "https://invoyce-pro-clone.vercel.app/", image: 'https://res.cloudinary.com/df6xz7bqp/image/upload/v1751756568/Screenshot_2025-07-05_235611-min_bqfkd9.png', tech: 'react' },
