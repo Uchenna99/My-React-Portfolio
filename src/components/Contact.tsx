@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { MdOutlineCall } from "react-icons/md";
 import { IoMailOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
+import axios from "axios";
+import { Send } from "lucide-react";
 
 
 
@@ -14,12 +16,25 @@ const Contact = () => {
   const [hover, setHover] = useState(false);
   const [hover2, setHover2] = useState(false);
   const [hover3, setHover3] = useState(false);
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+  const [sending, setSending] = useState(false);
+
 
   useEffect(()=>{
     if(inView && currentSection !== "contact" && !scrolling) {
       setCurrentSection("contact");
     }
   }, [inView]);
+
+  const handleMessage = ()=>{
+    setSending(true);
+
+    axios.post('')
+    .then(()=>{
+      
+    })
+  };
   
 
   return (
@@ -94,17 +109,17 @@ const Contact = () => {
 
               <div className="input-wrap">
                 <label htmlFor="name">Name</label>
-                <input id="name" type="text" />
+                <input id="name" type="text" value={name} onChange={()=> setName(name)} />
               </div>
 
-              <div className="input-wrap">
-                <label htmlFor="email">Email</label>
-                <input id="email" type="email" />
-              </div>
+              <textarea name="Message" id="" placeholder="Message" value={message} onChange={()=> setMessage(message)}></textarea>
 
-              <textarea name="Message" id="" placeholder="Message"></textarea>
-
-              <button id="send">Send</button>
+                {
+                  sending?
+                  <button id="send" style={{ cursor:'not-allowed'}} onClick={handleMessage}>Sending message...</button>
+                  :
+                  <button id="send" onClick={handleMessage}>Send</button>
+                }
 
             </div>
           </div>
