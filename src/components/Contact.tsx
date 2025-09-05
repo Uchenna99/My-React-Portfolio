@@ -19,13 +19,16 @@ const Contact = () => {
   const [hover3, setHover3] = useState(false);
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('');
   const [sending, setSending] = useState(false);
   const [popup, setPopup] = useState(false);
   const [success, setSuccess] = useState(true);
+  const [required, setRequired] = useState(false);
 
   const messageInfo = {
     name,
-    message
+    message,
+    email
   }
 
 
@@ -45,22 +48,28 @@ const Contact = () => {
         if(response.data.success) {
           setName('');
           setMessage('');
+          setEmail('');
         }
         setPopup(true);
         setTimeout(() => {
           setPopup(false);
-        }, 4000);
+        }, 5000);
       })
       .catch(()=>{
         setSuccess(false);
         setPopup(true);
         setTimeout(() => {
           setPopup(false);
-        }, 4000);
+        }, 5000);
       })
       .finally(()=>{
         setSending(false);
       });
+    }else {
+      setRequired(true);
+      setTimeout(() => {
+        setRequired(false);
+      }, 4000);
     }
   };
   
@@ -137,10 +146,32 @@ const Contact = () => {
 
               <div className="input-wrap">
                 <label htmlFor="name">Name</label>
-                <input id="name" type="text" value={name} onChange={(e)=> setName(e.target.value)} />
+                <input id="name" type="text" 
+                  className={`w-full h-10 px-4 border-none outline-1 outline-[#00bc7d] text-[17px] text-[#1A1A1A] transition-all 
+                  duration-300 ring-[#00bc7d] rounded-sm focus:ring-2 focus:shadow-sm
+                  ${required && name.length<=1 ? 'ring-2 ring-red-500 outline-red-500':''}`}
+                  value={name} 
+                  onChange={(e)=> setName(e.target.value)} 
+                />
               </div>
 
-              <textarea name="Message" id="" placeholder="Message" value={message} onChange={(e)=> setMessage(e.target.value)}></textarea>
+              <div className="input-wrap">
+                <label htmlFor="email">Email <span className="italic text-sm text-[#1A1A1A]/50">(Optional)</span></label>
+                <input id="email" type="text" 
+                  className="w-full h-10 px-4 border-none outline-1 outline-[#00bc7d] text-[17px] text-[#1A1A1A] transition-all 
+                  duration-300 ring-[#00bc7d] rounded-sm focus:ring-2 focus:shadow-sm"
+                  value={email} 
+                  onChange={(e)=> setEmail(e.target.value)} 
+                />
+              </div>
+
+              <textarea name="Message" id="" 
+                className={`w-full min-h-[150px] text-[17px] text-[#1A1A1A] resize-none border-none outline-1 outline-[#00bc7d] transition-all
+                duration-300 ring-[#00bc7d] rounded-sm focus:ring-2 focus:shadow-sm p-4
+                ${required && message.length<=2 ? 'ring-2 ring-red-500 outline-red-500':''}`}
+                placeholder="Message" 
+                value={message} 
+                onChange={(e)=> setMessage(e.target.value)}></textarea>
 
               {
                 sending?
