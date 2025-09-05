@@ -42,9 +42,11 @@ const Contact = () => {
       axios.post(`${HOST_URL}/api/v1/email/send-message`, messageInfo)
       .then((response)=>{
         setSuccess(response.data.success);
+        if(response.data.success) {
+          setName('');
+          setMessage('');
+        }
         setPopup(true);
-        setName('');
-        setMessage('');
         setTimeout(() => {
           setPopup(false);
         }, 4000);
