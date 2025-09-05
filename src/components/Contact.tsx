@@ -6,7 +6,7 @@ import { MdOutlineCall } from "react-icons/md";
 import { IoMailOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
 import axios from "axios";
-import { Send } from "lucide-react";
+import MessagePopup from "./MessagePopup";
 
 
 
@@ -19,6 +19,8 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [sending, setSending] = useState(false);
+  const [popup, setPopup] = useState(false);
+  const [success, setSuccess] = useState(true);
 
 
   useEffect(()=>{
@@ -31,9 +33,21 @@ const Contact = () => {
     setSending(true);
 
     axios.post('')
-    .then(()=>{
-      
+    .then((response)=>{
+      setSuccess(response.data.success);
+      setPopup(true);
+      setTimeout(() => {
+        setPopup(false);
+      }, 4000);
     })
+    .catch(()=>{
+      setSuccess(false);
+      setPopup(true);
+      setTimeout(() => {
+        setPopup(false);
+      }, 4000);
+    })
+    .finally(()=> setSending(false));
   };
   
 
@@ -114,12 +128,14 @@ const Contact = () => {
 
               <textarea name="Message" id="" placeholder="Message" value={message} onChange={()=> setMessage(message)}></textarea>
 
-                {
-                  sending?
-                  <button id="send" style={{ cursor:'not-allowed'}} onClick={handleMessage}>Sending message...</button>
-                  :
-                  <button id="send" onClick={handleMessage}>Send</button>
-                }
+              {
+                sending?
+                <button id="send" style={{ cursor:'not-allowed'}} onClick={handleMessage}>Sending message...</button>
+                :
+                <button id="send" onClick={handleMessage}>Send</button>
+              }
+
+              { popup && <MessagePopup success={success} /> }
 
             </div>
           </div>
