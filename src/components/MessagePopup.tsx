@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import cancel from '../assets/ICONS/cancel.png';
+import check from '../assets/ICONS/check.png'
 
 interface Props {
     success: boolean;
@@ -13,9 +15,13 @@ const MessagePopup = ({ success }:Props) => {
                 initial={{scale:0.8}} animate={{scale:1}} transition={{duration:0.3, ease:'easeInOut'}}>
                 {
                     success?
-                    <p className="text-lg text-center">Your message has been sent, thank you for reaching out.</p>
+                    <div className="flex flex-col items-center gap-3">
+                        <img src={check} alt="" className="w-10 h-10" />
+                        <p className="text-lg text-center">Your message has been sent, thank you for reaching out.</p>
+                    </div>
                     :
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col items-center gap-3">
+                        <img src={cancel} alt="" className="w-10 h-10" />
                         <p className="text-lg text-center">Something went wrong, please try again.</p>
                     </div>
                 }

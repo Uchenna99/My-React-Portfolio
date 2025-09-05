@@ -7,6 +7,7 @@ import { IoMailOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
 import axios from "axios";
 import MessagePopup from "./MessagePopup";
+import { HOST_URL } from "./Route";
 
 
 
@@ -22,6 +23,11 @@ const Contact = () => {
   const [popup, setPopup] = useState(false);
   const [success, setSuccess] = useState(true);
 
+  const messageInfo = {
+    name,
+    message
+  }
+
 
   useEffect(()=>{
     if(inView && currentSection !== "contact" && !scrolling) {
@@ -32,7 +38,7 @@ const Contact = () => {
   const handleMessage = ()=>{
     setSending(true);
 
-    axios.post('')
+    axios.post(`${HOST_URL}/api/v1/email/send-message`, messageInfo)
     .then((response)=>{
       setSuccess(response.data.success);
       setPopup(true);
