@@ -144,7 +144,7 @@ const Contact = () => {
 
               {
                 sending?
-                <button id="send" style={{ cursor:'not-allowed'}} onClick={handleMessage}>Sending message...</button>
+                <button id="send" style={{ cursor:'not-allowed'}}>Sending message...</button>
                 :
                 <button id="send" onClick={handleMessage}>Send</button>
               }
