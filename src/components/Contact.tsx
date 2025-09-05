@@ -43,6 +43,8 @@ const Contact = () => {
       .then((response)=>{
         setSuccess(response.data.success);
         setPopup(true);
+        setName('');
+        setMessage('');
         setTimeout(() => {
           setPopup(false);
         }, 4000);
@@ -54,7 +56,9 @@ const Contact = () => {
           setPopup(false);
         }, 4000);
       })
-      .finally(()=> setSending(false));
+      .finally(()=>{
+        setSending(false);
+      });
     }
   };
   
