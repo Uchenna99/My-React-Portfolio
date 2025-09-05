@@ -36,24 +36,26 @@ const Contact = () => {
   }, [inView]);
 
   const handleMessage = ()=>{
-    setSending(true);
-
-    axios.post(`${HOST_URL}/api/v1/email/send-message`, messageInfo)
-    .then((response)=>{
-      setSuccess(response.data.success);
-      setPopup(true);
-      setTimeout(() => {
-        setPopup(false);
-      }, 4000);
-    })
-    .catch(()=>{
-      setSuccess(false);
-      setPopup(true);
-      setTimeout(() => {
-        setPopup(false);
-      }, 4000);
-    })
-    .finally(()=> setSending(false));
+    if(name.length > 1 && message.length > 2) {
+      setSending(true);
+  
+      axios.post(`${HOST_URL}/api/v1/email/send-message`, messageInfo)
+      .then((response)=>{
+        setSuccess(response.data.success);
+        setPopup(true);
+        setTimeout(() => {
+          setPopup(false);
+        }, 4000);
+      })
+      .catch(()=>{
+        setSuccess(false);
+        setPopup(true);
+        setTimeout(() => {
+          setPopup(false);
+        }, 4000);
+      })
+      .finally(()=> setSending(false));
+    }
   };
   
 
@@ -129,10 +131,10 @@ const Contact = () => {
 
               <div className="input-wrap">
                 <label htmlFor="name">Name</label>
-                <input id="name" type="text" value={name} onChange={()=> setName(name)} />
+                <input id="name" type="text" value={name} onChange={(e)=> setName(e.target.value)} />
               </div>
 
-              <textarea name="Message" id="" placeholder="Message" value={message} onChange={()=> setMessage(message)}></textarea>
+              <textarea name="Message" id="" placeholder="Message" value={message} onChange={(e)=> setMessage(e.target.value)}></textarea>
 
               {
                 sending?
