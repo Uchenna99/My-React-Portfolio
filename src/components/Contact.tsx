@@ -24,6 +24,7 @@ const Contact = () => {
   const [popup, setPopup] = useState(false);
   const [success, setSuccess] = useState(true);
   const [required, setRequired] = useState(false);
+  const [patience, setPatience] = useState(false);
 
   const messageInfo = {
     name,
@@ -37,6 +38,14 @@ const Contact = () => {
       setCurrentSection("contact");
     }
   }, [inView]);
+
+  useEffect(()=>{
+    if(sending) {
+      setTimeout(() => {
+        setPatience(true);
+      }, 10000);
+    }
+  }, [sending]);
 
   const handleMessage = ()=>{
     if(name.length > 1 && message.length > 2) {
@@ -53,17 +62,18 @@ const Contact = () => {
         setPopup(true);
         setTimeout(() => {
           setPopup(false);
-        }, 5000);
+        }, 10000);
       })
       .catch(()=>{
         setSuccess(false);
         setPopup(true);
         setTimeout(() => {
           setPopup(false);
-        }, 5000);
+        }, 10000);
       })
       .finally(()=>{
         setSending(false);
+        setPatience(false);
       });
     }else {
       setRequired(true);
@@ -175,12 +185,20 @@ const Contact = () => {
 
               {
                 sending?
-                <button id="send" style={{ cursor:'not-allowed'}}>Sending message...</button>
+                <div className="flex flex-col items-center gap-2">
+                  <button id="send" style={{ cursor:'not-allowed'}}>Sending message...</button>
+                  {
+                    patience &&
+                    <p className="text-xs text-[#1A1A1A]">
+                      Please be patient, the server can sometimes take up to a minute to connect.
+                    </p>
+                  }
+                </div>
                 :
                 <button id="send" onClick={handleMessage}>Send</button>
               }
 
-              { popup && <MessagePopup success={success} /> }
+              { popup && <MessagePopup success={success} closePopup={()=> setPopup(false)} /> }
 
             </div>
           </div>
