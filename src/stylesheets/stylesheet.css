@@ -676,6 +676,10 @@ p.work-head:hover{
     /* background-color: #007a55; */
 }
 
+.info-tag-text > h4{
+    font-weight: 600;
+}
+
 .info-tag-link{
     width: 50px;
     min-width: 50px;
