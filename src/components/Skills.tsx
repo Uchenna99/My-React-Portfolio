@@ -118,7 +118,7 @@ const Skills = () => {
 
                       <SkillBar title="React" image={reactjs} level="85%" delay={0.4} />
 
-                      <SkillBar title="Tailwind CSS" image={tailwind} level="80%" delay={0.5} />
+                      <SkillBar title="Tailwind CSS" image={tailwind} level="85%" delay={0.5} />
 
                     </div>
 
@@ -180,7 +180,7 @@ const Skills = () => {
 
                       <SkillBar title="Node.js" image={node} level="85%" delay={0.2} />
 
-                      <SkillBar title="Express.js" image={exp} level="85%" delay={0.3} />
+                      <SkillBar title="Express.js" image={exp} level="85%" delay={0.3} /> 
 
                       <SkillBar title="MongoDB" image={mongodb} wyt={12} level="85%" delay={0.4} />
 

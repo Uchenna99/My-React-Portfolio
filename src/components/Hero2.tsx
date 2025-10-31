@@ -31,11 +31,18 @@ const Hero2 = () => {
 
           <p className="text-slate-200 text-lg md:text-xl text-center font-semibold">Full Stack Web Developer</p>
 
-          <button className="bg-emerald-500 hover:bg-emerald-700 w-fit h-12 rounded-lg text-xl text-slate-900 px-5 
-            font-semibold cursor-pointer transition-all duration-200 mt-7 "
-            onClick={ ()=> contactRef?.current?.scrollIntoView({behavior:'smooth'}) }>
-            Contact Me
-          </button>
+          <div className="w-full flex items-center gap-10">
+            <button className="bg-emerald-500 hover:bg-emerald-700 w-fit h-12 rounded-lg text-xl text-slate-900 px-5 
+              font-semibold cursor-pointer transition-all duration-200 mt-7 "
+              onClick={ ()=> contactRef?.current?.scrollIntoView({behavior:'smooth'}) }>
+              Contact Me
+            </button>
+            <button className="bg-emerald-500 hover:bg-emerald-700 w-fit h-12 rounded-lg text-xl text-slate-900 px-5 
+              font-semibold cursor-pointer transition-all duration-200 mt-7 "
+              onClick={ ()=> window.open('/Uchenna_Agbu_CV_.pdf', '_blank') }>
+              View Resume
+            </button>
+          </div>
 
         </motion.div>
 
