@@ -38,7 +38,7 @@ const Work = () => {
     { name: 'Carbon', desc: 'A clone of Carbon home page', url: "https://carbon-clone-uche.netlify.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749480397/Screenshot_2025-06-09_153823-min_fvik1l.png", tech: 'html' },
     { name: 'Hubspot', desc: 'A clone of Hubspot home page', url: "https://hubspot-clone-html.netlify.app/", image: hubspot, tech: 'html' },
     { name: 'HomeStyler', desc: 'A website for interior design services', url: "https://homestyler-by-elite-devs-5rjf.vercel.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1751153351/Screenshot_2025-06-29_000207-min_k7xly9.png", tech: 'react' },
-    { name: 'Evtol', desc: 'A drone delivery web app I designed', url: "https://evtol-8930olym3-uchennas-projects-8584ebcd.vercel.app", image: evtol, tech: 'react' },
+    { name: 'Evtol', desc: 'A drone delivery web app I designed', url: "https://evtol-delivery.vercel.app/", image: evtol, tech: 'react' },
     { name: 'Nairalender', desc: 'A loan web app I designed', url: "https://nairalender.vercel.app/", image: nairalender, tech: 'react' },
     { name: 'SAP', desc: 'A clone of SAP home page', url: "https://sap-clone-by-uchenna-agbu.netlify.app/", image: sap, tech: 'html' },
     { name: 'airbnb', desc: 'A clone of airbnb home page', url: "https://air-bnb-orpin.vercel.app/", image: airbnb, tech: 'react' },
