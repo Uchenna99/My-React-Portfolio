@@ -47,7 +47,7 @@ const Hero2 = () => {
             </button>
             <button className="bg-emerald-500 hover:bg-emerald-700 w-fit h-12 rounded-lg text-xl text-slate-900 px-5 
               font-semibold cursor-pointer transition-all duration-200 mt-7 text-nowrap"
-              onClick={ ()=> window.open('/Uchenna_Agbu_CV_.pdf', '_blank') }>
+              onClick={ ()=> window.open('/Uchenna_Agbu_CV.pdf', '_blank') }>
               View Resume
             </button>
           </div>
