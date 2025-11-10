@@ -39,17 +39,17 @@ const Hero2 = () => {
             Full Stack Web Developer
           </motion.p>
 
-          <div className="w-full flex flex-col sm:flex-row items-center gap-0 sm:gap-6">
+          <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-0 sm:gap-6">
             <button className="bg-emerald-500 hover:bg-emerald-700 w-fit h-12 rounded-lg text-xl text-slate-900 px-5 
               font-semibold cursor-pointer transition-all duration-200 mt-7 text-nowrap"
               onClick={ ()=> contactRef?.current?.scrollIntoView({behavior:'smooth'}) }>
               Contact Me
             </button>
-            <button className="bg-emerald-500 hover:bg-emerald-700 w-fit h-12 rounded-lg text-xl text-slate-900 px-5 
+            {/* <button className="bg-emerald-500 hover:bg-emerald-700 w-fit h-12 rounded-lg text-xl text-slate-900 px-5 
               font-semibold cursor-pointer transition-all duration-200 mt-7 text-nowrap"
               onClick={ ()=> window.open('/Uchenna_Agbu_CV.pdf', '_blank') }>
               View Resume
-            </button>
+            </button> */}
           </div>
 
         </motion.div>
