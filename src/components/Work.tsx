@@ -6,7 +6,6 @@ import bitmama from '../assets/IMAGES/photos/bitmama_clone.png'
 import nvidia from "../assets/IMAGES/photos/nvidia.png"
 import airbnb from "../assets/IMAGES/photos/airbnb.png"
 import nairalender from "../assets/IMAGES/photos/nairalender.png"
-import evtol from "../assets/IMAGES/photos/evtol.png"
 import sap from "../assets/IMAGES/photos/sap_screenshot.png"
 import hubspot from "../assets/IMAGES/photos/hubspot.png"
 import salesforce from "../assets/IMAGES/photos/salesforce.png"
@@ -31,14 +30,14 @@ const Work = () => {
   const [projects, setProjects] = useState<Card[] | null>(null);
 
   const pageCards: Card[] = [
-    { name: 'Shopper', desc: 'An E-commerce website for clothes and accessories', url: "https://shoppingspree-taupe.vercel.app/", image: shopper, tech: 'react' },
+    { name: 'Shopper', desc: 'An E-commerce website for clothes and accessories', url: "https://www.shoppingspree.space", image: shopper, tech: 'react' },
     { name: 'Invoyce', desc: 'A clone of Invoyce.pro homepage and user dashboard', url: "https://invoyce-pro-clone.vercel.app/", image: 'https://res.cloudinary.com/df6xz7bqp/image/upload/v1751756568/Screenshot_2025-07-05_235611-min_bqfkd9.png', tech: 'react' },
     { name: 'NVIDIA', desc: 'A clone of NVIDIA home page', url: "https://nvidia-clone-ts.vercel.app/", image: nvidia, tech: 'react' },
     { name: 'Bitmama', desc: 'A clone of Bitmama home page and Signin/Signup page', url: "https://bitmama-clone-ts.vercel.app/", image: bitmama, tech: 'react' },
     { name: 'Carbon', desc: 'A clone of Carbon home page', url: "https://carbon-clone-uche.netlify.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749480397/Screenshot_2025-06-09_153823-min_fvik1l.png", tech: 'html' },
     { name: 'Hubspot', desc: 'A clone of Hubspot home page', url: "https://hubspot-clone-html.netlify.app/", image: hubspot, tech: 'html' },
     { name: 'HomeStyler', desc: 'A website for interior design services', url: "https://homestyler-by-elite-devs-5rjf.vercel.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1751153351/Screenshot_2025-06-29_000207-min_k7xly9.png", tech: 'react' },
-    { name: 'Evtol', desc: 'A drone delivery web app I designed', url: "https://evtol-delivery.vercel.app/", image: evtol, tech: 'react' },
+    { name: 'Evtol', desc: 'A drone delivery web app I designed', url: "https://evtol-delivery.vercel.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1764975765/Evtol_delivery_screenshot_fip0kw.png", tech: 'react' },
     { name: 'Nairalender', desc: 'A loan web app I designed', url: "https://nairalender.vercel.app/", image: nairalender, tech: 'react' },
     { name: 'SAP', desc: 'A clone of SAP home page', url: "https://sap-clone-by-uchenna-agbu.netlify.app/", image: sap, tech: 'html' },
     { name: 'airbnb', desc: 'A clone of airbnb home page', url: "https://air-bnb-orpin.vercel.app/", image: airbnb, tech: 'react' },
