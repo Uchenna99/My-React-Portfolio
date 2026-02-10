@@ -1,14 +1,15 @@
 import { LuExternalLink } from "react-icons/lu";
 import { Card } from "./Work";
 import { useEffect, useState } from "react";
+import DetailsModal from "./DetailsModal";
 
 interface Props {
     card: Card;
-    onDetails: ()=> void;
 }
 
-const WorkCard = ({ card, onDetails }: Props) => {
+const WorkCard = ({ card }: Props) => {
     const [loading, setLoading] = useState(true);
+    const [showDetails, setShowDetails] = useState(false);
 
     useEffect(() => {
         if(!card.image) { setLoading(false); } else{
@@ -30,7 +31,7 @@ const WorkCard = ({ card, onDetails }: Props) => {
                         <h4>{card.name}</h4>
                         <p style={{fontSize: 14}}>{card.desc + " "} 
                             <span className="italic text-[#00bc7d]/70 hover:text-[#00bc7d] cursor-pointer"
-                                onClick={onDetails}>
+                                onClick={()=> setShowDetails(true)}>
                                 Details
                             </span>
                         </p>
@@ -55,6 +56,13 @@ const WorkCard = ({ card, onDetails }: Props) => {
             <div className="skeleton-card" />
             :
             <div/>
+        }
+
+        {
+            showDetails &&
+            <DetailsModal
+                onClose={()=> setShowDetails(false)}
+            />
         }
     </>
   )

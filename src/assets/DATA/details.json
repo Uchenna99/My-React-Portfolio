@@ -1,0 +1,55 @@
+{
+    "shopper": {
+        "name": "Shopper",
+        "problem": "Small and medium businesses often struggle to move their sales online quickly with a reliable, easy-to-use system. Many existing e-commerce solutions are either too complex, expensive, or inflexible. The Shopper App solves this by providing a simple, scalable e-commerce platform that allows users to browse products, manage carts, and place orders efficiently.",
+        "features": [
+            "User authentication and secure login",
+            "Product listing with dynamic data",
+            "Add-to-cart and cart management",
+            "Responsive design for mobile and desktop",
+            "Secure REST API for frontend communication"
+        ],
+        "stack": [
+            "Frontend: React, TypeScript, Tailwind CSS",
+            "Backend: Node.js, Express, TypeScript",
+            "Database: PostgreSQL with Prisma",
+            "Auth: JWT",
+            "API: RESTful architecture"
+        ],
+        "implementation": [
+            "Designed and implemented the full-stack architecture",
+            "Built responsive UI components using React and Tailwind CSS",
+            "Developed backend APIs for products, carts, and orders",
+            "Implemented authentication and protected routes",
+            "Designed the database schema and handled data persistence",
+            "Ensured clean, maintainable code with TypeScript"
+        ]
+    },
+
+    "evtol": {
+        "name": "Shopper",
+        "problem": "Small and medium businesses often struggle to move their sales online quickly with a reliable, easy-to-use system. Many existing e-commerce solutions are either too complex, expensive, or inflexible. The Shopper App solves this by providing a simple, scalable e-commerce platform that allows users to browse products, manage carts, and place orders efficiently.",
+        "features": [
+            "User authentication and secure login",
+            "Product listing with dynamic data",
+            "Add-to-cart and cart management",
+            "Responsive design for mobile and desktop",
+            "Secure REST API for frontend communication"
+        ],
+        "stack": [
+            "Frontend: React, TypeScript, Tailwind CSS",
+            "Backend: Node.js, Express, TypeScript",
+            "Database: PostgreSQL with Prisma",
+            "Auth: JWT",
+            "API: RESTful architecture"
+        ],
+        "implementation": [
+            "Designed and implemented the full-stack architecture",
+            "Built responsive UI components using React and Tailwind CSS",
+            "Developed backend APIs for products, carts, and orders",
+            "Implemented authentication and protected routes",
+            "Designed the database schema and handled data persistence",
+            "Ensured clean, maintainable code with TypeScript"
+        ]
+    }
+}
