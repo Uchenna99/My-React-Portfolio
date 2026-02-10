@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 
 interface Props {
     card: Card;
+    onDetails: ()=> void;
 }
 
-const WorkCard = ({ card }: Props) => {
+const WorkCard = ({ card, onDetails }: Props) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -29,7 +30,7 @@ const WorkCard = ({ card }: Props) => {
                         <h4>{card.name}</h4>
                         <p style={{fontSize: 14}}>{card.desc + " "} 
                             <span className="italic text-[#00bc7d]/70 hover:text-[#00bc7d] cursor-pointer"
-                                onClick={()=>{}}>
+                                onClick={onDetails}>
                                 Details
                             </span>
                         </p>

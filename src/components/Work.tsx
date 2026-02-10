@@ -13,6 +13,7 @@ import shopper from "../assets/IMAGES/photos/Shopper.png"
 import soon from "../assets/IMAGES/photos/coming_soon.png"
 import WorkCard from "./WorkCard";
 import FadeUp from "./Elements/FadeUp";
+import DetailsModal from "./DetailsModal";
 
 export interface Card {
   name: string;
@@ -28,6 +29,7 @@ const Work = () => {
   const {ref, inView} = useInView({threshold: 0.5});
   const [options, setOptions] = useState('all');
   const [projects, setProjects] = useState<Card[] | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
 
   const pageCards: Card[] = [
     { name: 'Shopper', desc: 'An E-commerce website for clothes and accessories', url: "https://www.shoppingspree.space", image: shopper, tech: 'react' },
@@ -106,6 +108,7 @@ const Work = () => {
                   <FadeUp delay={0.2} key={index}>
                     <WorkCard
                       card={card}
+                      onDetails={()=> setShowDetails(true)}
                     />
                   </FadeUp>
 
@@ -114,7 +117,17 @@ const Work = () => {
 
               {
                 options === 'mobile' &&
-                <WorkCard card={emptyCard}/>
+                <WorkCard 
+                  card={emptyCard}
+                  onDetails={()=>{}}
+                />
+              }
+
+              {
+                showDetails &&
+                <DetailsModal
+                  onClose={()=> setShowDetails(false)}
+                />
               }
 
             </div>
