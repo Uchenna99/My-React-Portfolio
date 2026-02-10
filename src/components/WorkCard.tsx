@@ -27,7 +27,12 @@ const WorkCard = ({ card }: Props) => {
 
                     <div className="info-tag-text">
                         <h4>{card.name}</h4>
-                        <p style={{fontSize: 14}}>{card.desc}</p>
+                        <p style={{fontSize: 14}}>{card.desc + " "} 
+                            <span className="italic text-[#00bc7d]/70 hover:text-[#00bc7d] cursor-pointer"
+                                onClick={()=>{}}>
+                                Details
+                            </span>
+                        </p>
                     </div>
 
                     <div className="info-tag-link">
