@@ -34,7 +34,7 @@ const Work = () => {
     { name: 'Invoyce', desc: 'A clone of Invoyce.pro homepage and user dashboard', url: "https://invoyce-pro-clone.vercel.app/", image: 'https://res.cloudinary.com/df6xz7bqp/image/upload/v1751756568/Screenshot_2025-07-05_235611-min_bqfkd9.png', tech: 'react' },
     { name: 'NVIDIA', desc: 'A clone of NVIDIA home page', url: "https://nvidia-clone-ts.vercel.app/", image: nvidia, tech: 'react' },
     { name: 'Bitmama', desc: 'A clone of Bitmama home page and Signin/Signup page', url: "https://bitmama-clone-ts.vercel.app/", image: bitmama, tech: 'react' },
-    { name: 'Evtol', desc: 'A drone delivery web app I designed', url: "https://evtol-delivery.vercel.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1764975765/Evtol_delivery_screenshot_fip0kw.png", tech: 'react' },
+    { name: 'Evtol', desc: 'A drone delivery web app I designed', url: "https://www.evtoldeliveries.online/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1764975765/Evtol_delivery_screenshot_fip0kw.png", tech: 'react' },
     { name: 'Carbon', desc: 'A clone of Carbon home page', url: "https://carbon-clone-uche.netlify.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749480397/Screenshot_2025-06-09_153823-min_fvik1l.png", tech: 'html' },
     { name: 'Hubspot', desc: 'A clone of Hubspot home page', url: "https://hubspot-clone-html.netlify.app/", image: hubspot, tech: 'html' },
     { name: 'HomeStyler', desc: 'A website for interior design services', url: "https://homestyler-by-elite-devs-5rjf.vercel.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1751153351/Screenshot_2025-06-29_000207-min_k7xly9.png", tech: 'react' },
