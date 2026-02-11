@@ -14,7 +14,8 @@
             "Backend: Node.js, Express, TypeScript",
             "Database: PostgreSQL with Prisma",
             "Auth: JWT",
-            "API: RESTful architecture"
+            "API: RESTful architecture",
+            "DevOps: Docker"
         ],
         "implementation": [
             "Designed and implemented the full-stack architecture",
@@ -22,33 +23,34 @@
             "Developed backend APIs for products, carts, and orders",
             "Implemented authentication and protected routes",
             "Designed the database schema and handled data persistence",
+            "Containerized the application using Docker",
             "Ensured clean, maintainable code with TypeScript"
         ]
     },
 
     "evtol": {
-        "name": "Shopper",
-        "problem": "Small and medium businesses often struggle to move their sales online quickly with a reliable, easy-to-use system. Many existing e-commerce solutions are either too complex, expensive, or inflexible. The Shopper App solves this by providing a simple, scalable e-commerce platform that allows users to browse products, manage carts, and place orders efficiently.",
+        "name": "Evtol",
+        "problem": "Delivering medical and essential supplies in hard-to-reach or time-critical locations is often slow due to traffic, distance, or infrastructure limitations. The Evtol Delivery Platform addresses this by enabling efficient, drone-based delivery management.",
         "features": [
-            "User authentication and secure login",
-            "Product listing with dynamic data",
-            "Add-to-cart and cart management",
+            "User authentication and role-based access",
+            "Create and manage delivery orders",
+            "Scalable backend architecture",
             "Responsive design for mobile and desktop",
-            "Secure REST API for frontend communication"
+            "REST API for delivery and logistics management"
         ],
         "stack": [
             "Frontend: React, TypeScript, Tailwind CSS",
             "Backend: Node.js, Express, TypeScript",
             "Database: PostgreSQL with Prisma",
             "Auth: JWT",
-            "API: RESTful architecture"
+            "API: RESTful"
         ],
         "implementation": [
-            "Designed and implemented the full-stack architecture",
+            "Designed the overall system architecture",
             "Built responsive UI components using React and Tailwind CSS",
-            "Developed backend APIs for products, carts, and orders",
-            "Implemented authentication and protected routes",
-            "Designed the database schema and handled data persistence",
+            "Built the backend APIs for delivery workflows",
+            "Modeled relational data using PostgreSQL",
+            "Implemented authentication and secure endpoints",
             "Ensured clean, maintainable code with TypeScript"
         ]
     }

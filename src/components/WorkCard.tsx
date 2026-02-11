@@ -30,10 +30,13 @@ const WorkCard = ({ card }: Props) => {
                     <div className="info-tag-text">
                         <h4>{card.name}</h4>
                         <p style={{fontSize: 14}}>{card.desc + " "} 
-                            <span className="italic text-[#00bc7d]/70 hover:text-[#00bc7d] cursor-pointer"
-                                onClick={()=> setShowDetails(true)}>
-                                Details
-                            </span>
+                            {
+                                card.details &&
+                                <span className="italic text-[#00bc7d]/70 hover:text-[#00bc7d] active:text-[#00bc7d] cursor-pointer"
+                                    onClick={()=> setShowDetails(true)}>
+                                    Details
+                                </span>
+                            }
                         </p>
                     </div>
 
@@ -62,6 +65,7 @@ const WorkCard = ({ card }: Props) => {
             showDetails &&
             <DetailsModal
                 onClose={()=> setShowDetails(false)}
+                details={card.details!}
             />
         }
     </>

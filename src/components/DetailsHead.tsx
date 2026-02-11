@@ -1,7 +1,11 @@
 import { useState } from "react";
 
+interface Props {
+    name: string;
+    problem: string;
+}
 
-const DetailsHead = () => {
+const DetailsHead = ({ name, problem }:Props) => {
     const [hovering, setHovering] = useState(false);
 
   return (
@@ -9,14 +13,11 @@ const DetailsHead = () => {
 
         <header className={`${hovering? 'border-[#00bc7d]':'border-[#00bc7d]/50'} border-b transition-all duration-200`}>
             <h4 className={`${hovering? 'text-[#00bc7d]':''} font-semibold transition-all duration-200`}>
-                Evtol
+                {   name}
             </h4>
         </header>
         <p className="max-sm:text-sm">
-            Small and medium businesses often struggle to move their sales online quickly with a reliable, easy-to-use system. 
-            Many existing e-commerce solutions are either too complex, expensive, or inflexible.
-            The Shopper App solves this by providing a simple, scalable e-commerce platform that allows users to browse products, 
-            manage carts, and place orders efficiently.
+            {problem}
         </p>
 
     </div>

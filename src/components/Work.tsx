@@ -14,6 +14,7 @@ import soon from "../assets/IMAGES/photos/coming_soon.png"
 import WorkCard from "./WorkCard";
 import FadeUp from "./Elements/FadeUp";
 import details from "../assets/DATA/details.json";
+import { ProjectDetails } from "./DetailsModal";
 
 export interface Card {
   name: string;
@@ -21,7 +22,7 @@ export interface Card {
   url: string;
   image: string;
   tech: string;
-  details?: {};
+  details?: ProjectDetails;
 }
 
 

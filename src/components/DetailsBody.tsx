@@ -2,10 +2,10 @@ import { useState } from "react";
 import { RiArrowDropRightFill } from "react-icons/ri";
 
 interface Props {
-    features: string[];
+    list: string[];
 }
 
-const DetailsBody = ({ features }:Props) => {
+const DetailsBody = ({ list }:Props) => {
     const [hovering, setHovering] = useState(false);
 
   return (
@@ -18,11 +18,11 @@ const DetailsBody = ({ features }:Props) => {
         </header>
 
         {
-            features.map((feat, index)=>(
+            list.map((item, index)=>(
                 <div className="flex items-center gap-2" key={index}>
                     <RiArrowDropRightFill className="text-[#00bc7d] w-4 h-4"/>
 
-                    <p className="max-sm:text-sm">{feat}</p>
+                    <p className="max-sm:text-sm">{item}</p>
                 </div>
             ))
         }
