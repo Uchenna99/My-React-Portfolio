@@ -12,7 +12,7 @@
         "stack": [
             "Frontend: React, TypeScript, Tailwind CSS",
             "Backend: Node.js, Express, TypeScript",
-            "Database: PostgreSQL with Prisma",
+            "Database: PostgreSQL / Prisma",
             "Auth: JWT",
             "API: RESTful architecture",
             "DevOps: Docker"
@@ -41,7 +41,7 @@
         "stack": [
             "Frontend: React, TypeScript, Tailwind CSS",
             "Backend: Node.js, Express, TypeScript",
-            "Database: PostgreSQL with Prisma",
+            "Database: PostgreSQL / Prisma",
             "Auth: JWT",
             "API: RESTful"
         ],

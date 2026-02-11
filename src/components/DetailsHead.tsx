@@ -13,7 +13,7 @@ const DetailsHead = ({ name, problem }:Props) => {
 
         <header className={`${hovering? 'border-[#00bc7d]':'border-[#00bc7d]/50'} border-b transition-all duration-200`}>
             <h4 className={`${hovering? 'text-[#00bc7d]':''} font-semibold transition-all duration-200`}>
-                {   name}
+                {name}
             </h4>
         </header>
         <p className="max-sm:text-sm">

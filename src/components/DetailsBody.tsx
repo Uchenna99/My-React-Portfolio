@@ -2,10 +2,11 @@ import { useState } from "react";
 import { RiArrowDropRightFill } from "react-icons/ri";
 
 interface Props {
+    name: string;
     list: string[];
 }
 
-const DetailsBody = ({ list }:Props) => {
+const DetailsBody = ({ list, name }:Props) => {
     const [hovering, setHovering] = useState(false);
 
   return (
@@ -13,7 +14,7 @@ const DetailsBody = ({ list }:Props) => {
 
         <header className={`${hovering? 'border-[#00bc7d]':'border-[#00bc7d]/50'} border-b transition-all duration-200`}>
             <h4 className={`${hovering? 'text-[#00bc7d]':''} max-sm:text-sm font-semibold transition-all duration-200`}>
-                Key Features
+                {name}
             </h4>
         </header>
 

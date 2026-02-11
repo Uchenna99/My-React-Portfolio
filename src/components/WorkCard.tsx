@@ -65,7 +65,7 @@ const WorkCard = ({ card }: Props) => {
             showDetails &&
             <DetailsModal
                 onClose={()=> setShowDetails(false)}
-                details={card.details!}
+                details={card}
             />
         }
     </>
