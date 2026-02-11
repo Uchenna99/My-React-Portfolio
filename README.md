@@ -24,8 +24,8 @@ My portfolio website showcasing some of my projects, skills and experience.
 
 > Installation
 ```js
-git clone https://github.com/Uchenna99/Shopper.git
-cd Shopper
+git clone https://github.com/Uchenna99/My-React-Portfolio.git
+cd My-React-Portfolio
 npm install
 ```
 
