@@ -8,7 +8,6 @@ import Skills from "./components/Skills"
 import Work from "./components/Work"
 import { NavbarContext } from "./context/ContextProvider"
 import PageLoader from "./components/PageLoader";
-import hero_img from "./assets/IMAGES/photos/my_photo.png";
 
 
 
@@ -16,11 +15,11 @@ const HomePage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(()=>{
-    const img = new Image();
-    img.src = hero_img;
-    img.onload = ()=> { setTimeout(() => {
+    const timer = setTimeout(() => {
       setLoading(false);
-    }, 200); }
+    }, 200);
+
+    return () => clearTimeout(timer);
   },[]);
 
   return (

@@ -863,7 +863,7 @@ button#send{
     font-size: 17px;
     color: white;
     border: none;
-    background-color: #00bc7d;
+    background-color: teal;
     border-radius: 5px;
     transition: 300ms;
 }

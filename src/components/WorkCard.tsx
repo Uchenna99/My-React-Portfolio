@@ -28,7 +28,7 @@ const WorkCard = ({ card }: Props) => {
                 <div className="info-tag">
 
                     <div className="info-tag-text">
-                        <h4>{card.name}</h4>
+                        <h3>{card.name}</h3>
                         <p style={{fontSize: 14}}>{card.desc + " "} 
                             {
                                 card.details &&
@@ -40,15 +40,15 @@ const WorkCard = ({ card }: Props) => {
                         </p>
                     </div>
 
-                    <div className="info-tag-link">
-                        <a href={card.url} target="_blank" rel="noopener noreferrer">
+                    <div className="">
+                        <a href={card.url} target="_blank" rel="noopener noreferrer" className="info-tag-link">
                             <LuExternalLink 
                             size={25} 
                             color="#00bc7d"
                             style={{cursor:'pointer'}}
                             />
+                            <p>Visit</p>
                         </a>
-                        <p>Visit</p>
                     </div>
 
                 </div>

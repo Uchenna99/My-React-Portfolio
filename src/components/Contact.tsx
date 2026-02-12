@@ -166,7 +166,7 @@ const Contact = () => {
               </div>
 
               <div className="input-wrap">
-                <label htmlFor="email">Email <span className="italic text-sm text-[#1A1A1A]/50">(Optional)</span></label>
+                <label htmlFor="email">Email <span className="italic text-sm text-[#1A1A1A]/70">(Optional)</span></label>
                 <input id="email" type="text" 
                   className="w-full h-10 px-4 border-none outline-1 outline-[#00bc7d] text-[17px] text-[#1A1A1A] transition-all 
                   duration-300 ring-[#00bc7d] rounded-sm focus:ring-2 focus:shadow-sm"

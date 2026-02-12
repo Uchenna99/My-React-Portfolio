@@ -50,7 +50,7 @@ const Skills = () => {
             <FadeUp delay={0}>
               <div className="skills-display" >
 
-                <h4 id="h4">Professional Skills</h4>
+                <h2 id="h4">Professional Skills</h2>
                 <p>
                 As a committed web developer, I possess a strong combination of technical proficiency and creative problem-solving 
                 abilities. My skills span across modern web development practices and frameworks, including front-end and back-end 
@@ -66,7 +66,7 @@ const Skills = () => {
               <div className="skill-group-card-wrap">
                 <FadeIn delay={0.1}>
                   <div className="skill-group-card">
-                    <h4 id="h4">Front-End development</h4>
+                    <h2 id="h4">Front-End development</h2>
 
                     <div className="card-indent">
                       <div className="indent-arrow">
@@ -130,7 +130,7 @@ const Skills = () => {
               <div className="skill-group-card-wrap">
                 <FadeIn delay={0.2}>
                   <div className="skill-group-card">
-                    <h4>Back-End Development</h4>
+                    <h2>Back-End Development</h2>
                     <p>
                       I am capable of building robust, scalable, and secure server-side applications with the following tools 
                     </p>
@@ -195,7 +195,7 @@ const Skills = () => {
               <div className="skill-group-card-wrap">
                 <FadeIn delay={0.3}>
                   <div className="skill-group-card">
-                    <h4>Soft Skills</h4>
+                    <h2>Soft Skills</h2>
 
                     <div className="card-indent">
                       <div className="indent-arrow">
