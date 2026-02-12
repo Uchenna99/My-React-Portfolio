@@ -1,13 +1,21 @@
 import { useEffect, useState } from "react"
-import About from "./components/About"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
+// import About from "./components/About"
+// import Contact from "./components/Contact"
+// import Footer from "./components/Footer"
 import Hero2 from "./components/Hero2"
 import Navbar2 from "./components/Navbar2"
-import Skills from "./components/Skills"
-import Work from "./components/Work"
+// import Skills from "./components/Skills"
+// import Work from "./components/Work"
 import { NavbarContext } from "./context/ContextProvider"
 import PageLoader from "./components/PageLoader";
+
+import { lazy, Suspense } from "react";
+
+const About = lazy(() => import("./components/About"));
+const Skills = lazy(() => import("./components/Skills"));
+const Work = lazy(() => import("./components/Work"));
+const Contact = lazy(() => import("./components/Contact"));
+const Footer = lazy(() => import("./components/Footer"));
 
 
 
@@ -37,15 +45,19 @@ const HomePage = () => {
 
           <Hero2/>
 
-          <About />
+          <Suspense fallback={null}>
 
-          <Skills />
-          
-          <Work />
+            <About />
 
-          <Contact />
+            <Skills />
 
-          <Footer />
+            <Work />
+
+            <Contact />
+
+            <Footer />
+            
+          </Suspense>
 
         </div>
       </NavbarContext>

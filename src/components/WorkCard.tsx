@@ -1,7 +1,8 @@
 import { LuExternalLink } from "react-icons/lu";
 import { Card } from "./Work";
-import { useEffect, useState } from "react";
-import DetailsModal from "./DetailsModal";
+import { lazy, Suspense, useEffect, useState } from "react";
+// import DetailsModal from "./DetailsModal";
+const DetailsModal = lazy(() => import("./DetailsModal"));
 
 interface Props {
     card: Card;
@@ -63,10 +64,12 @@ const WorkCard = ({ card }: Props) => {
 
         {
             showDetails &&
-            <DetailsModal
-                onClose={()=> setShowDetails(false)}
-                details={card}
-            />
+            <Suspense fallback={null}>
+                <DetailsModal
+                    onClose={()=> setShowDetails(false)}
+                    details={card}
+                />
+            </Suspense>
         }
     </>
   )
