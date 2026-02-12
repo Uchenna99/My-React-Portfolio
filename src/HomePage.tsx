@@ -7,7 +7,6 @@ import Navbar2 from "./components/Navbar2"
 import Skills from "./components/Skills"
 import Work from "./components/Work"
 import { NavbarContext } from "./context/ContextProvider"
-import PageLoader from "./components/PageLoader"
 
 
 
@@ -24,13 +23,8 @@ const HomePage = () => {
 
   return (
     <>
-    <NavbarContext>
-
-      {
-        loading?
-        <PageLoader />
-        :
-        <div className={`portfolio-wrap ${loading? 'opacity-0': 'opacity-100'}`}>
+      <NavbarContext>
+        <div className={`portfolio-wrap ${loading? 'opacity-0': 'opacity-100'} transition-all duration-250`}>
 
           <Navbar2/>
 
@@ -47,7 +41,6 @@ const HomePage = () => {
           <Footer />
 
         </div>
-      }
       </NavbarContext>
     </>
   )
