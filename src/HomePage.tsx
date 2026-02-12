@@ -7,7 +7,8 @@ import Navbar2 from "./components/Navbar2"
 import Skills from "./components/Skills"
 import Work from "./components/Work"
 import { NavbarContext } from "./context/ContextProvider"
-import PageLoader from "./components/PageLoader"
+import PageLoader from "./components/PageLoader";
+import hero_img from "./assets/IMAGES/photos/my_photo.png";
 
 
 
@@ -16,7 +17,7 @@ const HomePage = () => {
 
   useEffect(()=>{
     const img = new Image();
-    img.src = "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749919456/me_no_bg_crop_gwa5wr.png";
+    img.src = hero_img;
     img.onload = ()=> { setTimeout(() => {
       setLoading(false);
     }, 200); }
@@ -30,7 +31,7 @@ const HomePage = () => {
           loading &&
           <PageLoader />
         }
-        
+
         <div className={`portfolio-wrap ${loading? 'opacity-0': 'opacity-100'} transition-all duration-250`}>
 
           <Navbar2/>

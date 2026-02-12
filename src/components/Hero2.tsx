@@ -2,11 +2,11 @@ import { useNavbarContext } from "../context/ContextProvider";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import my_image from "../assets/IMAGES/photos/my_photo.png";
 
 
 const Hero2 = () => {
-  // const imageUrl = "https://res.cloudinary.com/df6xz7bqp/image/upload/v1762378023/Generated_Image_November_05_2025_-_9_18PM-min_i919fw.png"
-  const imageUrl = "https://res.cloudinary.com/df6xz7bqp/image/upload/v1762380159/Adobe_Express_-_file_3_-min_yeaq8b.png"
+  // const imageUrl = "https://res.cloudinary.com/df6xz7bqp/image/upload/v1762380159/Adobe_Express_-_file_3_-min_yeaq8b.png"
 
   const {scrolling, currentSection, setCurrentSection, heroRef, contactRef} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
@@ -56,7 +56,7 @@ const Hero2 = () => {
 
         
         <div className="w-[500px] aspect-[1/1.4] max-w-full rounded-full border-2 border-white bg-cover bg-center bg-no-repeat"
-          style={{backgroundImage:`url(${imageUrl})`}}>
+          style={{backgroundImage:`url(${my_image})`}}>
           {/* <img src={imageUrl} alt="My Photo" className="absolute right-[-240px] md:right-[-100px] bottom-[-120px] w-[900px] 
             min-w-[900px] opacity-40 "
           /> */}
