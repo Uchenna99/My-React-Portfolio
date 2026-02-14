@@ -195,7 +195,7 @@ const Contact = () => {
                   }
                 </div>
                 :
-                <button id="send" onClick={handleMessage}>Send</button>
+                <button id="send" onClick={handleMessage}>Send a Message</button>
               }
 
               { popup && <MessagePopup success={success} closePopup={()=> setPopup(false)} /> }

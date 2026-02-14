@@ -3,7 +3,6 @@ import HeaderText from "./HeaderText"
 import { useNavbarContext } from "../context/ContextProvider";
 import { useEffect, useState } from "react";
 import me from "../assets/IMAGES/photos/Me_smile.jpg"
-import AboutInfo from "./AboutInfo";
 import AboutParagraph from "./AboutParagraph";
 
 interface Props {
@@ -39,10 +38,13 @@ const About = ({  }: Props) => {
                   loading &&
                   <div className="skeleton-about-photo" />
                 }
-                <img src={me} alt="photo" onLoad={()=> setLoading(false)} />
+                <img src={me} alt="photo" 
+                  loading="lazy"
+                  onLoad={()=> setLoading(false)} 
+                />
               </div>
 
-              <div className="about-info" >
+              {/* <div className="about-info" >
                 
                 <AboutInfo label="Name" info="Uchenna Agbu" delay={0} />
 
@@ -52,7 +54,7 @@ const About = ({  }: Props) => {
 
                 <AboutInfo label="Phone" info="+234 703 522 9994" delay={0.3} />
 
-              </div>
+              </div> */}
 
             </div>
             
@@ -61,25 +63,28 @@ const About = ({  }: Props) => {
 
                 <AboutParagraph
                   delay={0.1}
-                  text="I'm a passionate Full Stack Web Developer with a strong drive for building scalable, user-friendly 
-                    applications. With a solid foundation in both front-end and back-end technologies, I specialize in crafting seamless 
-                    digital experiences that blend clean code with great design."
+                  text="I'm a Full Stack Developer with 4+ years of experience building scalable, production-ready web applications using React, 
+                  TypeScript, Node.js, Express, and PostgreSQL."
                 />
 
                 <AboutParagraph
                   delay={0.2}
-                  text="I'm experienced with modern tech stacks like React, Node.js, TypeScript, Express, and PostgreSQL, and I thrive in 
-                    environments that encourage continuous learning and collaboration. Whether I'm working on a solo project or 
-                    contributing to a team, I bring a proactive mindset, 
-                    attention to detail, and a genuine enthusiasm for development."
+                  text="I specialize in creating fast, intuitive user interfaces backed by clean, well-structured APIs. From real-time systems 
+                  with Socket.io to secure JWT authentication flows and payment integrations, I focus on delivering software that is both 
+                  technically solid and user-centered."
                 />
 
                 <AboutParagraph
                   delay={0.3}
-                  text="I'm currently seeking opportunities where I can grow, 
-                    contribute meaningfully, and help create impactful software products. When I'm not coding, you'll find me exploring 
-                    new tech trends, mentoring others, or enjoying a good book or game.
-                    Let's build something great together."
+                  text="Beyond writing clean code, I care deeply about performance, maintainability, and great user experience. 
+                  I've built and deployed full-stack applications, collaborated across teams, and taken products from idea to launch."
+                />
+
+                <AboutParagraph
+                  delay={0.4}
+                  text="I'm currently open to opportunities where I can contribute to impactful products, solve real business problems, 
+                  and continue growing as a developer. If you're looking for someone who combines strong frontend expertise with solid 
+                  backend architecture skills, let's connect."
                 />
 
               </div>

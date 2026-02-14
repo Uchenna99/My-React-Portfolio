@@ -317,7 +317,7 @@
 
 
 .photo-info-wrap{
-    min-width: 50%;
+    min-width: 45%;
     height: fit-content;
     display: flex;
     gap: 20px;
@@ -325,9 +325,9 @@
 }
 
 .photo{
-    width: 200px;
-    min-width: 200px;
-    height: 200px;
+    width: 300px;
+    max-width: 100%;
+    aspect-ratio: 1/1;
     background-color: lightgray;
     border-radius: 5px;
     display: flex;
@@ -363,7 +363,7 @@
 
 
 .about-text-wrap{
-    width: 50%;
+    width: 55%;
     height: fit-content;
     /* background-color: gray; */
     border-radius: 5px;

@@ -40,7 +40,7 @@ const Hero2 = () => {
 
           <motion.p className="text-slate-200 text-lg md:text-xl max-md:text-center font-medium ital"
             initial={{opacity:0, x:100}} animate={{opacity:1, x:0}} transition={{duration:0.8, delay:0.8, ease:'easeOut'}}>
-            I build scalable, high-performance web applications using React, Node.js, Express, and MongoDB / PostgreSQL.
+            I build scalable, high-performance web applications using React, Typescript, Node.js, Express, and MongoDB / PostgreSQL.
           </motion.p>
 
           <div className="w-full flex max-md:justify-center mt-7">
