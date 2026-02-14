@@ -6,7 +6,6 @@ import my_image from "../assets/IMAGES/photos/my_photo.png";
 
 
 const Hero2 = () => {
-  // const imageUrl = "https://res.cloudinary.com/df6xz7bqp/image/upload/v1762380159/Adobe_Express_-_file_3_-min_yeaq8b.png"
 
   const {scrolling, currentSection, setCurrentSection, heroRef, contactRef} = useNavbarContext();
   const {ref, inView} = useInView({threshold: 0.5});
@@ -28,17 +27,17 @@ const Hero2 = () => {
         <motion.div className="w-[500px] max-w-full flex flex-col gap-6 z-20 md:pb-20" ref={ref}
           initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1, delay:0.3, ease:'easeOut'}} >
 
-          <motion.p className="text-slate-300 text-3xl md:text-4xl max-md:text-center font-medium "
+          <motion.p className="text-slate-300 text-3xl max-md:text-center font-medium "
             initial={{opacity:0, x:100}} animate={{opacity:1, x:0}} transition={{duration:0.8, delay:0.3, ease:'easeOut'}}>
             Uchenna Agbu
           </motion.p>
 
-          <motion.h1 className="text-slate-200 text-4xl md:text-5xl max-md:text-center font-semibold ital"
+          <motion.h1 className="text-slate-200 text-3xl md:text-4xl max-md:text-center font-semibold ital"
             initial={{opacity:0, x:100}} animate={{opacity:1, x:0}} transition={{duration:0.8, delay:0.6, ease:'easeOut'}}>
             Full Stack MERN & React Developer
           </motion.h1>
 
-          <motion.p className="text-slate-200 text-lg md:text-xl max-md:text-center font-medium ital"
+          <motion.p className="text-slate-200 md:text-lg max-md:text-center "
             initial={{opacity:0, x:100}} animate={{opacity:1, x:0}} transition={{duration:0.8, delay:0.8, ease:'easeOut'}}>
             I build scalable, high-performance web applications using React, Typescript, Node.js, Express, and MongoDB / PostgreSQL.
           </motion.p>

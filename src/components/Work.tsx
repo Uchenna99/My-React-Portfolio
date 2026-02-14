@@ -4,7 +4,8 @@ import { useNavbarContext } from "../context/ContextProvider";
 import { useEffect, useState } from "react";
 import bitmama from '../assets/IMAGES/photos/bitmama_clone.png'
 import nvidia from "../assets/IMAGES/photos/nvidia.png"
-import airbnb from "../assets/IMAGES/photos/airbnb.png"
+import airbnb from "../assets/IMAGES/photos/airbnb.webp"
+import homestyler from "../assets/IMAGES/photos/homestyler.webp";
 import nairalender from "../assets/IMAGES/photos/nairalender.png"
 import sap from "../assets/IMAGES/photos/sap_screenshot.webp"
 import hubspot from "../assets/IMAGES/photos/hubspot.png"
@@ -41,7 +42,7 @@ const Work = () => {
     { name: 'Bitmama', desc: 'A clone of Bitmama home page and Signin/Signup page', url: "https://bitmama-clone-ts.vercel.app/", image: bitmama, tech: 'react' },
     { name: 'Carbon', desc: 'A clone of Carbon home page', url: "https://carbon-clone-uche.netlify.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1749480397/Screenshot_2025-06-09_153823-min_fvik1l.png", tech: 'html' },
     { name: 'Hubspot', desc: 'A clone of Hubspot home page', url: "https://hubspot-clone-html.netlify.app/", image: hubspot, tech: 'html' },
-    { name: 'HomeStyler', desc: 'A website for interior design services', url: "https://homestyler-by-elite-devs-5rjf.vercel.app/", image: "https://res.cloudinary.com/df6xz7bqp/image/upload/v1751153351/Screenshot_2025-06-29_000207-min_k7xly9.png", tech: 'react' },
+    { name: 'HomeStyler', desc: 'A website for interior design services', url: "https://homestyler-by-elite-devs-5rjf.vercel.app/", image: homestyler, tech: 'react' },
     { name: 'Nairalender', desc: 'A loan web app I designed', url: "https://nairalender.vercel.app/", image: nairalender, tech: 'react' },
     { name: 'SAP', desc: 'A clone of SAP home page', url: "https://sap-clone-by-uchenna-agbu.netlify.app/", image: sap, tech: 'html' },
     { name: 'airbnb', desc: 'A clone of airbnb home page', url: "https://air-bnb-orpin.vercel.app/", image: airbnb, tech: 'react' },
