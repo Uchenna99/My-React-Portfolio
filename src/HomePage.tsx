@@ -43,21 +43,23 @@ const HomePage = () => {
 
           <Navbar2/>
 
-          <Hero2/>
+          <main>
+            <Hero2/>
 
-          <Suspense fallback={null}>
+            <Suspense fallback={null}>
 
-            <About />
+              <About />
 
-            <Skills />
+              <Skills />
 
-            <Work />
+              <Work />
 
-            <Contact />
+              <Contact />
 
-            <Footer />
-            
-          </Suspense>
+              <Footer />
+              
+            </Suspense>
+          </main>
 
         </div>
       </NavbarContext>

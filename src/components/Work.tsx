@@ -6,7 +6,7 @@ import bitmama from '../assets/IMAGES/photos/bitmama_clone.png'
 import nvidia from "../assets/IMAGES/photos/nvidia.png"
 import airbnb from "../assets/IMAGES/photos/airbnb.png"
 import nairalender from "../assets/IMAGES/photos/nairalender.png"
-import sap from "../assets/IMAGES/photos/sap_screenshot.png"
+import sap from "../assets/IMAGES/photos/sap_screenshot.webp"
 import hubspot from "../assets/IMAGES/photos/hubspot.png"
 import salesforce from "../assets/IMAGES/photos/salesforce.png"
 import shopper from "../assets/IMAGES/photos/Shopper.png"

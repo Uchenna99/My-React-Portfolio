@@ -13,13 +13,11 @@ import mongodb from "../assets/IMAGES/skills/mongo_db.png"
 import node from "../assets/IMAGES/skills/node-js.227x256.png"
 import exp from "../assets/IMAGES/skills/express-original.256x149.png"
 import tailwind from "../assets/IMAGES/skills/Tailwind_CSS_Logo.png"
-import appwrite from "../assets/IMAGES/skills/appwrite_logo.png"
 import { RiArrowDownDoubleLine } from "react-icons/ri";
 import { RiArrowUpDoubleLine } from "react-icons/ri";
-import { RiArrowDropRightFill } from "react-icons/ri";
-import FadeUp from "./Elements/FadeUp";
 import FadeIn from "./Elements/FadeIn";
 import SkillBar from "./Elements/SkillBar";
+import SkillText from "./SkillText";
 
 
 
@@ -47,19 +45,6 @@ const Skills = () => {
 
           <div className="skills" ref={skillsRef}>
 
-            <FadeUp delay={0}>
-              <div className="skills-display" >
-
-                <h2 id="h4">Professional Skills</h2>
-                <p>
-                As a committed web developer, I possess a strong combination of technical proficiency and creative problem-solving 
-                abilities. My skills span across modern web development practices and frameworks, including front-end and back-end 
-                technologies, responsive designs, and user experience optimization.
-                </p>
-
-              </div>
-            </FadeUp>
-
 
             <div className="skill-groups">
 
@@ -68,38 +53,29 @@ const Skills = () => {
                   <div className="skill-group-card">
                     <h2 id="h4">Front-End development</h2>
 
-                    <div className="card-indent">
-                      <div className="indent-arrow">
-                        <RiArrowDropRightFill id="arr-right" />
-                      </div>
+                    <SkillText
+                      skill="React (Components, Hooks, Context, Performance Optimization)"
+                    />
 
-                      <div className="indent-text">
-                        <p>
-                          I can craft responsive, user-friendly interfaces with modern web technologies such as HTML, CSS, Javascript 
-                          and Typescript.
-                        </p>
-                      </div>
-                    </div>
+                    <SkillText
+                      skill="TypeScript"
+                    />
 
-                    <div className="card-indent">
-                      <div className="indent-arrow">
-                        <RiArrowDropRightFill id="arr-right" />
-                      </div>
+                    <SkillText
+                      skill="Tailwind CSS"
+                    />
 
-                      <div className="indent-text">
-                        <p>I'm also adept at utilizing libraries such as React.js and Tailwind CSS.</p>
-                      </div>
-                    </div>
+                    <SkillText
+                      skill="Responsive & Mobile-First Design"
+                    />
 
-                    <div className="card-indent">
-                      <div className="indent-arrow">
-                        <RiArrowDropRightFill id="arr-right" />
-                      </div>
+                    <SkillText
+                      skill="Figma-to-Code Implementation"
+                    />
 
-                      <div className="indent-text">
-                        <p>I work efficiently with designs from Figma and Adobe XD.</p>
-                      </div>
-                    </div>
+                    <SkillText
+                      skill="React Router & State Management"
+                    />
                     
                     {
                       feVisible? <RiArrowUpDoubleLine id="arrow" onClick={()=>setFeVisible(false)}/> :
@@ -110,15 +86,16 @@ const Skills = () => {
 
                       <SkillBar title="HTML" image={html} level="95%" delay={0} />
 
-                      <SkillBar title="CSS" image={css} level="90%" delay={0.1} />
+                      <SkillBar title="CSS" image={css} level="95%" delay={0.1} />
 
-                      <SkillBar title="Javascript" image={js} level="85%" delay={0.2} />
+                      <SkillBar title="React" image={reactjs} level="90%" delay={0.2} />
 
-                      <SkillBar title="Typescript" image={ts} level="85%" delay={0.3} />
+                      <SkillBar title="Tailwind CSS" image={tailwind} level="88%" delay={0.3} />
 
-                      <SkillBar title="React" image={reactjs} level="85%" delay={0.4} />
+                      <SkillBar title="Javascript" image={js} level="86%" delay={0.4} />
 
-                      <SkillBar title="Tailwind CSS" image={tailwind} level="85%" delay={0.5} />
+                      <SkillBar title="Typescript" image={ts} level="86%" delay={0.5} />
+
 
                     </div>
 
@@ -127,45 +104,35 @@ const Skills = () => {
                 </FadeIn>
               </div>  
 
+
               <div className="skill-group-card-wrap">
                 <FadeIn delay={0.2}>
                   <div className="skill-group-card">
                     <h2>Back-End Development</h2>
-                    <p>
-                      I am capable of building robust, scalable, and secure server-side applications with the following tools 
-                    </p>
+                    
+                    <SkillText
+                      skill="Node.js"
+                    />
 
-                    <div className="card-indent">
-                      <div className="indent-arrow">
-                        <RiArrowDropRightFill id="arr-right" />
-                      </div>
+                    <SkillText
+                      skill="Express.js"
+                    />
 
-                      <div className="indent-text">
-                        <p>Language: Node.js</p>
-                      </div>
-                    </div>
+                    <SkillText
+                      skill="REST API Design"
+                    />
 
-                    <div className="card-indent">
-                      <div className="indent-arrow">
-                        <RiArrowDropRightFill id="arr-right" />
-                      </div>
+                    <SkillText
+                      skill="JWT Authentication"
+                    />
 
-                      <div className="indent-text">
-                        <p>Framework: Express.js</p>
-                      </div>
-                    </div>
+                    <SkillText
+                      skill="PostgreSQL (Prisma)"
+                    />
 
-                    <div className="card-indent">
-                      <div className="indent-arrow">
-                        <RiArrowDropRightFill id="arr-right" />
-                      </div>
-
-                      <div className="indent-text">
-                        <p>Databases: MongoDB, PostgreSQL & Appwrite</p>
-                      </div>
-                    </div>
-
-                    <p>I can also build and consume RESTful APIs.</p>
+                    <SkillText
+                      skill="Real-time apps with Socket.io"
+                    />
 
                     {
                       beVisible? <RiArrowUpDoubleLine id="arrow" onClick={()=>setBeVisible(false)}/> :
@@ -176,15 +143,15 @@ const Skills = () => {
 
                       <SkillBar title="Prisma" image={prisma} level="95%" delay={0} />
 
-                      <SkillBar title="PostgreSQL" image={pg} level="90%" delay={0.1} />
+                      <SkillBar title="PostgreSQL" image={pg} level="95%" delay={0.1} />
 
-                      <SkillBar title="Node.js" image={node} level="85%" delay={0.2} />
+                      <SkillBar title="Node.js" image={node} level="87%" delay={0.2} />
 
-                      <SkillBar title="Express.js" image={exp} level="85%" delay={0.3} /> 
+                      <SkillBar title="Express.js" image={exp} level="87%" delay={0.3} /> 
 
                       <SkillBar title="MongoDB" image={mongodb} wyt={12} level="85%" delay={0.4} />
 
-                      <SkillBar title="Appwrite" image={appwrite} level="70%" delay={0.5} />
+                      {/* <SkillBar title="Appwrite" image={appwrite} level="70%" delay={0.5} /> */}
 
                     </div>
                   </div>
@@ -197,35 +164,17 @@ const Skills = () => {
                   <div className="skill-group-card">
                     <h2>Soft Skills</h2>
 
-                    <div className="card-indent">
-                      <div className="indent-arrow">
-                        <RiArrowDropRightFill id="arr-right" />
-                      </div>
+                    <SkillText
+                      skill="Problem Solving"
+                    />
 
-                      <div className="indent-text">
-                        <p>Problem solving & Debugging</p>
-                      </div>
-                    </div>
+                    <SkillText
+                      skill="Clear Communication"
+                    />
 
-                    <div className="card-indent">
-                      <div className="indent-arrow">
-                        <RiArrowDropRightFill id="arr-right" />
-                      </div>
-
-                      <div className="indent-text">
-                        <p>Effective Communication & Team Collaboration</p>
-                      </div>
-                    </div>
-
-                    <div className="card-indent">
-                      <div className="indent-arrow">
-                        <RiArrowDropRightFill id="arr-right" />
-                      </div>
-
-                      <div className="indent-text">
-                        <p>Adaptability and Continuous Learning</p>
-                      </div>
-                    </div>
+                    <SkillText
+                      skill="Ownership & Initiative"
+                    />
 
                   </div>
 

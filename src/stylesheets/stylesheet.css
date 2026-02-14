@@ -527,6 +527,7 @@
     height: fit-content;
     /* background-color: pink; */
     display: flex;
+    align-items: center;
     gap: 5px;
 }
 
