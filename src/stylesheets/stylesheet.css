@@ -642,17 +642,18 @@ p.work-head:hover{
     transition: all 200ms ease-in-out;
 }
 
-.work-sample:hover{
+
+.w-card-cover:hover .info-tag {
+    opacity: 1;
+    bottom: 20px;
+}
+
+.w-card-cover:hover .work-sample {
     background-blend-mode: darken;
     border-bottom: 3px solid #00bc7d;
     transform: translateY(-5px);
 }
 
-.work-sample:hover .info-tag{
-    opacity: 1;
-    bottom: 20px;
-
-}
 
 .info-tag{
     width: 90%;

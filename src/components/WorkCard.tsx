@@ -24,36 +24,38 @@ const WorkCard = ({ card }: Props) => {
     <>
         {
             !loading && card.image?
-            <div className="work-sample" style={{backgroundImage:`url(${card.image})`}}>
+            <div className="w-card-cover">
+                <div className="work-sample group-hover:-translate-y-1.5" style={{backgroundImage:`url(${card.image})`}}>
 
-                <div className="info-tag">
+                    <div className="info-tag">
 
-                    <div className="info-tag-text">
-                        <h3>{card.name}</h3>
-                        <p style={{fontSize: 14}}>{card.desc + " "} 
-                            {
-                                card.details &&
-                                <span className="italic text-[#00bc7d]/70 hover:text-[#00bc7d] active:text-[#00bc7d] cursor-pointer"
-                                    onClick={()=> setShowDetails(true)}>
-                                    Details
-                                </span>
-                            }
-                        </p>
-                    </div>
+                        <div className="info-tag-text">
+                            <h3>{card.name}</h3>
+                            <p style={{fontSize: 14}}>{card.desc + " "} 
+                                {
+                                    card.details &&
+                                    <span className="italic text-[#00bc7d]/70 hover:text-[#00bc7d] active:text-[#00bc7d] cursor-pointer"
+                                        onClick={()=> setShowDetails(true)}>
+                                        Details
+                                    </span>
+                                }
+                            </p>
+                        </div>
 
-                    <div className="">
-                        <a href={card.url} target="_blank" rel="noopener noreferrer" className="info-tag-link">
-                            <LuExternalLink 
-                            size={25} 
-                            color="#00bc7d"
-                            style={{cursor:'pointer'}}
-                            />
-                            <p>Visit</p>
-                        </a>
+                        <div className="">
+                            <a href={card.url} target="_blank" rel="noopener noreferrer" className="info-tag-link">
+                                <LuExternalLink 
+                                size={25} 
+                                color="#00bc7d"
+                                style={{cursor:'pointer'}}
+                                />
+                                <p>Visit</p>
+                            </a>
+                        </div>
+
                     </div>
 
                 </div>
-
             </div>
             :
             loading?
